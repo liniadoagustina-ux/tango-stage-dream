@@ -16,8 +16,8 @@ export const Route = createFileRoute("/company")({
 });
 
 const milestones = [
-  { year: "Internacional Debute at 17", text: "They began their international careers at just 17. With a foundation in tango, ballet, flamenco, contemporary dance, and circus arts." },
-  { year: "Today", text: "Their creations have been presented across Europe, Asia and the Americas" },
+  { year: "Internacional Debute at 17", text: "Their creations have been presented across Europe, Asia, and the Americas" },
+  { year: "Today", text: "Luizaga Brothers continue to redefine Argentine performance traditions, transforming them into a contemporary and globally resonant artistic language." },
 ];
 
 const reach = [
@@ -49,20 +49,12 @@ export function CompanyPage() {
         <div className="max-w-4xl mx-auto space-y-8 text-lg leading-relaxed text-foreground/90">
           <Reveal>
             <p>
-              Luizaga Brothers Production is the company of Argentine choreographers and
-              artistic directors <span className="text-primary-glow">Leonardo and Edgar Luizaga</span>.
-              Born in Zárate, Argentina, into a family of dancers and gymnasts, they began training
-              at the age of five and stepped onto international stages at seventeen.
-            </p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <p>
               Their work is defined by a distinctive fusion of Argentine tango, aerial performance
               and physical theatre — a refined multidisciplinary language that bridges tradition
               and contemporary expression.
             </p>
           </Reveal>
-          <Reveal delay={0.2}>
+          <Reveal delay={0.1}>
             <p className="font-serif italic text-2xl text-foreground/85 border-l-2 border-primary pl-6">
               We carry the emotional and cultural resonance of Argentina into a global contemporary
               context, shaping a performative language that is fluid, hybrid and evolving.
@@ -75,7 +67,7 @@ export function CompanyPage() {
       <section className="py-24 px-6 bg-curtain">
         <div className="max-w-5xl mx-auto">
           <Reveal>
-            <h2 className="font-serif text-4xl md:text-5xl mb-16">A trajectory.</h2>
+            <h2 className="font-serif text-4xl md:text-5xl mb-16">Trajectory</h2>
           </Reveal>
           <div className="space-y-12">
             {milestones.map((m, i) => (
