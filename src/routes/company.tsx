@@ -16,10 +16,7 @@ export const Route = createFileRoute("/company")({
 });
 
 const milestones = [
-  { 
-    year: "From Zárate to Colón to The World\n\n\nInternacional Debute at 17", 
-    text: "They began their studies in the matter at the age of five within a family of dancers and gymnasts. Trained at prestigious institutions such as the Teatro Colón Institute, they began their international careers at just 17." 
-  },
+  { year: "Internacional Debute at 17", text: "They began their international careers at just 17. With a foundation in tango, ballet, flamenco, contemporary dance, and circus arts." },
   { year: "Today", text: "Their creations have been presented across Europe, Asia and the Americas" },
 ];
 
@@ -78,13 +75,13 @@ export function CompanyPage() {
       <section className="py-24 px-6 bg-curtain">
         <div className="max-w-5xl mx-auto">
           <Reveal>
-            <h2 className="font-serif text-4xl md:text-5xl mb-16">How it began</h2>
+            <h2 className="font-serif text-4xl md:text-5xl mb-16">A trajectory.</h2>
           </Reveal>
           <div className="space-y-12">
             {milestones.map((m, i) => (
               <Reveal key={m.year} delay={i * 0.08}>
                 <div className="grid md:grid-cols-[200px_1fr] gap-6 md:gap-12 border-t border-border/60 pt-8">
-                  <div className="font-serif text-2xl md:text-3xl text-primary-glow whitespace-pre-line">{m.year}</div>
+                  <div className="font-serif text-2xl md:text-3xl text-primary-glow">{m.year}</div>
                   <p className="text-base md:text-lg text-foreground/85 leading-relaxed">{m.text}</p>
                 </div>
               </Reveal>
@@ -101,7 +98,7 @@ export function CompanyPage() {
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="font-serif text-4xl md:text-5xl mb-16 max-w-3xl">
-              They began their international careers at just 17.
+              Their creations have been presented across Europe, Asia and the Americas
             </h2>
           </Reveal>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-border/60">
