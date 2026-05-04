@@ -17,10 +17,9 @@ export const Route = createFileRoute("/company")({
 
 const milestones = [
   { 
-    year: "From Zárate to Colón to The World\n\n\nInternacional Debute at 17", 
-    text: "They began their studies in the matter at the age of five within a family of dancers and gymnasts. Trained at prestigious institutions such as the Teatro Colón Institute, they began their international careers at just 17." 
+    year: "Leonardo Luizaga and Edgar Luizaga are argentine choreographers, artistic directors, and founders of Luizaga Brothers Production, working internationally. \n\nBorn in Zárate, Argentina, they began their training at the age of five within a family of dancers and gymnasts. Trained at prestigious institutions such as the Teatro Colón Institute, they began their international careers at just 17.  \n\nTheir creations have been presented across Europe, Asia, and the Americas, where they develop immersive works that transform Argentine cultural heritage into a bold, innovative, and globally resonant stage experience. \n\nWith a foundation in tango, ballet, flamenco, contemporary dance, and circus arts, Luizaga Brothers continue to redefine Argentine performance traditions, transforming them into a contemporary and globally resonant artistic language. \n", 
+    text: "" 
   },
-  { year: "Today", text: "Their creations have been presented across Europe, Asia and the Americas" },
 ];
 
 const reach = [
