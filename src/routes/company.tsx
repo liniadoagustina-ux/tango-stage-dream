@@ -16,8 +16,7 @@ export const Route = createFileRoute("/company")({
 });
 
 const milestones = [
-  { year: "Zárate", text: "Born in Argentina, into a family of dancers and gymnasts. Training begins at the age of five." },
-  { year: "Teatro Colón", text: "Trained at the Instituto Superior de Arte under masters of Argentine ballet." },
+  { year: "Zárate", text: "Born in Zárate, Argentina, they began their training at the age of five within a family of dancers and gymnasts. Growing up they ended up training at prestigious institutions such as the Teatro Colón Institute." },
   { year: "17", text: "International debut. Touring Europe with legendary tango companies." },
   { year: "Today", text: "Productions across the UK, Spain, France, Italy, Japan, China, South Korea, the UAE, the US and Argentina." },
 ];
