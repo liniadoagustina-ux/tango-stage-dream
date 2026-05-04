@@ -16,9 +16,8 @@ export const Route = createFileRoute("/company")({
 });
 
 const milestones = [
-  { year: "Zárate", text: "Born in Zárate, Argentina, they began their training at the age of five within a family of dancers and gymnasts. Growing up they ended up training at prestigious institutions such as the Teatro Colón Institute." },
-  { year: "17", text: "International debut. Touring Europe with legendary tango companies." },
-  { year: "Today", text: "Productions across the UK, Spain, France, Italy, Japan, China, South Korea, the UAE, the US and Argentina." },
+  { year: "Internacional Debute at 17", text: "They began their international careers at just 17. With a foundation in tango, ballet, flamenco, contemporary dance, and circus arts." },
+  { year: "Today", text: "Their creations have been presented across Europe, Asia and the Americas" },
 ];
 
 const reach = [
@@ -99,7 +98,7 @@ export function CompanyPage() {
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="font-serif text-4xl md:text-5xl mb-16 max-w-3xl">
-              Theatres on three continents.
+              Their creations have been presented across Europe, Asia and the Americas
             </h2>
           </Reveal>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-border/60">
