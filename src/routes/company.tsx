@@ -82,9 +82,9 @@ export function CompanyPage() {
           <div className="space-y-12">
             {milestones.map((m, i) => (
               <Reveal key={m.year} delay={i * 0.08}>
-                <div className="grid md:grid-cols-[200px_1fr] gap-6 md:gap-12 border-t border-border/60 pt-8">
+                <div className="border-t border-border/60 pt-8">
                   <div className="font-serif text-2xl md:text-3xl text-primary-glow whitespace-pre-line">{m.year}</div>
-                  <p className="text-base md:text-lg text-foreground/85 leading-relaxed">{m.text}</p>
+                  {m.text && <p className="text-base md:text-lg text-foreground/85 leading-relaxed mt-4">{m.text}</p>}
                 </div>
               </Reveal>
             ))}
