@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { motion } from "framer-motion";
+import stage2 from "@/assets/stage/stage-2.jpg";
 
 export const Route = createFileRoute("/show")({
   head: () => ({
