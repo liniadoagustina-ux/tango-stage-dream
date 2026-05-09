@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { motion } from "framer-motion";
+import stage2 from "@/assets/stage/stage-2.jpg";
 
 export const Route = createFileRoute("/show")({
   head: () => ({
@@ -22,12 +23,11 @@ function ShowPage() {
           initial={{ scale: 1.1, opacity: 0.6 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 6, ease: "easeOut" }}
-          className="absolute inset-0"
-        >
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_40%_50%,oklch(0.35_0.18_25/0.55),transparent_65%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,oklch(0.28_0.14_20/0.45),transparent_55%)]" />
-        </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/30" />
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${stage2})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.13_0.01_20/0.85)_90%)]" />
         <div className="relative z-10 h-full flex items-end pb-24 px-6">
           <div className="max-w-7xl mx-auto w-full">
             <p className="text-xs uppercase tracking-luxe text-primary-glow mb-5">The Show · 2025 — 2026</p>
