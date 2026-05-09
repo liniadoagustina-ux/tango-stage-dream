@@ -1,14 +1,34 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import stage1 from "@/assets/stage/stage-1.jpg";
+import stage2 from "@/assets/stage/stage-2.jpg";
+
+const slides = [stage1, stage2];
 
 export function Hero() {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 6000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section className="relative h-screen min-h-[640px] w-full overflow-hidden vignette bg-background">
-      {/* Atmospheric gradient backdrop */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_40%,oklch(0.35_0.18_25/0.55),transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_70%,oklch(0.28_0.14_20/0.45),transparent_55%)]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,oklch(0.13_0.01_20/0.85)_85%)]" />
+      {/* Stage photography backdrop */}
+      <AnimatePresence mode="sync">
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, scale: 1.08 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ opacity: { duration: 1.6 }, scale: { duration: 7, ease: "linear" } }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${slides[index]})` }}
+        />
+      </AnimatePresence>
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/30 to-background" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.13_0.01_20/0.85)_90%)]" />
 
       <div className="relative z-10 h-full flex flex-col justify-end pb-24 md:pb-32 px-6">
         <div className="max-w-7xl mx-auto w-full">
