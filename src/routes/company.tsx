@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
-import ensemble from "@/assets/gallery/ensemble.jpg";
 
 export const Route = createFileRoute("/company")({
   head: () => ({
@@ -9,7 +8,6 @@ export const Route = createFileRoute("/company")({
       { name: "description", content: "Luizaga Brothers Production — history, mission, and global reach of the Argentine stage company." },
       { property: "og:title", content: "The Company — Luizaga Brothers" },
       { property: "og:description", content: "An Argentine stage company touring across Europe, Asia and the Americas." },
-      { property: "og:image", content: ensemble },
     ],
   }),
   component: CompanyPage,
@@ -30,7 +28,7 @@ export function CompanyPage() {
   return (
     <>
       <section className="relative pt-40 pb-24 md:pt-52 md:pb-32 px-6 overflow-hidden">
-        <img src={ensemble} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,oklch(0.32_0.16_25/0.45),transparent_60%)]" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
         <div className="relative max-w-5xl mx-auto">
           <Reveal>

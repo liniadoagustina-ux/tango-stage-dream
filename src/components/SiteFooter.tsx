@@ -21,8 +21,6 @@ export function SiteFooter() {
             <li><Link to="/show" className="hover:text-foreground">The Show</Link></li>
             <li><Link to="/company" className="hover:text-foreground">The Company</Link></li>
             <li><Link to="/artists" className="hover:text-foreground">Artists</Link></li>
-            <li><Link to="/gallery" className="hover:text-foreground">Gallery</Link></li>
-            <li><Link to="/tour" className="hover:text-foreground">Tour</Link></li>
           </ul>
         </div>
         <div>
@@ -30,8 +28,11 @@ export function SiteFooter() {
             Bookings
           </h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>contact@luizagabrothers.com</li>
-            <li>Buenos Aires · London · Tokyo</li>
+            <li>
+              <a href="mailto:luizagabros@gmail.com" className="hover:text-foreground">
+                luizagabros@gmail.com
+              </a>
+            </li>
           </ul>
         </div>
       </div>

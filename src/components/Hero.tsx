@@ -1,26 +1,13 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
-import heroImage from "@/assets/gallery/hero-aerial.jpg";
 
 export function Hero() {
   return (
-    <section className="relative h-screen min-h-[640px] w-full overflow-hidden vignette">
-      {/* Background video with image fallback */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster={heroImage}
-        className="absolute inset-0 h-full w-full object-cover animate-slow-zoom"
-      >
-        <source
-          src="https://cdn.coverr.co/videos/coverr-tango-dancers-on-the-stage-2633/1080p.mp4"
-          type="video/mp4"
-        />
-      </video>
-
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background" />
+    <section className="relative h-screen min-h-[640px] w-full overflow-hidden vignette bg-background">
+      {/* Atmospheric gradient backdrop */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_40%,oklch(0.35_0.18_25/0.55),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_70%,oklch(0.28_0.14_20/0.45),transparent_55%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,oklch(0.13_0.01_20/0.85)_85%)]" />
 
       <div className="relative z-10 h-full flex flex-col justify-end pb-24 md:pb-32 px-6">
@@ -64,12 +51,12 @@ export function Hero() {
             >
               Discover the Show
             </Link>
-            <Link
-              to="/tour"
+            <a
+              href="mailto:luizagabros@gmail.com"
               className="inline-flex items-center px-8 py-4 border border-foreground/40 text-foreground text-xs uppercase tracking-luxe font-medium rounded-sm hover:bg-foreground hover:text-background transition-colors"
             >
-              Tour Dates
-            </Link>
+              Booking
+            </a>
           </motion.div>
         </div>
       </div>

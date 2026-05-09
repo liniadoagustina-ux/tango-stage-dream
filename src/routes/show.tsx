@@ -1,10 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { motion } from "framer-motion";
-import embrace from "@/assets/gallery/tango-embrace.jpg";
-import aerial from "@/assets/gallery/aerial-silk.jpg";
-import bandoneon from "@/assets/gallery/bandoneon.jpg";
-import ensemble from "@/assets/gallery/ensemble.jpg";
 
 export const Route = createFileRoute("/show")({
   head: () => ({
@@ -13,7 +9,6 @@ export const Route = createFileRoute("/show")({
       { name: "description", content: "La Muerte del Ángel — the current Luizaga Brothers production. An immersive tango spectacle." },
       { property: "og:title", content: "La Muerte del Ángel — Luizaga Brothers" },
       { property: "og:description", content: "An immersive evening of tango, aerial choreography and live music." },
-      { property: "og:image", content: embrace },
     ],
   }),
   component: ShowPage,
@@ -22,15 +17,16 @@ export const Route = createFileRoute("/show")({
 function ShowPage() {
   return (
     <>
-      <section className="relative h-[80vh] min-h-[520px] overflow-hidden vignette">
-        <motion.img
-          initial={{ scale: 1.15 }}
-          animate={{ scale: 1.05 }}
+      <section className="relative h-[80vh] min-h-[520px] overflow-hidden vignette bg-background">
+        <motion.div
+          initial={{ scale: 1.1, opacity: 0.6 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 6, ease: "easeOut" }}
-          src={embrace}
-          alt="La Muerte del Ángel"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+          className="absolute inset-0"
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_40%_50%,oklch(0.35_0.18_25/0.55),transparent_65%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,oklch(0.28_0.14_20/0.45),transparent_55%)]" />
+        </motion.div>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/30" />
         <div className="relative z-10 h-full flex items-end pb-24 px-6">
           <div className="max-w-7xl mx-auto w-full">
@@ -62,18 +58,6 @@ function ShowPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-24">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-3">
-          {[aerial, ensemble, bandoneon].map((src, i) => (
-            <Reveal key={i} delay={i * 0.1}>
-              <div className="aspect-[3/4] overflow-hidden rounded-sm">
-                <img src={src} alt="" loading="lazy" className="h-full w-full object-cover hover:scale-105 transition-transform duration-1000" />
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
       <section className="py-24 md:py-32 px-6 bg-curtain">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
           {[
@@ -97,12 +81,12 @@ function ShowPage() {
             <h2 className="font-serif text-4xl md:text-5xl">See it live.</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <Link
-              to="/tour"
+            <a
+              href="mailto:luizagabros@gmail.com"
               className="mt-8 inline-flex items-center px-8 py-4 bg-gradient-red text-primary-foreground text-xs uppercase tracking-luxe rounded-sm shadow-red"
             >
-              Tour Dates & Tickets
-            </Link>
+              Booking & Enquiries
+            </a>
           </Reveal>
         </div>
       </section>

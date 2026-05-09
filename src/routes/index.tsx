@@ -1,10 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
-import { motion } from "framer-motion";
-import ensemble from "@/assets/gallery/ensemble.jpg";
-import embrace from "@/assets/gallery/tango-embrace.jpg";
-import aerial from "@/assets/gallery/aerial-silk.jpg";
 import { artists } from "@/data/artists";
 
 export const Route = createFileRoute("/")({
@@ -49,19 +45,13 @@ function Index() {
       <section className="py-24 md:py-32 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 md:gap-4">
           {[
-            { img: embrace, title: "Tango", text: "The embrace, fragmented and rebuilt." },
-            { img: aerial, title: "Aerial", text: "Suspension. Flight. Risk. The body free of the floor." },
-            { img: ensemble, title: "Theatre", text: "Atmosphere, dramaturgy and spatial composition." },
+            { title: "Tango", text: "The embrace, fragmented and rebuilt." },
+            { title: "Aerial", text: "Suspension. Flight. Risk. The body free of the floor." },
+            { title: "Theatre", text: "Atmosphere, dramaturgy and spatial composition." },
           ].map((p, i) => (
             <Reveal key={p.title} delay={i * 0.1}>
-              <div className="group relative aspect-[3/4] overflow-hidden rounded-sm">
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+              <div className="group relative aspect-[3/4] overflow-hidden rounded-sm border border-border/60 bg-gradient-to-br from-card via-background to-card">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.35_0.18_25/0.4),transparent_70%)]" />
                 <div className="absolute inset-x-0 bottom-0 p-8">
                   <h3 className="font-serif text-3xl mb-2">{p.title}</h3>
                   <p className="text-sm text-muted-foreground max-w-xs">{p.text}</p>
@@ -73,17 +63,8 @@ function Index() {
       </section>
 
       {/* Show teaser */}
-      <section className="relative py-32 md:py-44 px-6 overflow-hidden">
-        <motion.div
-          initial={{ scale: 1.1 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
-          className="absolute inset-0"
-        >
-          <img src={embrace} alt="" className="h-full w-full object-cover opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
-        </motion.div>
+      <section className="relative py-32 md:py-44 px-6 overflow-hidden bg-curtain">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,oklch(0.32_0.16_25/0.5),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto">
           <Reveal>
             <p className="text-xs uppercase tracking-luxe text-primary-glow mb-5">Current Production</p>

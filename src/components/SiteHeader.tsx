@@ -9,8 +9,6 @@ const nav = [
   { to: "/show", label: "The Show" },
   { to: "/company", label: "The Company" },
   { to: "/artists", label: "Artists" },
-  { to: "/gallery", label: "Gallery" },
-  { to: "/tour", label: "Tour" },
 ] as const;
 
 export function SiteHeader() {
@@ -74,12 +72,12 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden lg:block">
-          <Link
-            to="/tour"
+          <a
+            href="mailto:luizagabros@gmail.com"
             className="inline-flex items-center justify-center px-5 py-2.5 text-xs uppercase tracking-luxe font-medium bg-gradient-red text-primary-foreground rounded-sm shadow-red hover:opacity-90 transition-opacity"
           >
-            Tickets
-          </Link>
+            Booking
+          </a>
         </div>
 
         <button
@@ -109,12 +107,12 @@ export function SiteHeader() {
                   {item.label}
                 </Link>
               ))}
-              <Link
-                to="/tour"
+              <a
+                href="mailto:luizagabros@gmail.com"
                 className="mt-2 inline-flex justify-center px-5 py-3 text-xs uppercase tracking-luxe bg-gradient-red text-primary-foreground rounded-sm"
               >
-                Tickets
-              </Link>
+                Booking
+              </a>
             </nav>
           </motion.div>
         )}
