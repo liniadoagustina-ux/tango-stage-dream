@@ -1,18 +1,34 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import stage1 from "@/assets/stage/stage-1.jpg";
+import stage3 from "@/assets/stage/stage-3.jpg";
+import stage4 from "@/assets/stage/stage-4.jpg";
+
+const slides = [stage1, stage3, stage4];
 
 export function Hero() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 6000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section className="relative h-screen min-h-[640px] w-full overflow-hidden vignette bg-background">
       {/* Stage photography backdrop */}
-      <motion.div
-        initial={{ scale: 1.08, opacity: 0.7 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 7, ease: "easeOut" }}
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${stage1})` }}
-      />
+      <AnimatePresence mode="sync">
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, scale: 1.08 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ opacity: { duration: 1.6 }, scale: { duration: 7, ease: "easeOut" } }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${slides[index]})` }}
+        />
+      </AnimatePresence>
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/30 to-background" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.13_0.01_20/0.85)_90%)]" />
 
