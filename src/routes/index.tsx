@@ -49,13 +49,19 @@ function Index() {
       <section className="py-24 md:py-32 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 md:gap-4">
           {[
-            { title: "Tango", text: "The embrace, fragmented and rebuilt." },
-            { title: "Aerial", text: "Suspension. Flight. Risk. The body free of the floor." },
-            { title: "Theatre", text: "Atmosphere, dramaturgy and spatial composition." },
+            { title: "Tango", text: "The embrace, fragmented and rebuilt.", image: stageTango },
+            { title: "Aerial", text: "Suspension. Flight. Risk. The body free of the floor.", image: stageAerial },
+            { title: "Theatre", text: "Atmosphere, dramaturgy and spatial composition.", image: stageTheatre },
           ].map((p, i) => (
             <Reveal key={p.title} delay={i * 0.1}>
-              <div className="group relative aspect-[3/4] overflow-hidden rounded-sm border border-border/60 bg-gradient-to-br from-card via-background to-card">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.35_0.18_25/0.4),transparent_70%)]" />
+              <div className="group relative aspect-[3/4] overflow-hidden rounded-sm border border-border/60 bg-card">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-8">
                   <h3 className="font-serif text-3xl mb-2">{p.title}</h3>
                   <p className="text-sm text-muted-foreground max-w-xs">{p.text}</p>
