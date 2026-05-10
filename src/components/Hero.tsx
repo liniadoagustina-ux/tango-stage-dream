@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import stage1 from "@/assets/stage/stage-1.jpg";
 import stage3 from "@/assets/stage/stage-3.jpg";
 import stage4 from "@/assets/stage/stage-4.jpg";
+import stage5 from "@/assets/stage/stage-5.jpg";
 
-const slides = [stage1, stage3, stage4];
+const slides = [stage1, stage3, stage5, stage4];
 
 export function Hero() {
   const [index, setIndex] = useState(0);
