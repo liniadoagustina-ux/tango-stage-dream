@@ -1,10 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { artists, type Artist } from "@/data/artists";
 import { ArtistCard } from "@/components/ArtistCard";
 import { Reveal } from "@/components/Reveal";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+  DialogPortal,
+  DialogOverlay,
+} from "@/components/ui/dialog";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
 
 export const Route = createFileRoute("/artists")({
   head: () => ({
@@ -39,61 +47,62 @@ function ArtistsPage() {
       <section className="px-6 pb-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {artists.map((a, i) => (
-            <Reveal key={a.slug} delay={i * 0.06}>
+            <Reveal key={a.slug} delay={i * 0.04}>
               <ArtistCard artist={a} onOpen={() => setActive(a)} />
             </Reveal>
           ))}
         </div>
       </section>
 
-      <AnimatePresence>
-        {active && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setActive(null)}
-            className="fixed inset-0 z-[100] bg-background/95 backdrop-blur-xl overflow-y-auto"
+      <Dialog open={!!active} onOpenChange={(o) => !o && setActive(null)}>
+        <DialogPortal>
+          <DialogOverlay className="bg-background/85 backdrop-blur-xl" />
+          <DialogPrimitive.Content
+            className="fixed left-[50%] top-[50%] z-50 grid w-[95vw] max-w-4xl max-h-[90vh] translate-x-[-50%] translate-y-[-50%] overflow-y-auto border border-border/40 bg-background/95 p-0 shadow-2xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 sm:rounded-sm"
           >
-            <motion.div
-              initial={{ y: 40, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 40, opacity: 0 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              onClick={(e) => e.stopPropagation()}
-              className="min-h-screen max-w-5xl mx-auto p-6 md:p-12"
-            >
-              <button
-                onClick={() => setActive(null)}
-                className="sticky top-4 ml-auto block p-2 text-foreground/70 hover:text-foreground"
-                aria-label="Close"
-              >
-                <X className="size-7" />
-              </button>
-              <div className="grid md:grid-cols-[2fr_3fr] gap-8 md:gap-12 mt-4">
-                <div className="aspect-[3/4] overflow-hidden rounded-sm">
-                  <img src={active.image} alt={active.name} className="h-full w-full object-cover" />
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-luxe text-primary-glow mb-3">
-                    {active.discipline}
-                  </p>
-                  <h2 className="font-serif text-4xl md:text-5xl leading-tight">{active.name}</h2>
-                  <p className="mt-2 text-sm uppercase tracking-luxe text-muted-foreground">
-                    {active.role}
-                  </p>
-                  <p className="mt-6 font-serif italic text-xl text-foreground/85 border-l-2 border-primary pl-5">
-                    “{active.poetic}”
-                  </p>
-                  <div className="mt-8 space-y-5 text-base text-foreground/85 leading-relaxed">
-                    {active.bio.map((p, i) => <p key={i}>{p}</p>)}
+            {active && (
+              <>
+                <DialogTitle className="sr-only">{active.name}</DialogTitle>
+                <DialogDescription className="sr-only">{active.role}</DialogDescription>
+
+                <div className="grid md:grid-cols-[2fr_3fr]">
+                  <div className="aspect-[3/4] md:aspect-auto overflow-hidden bg-card">
+                    <img
+                      src={active.image}
+                      alt={active.name}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="p-7 md:p-10 lg:p-12">
+                    <p className="text-[10px] uppercase tracking-luxe text-primary-glow mb-3">
+                      {active.discipline}
+                    </p>
+                    <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight text-foreground">
+                      {active.name}
+                    </h2>
+                    <p className="mt-2 text-xs md:text-sm uppercase tracking-luxe text-muted-foreground">
+                      {active.role}
+                    </p>
+                    <p className="mt-6 font-serif italic text-lg md:text-xl text-foreground/85 border-l-2 border-primary pl-5">
+                      “{active.poetic}”
+                    </p>
+                    <div className="mt-7 space-y-4 text-[15px] md:text-base text-foreground/90 leading-relaxed">
+                      {active.bio.map((p, i) => <p key={i}>{p}</p>)}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+                <DialogPrimitive.Close
+                  aria-label="Close"
+                  className="absolute right-4 top-4 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground size-10 shadow-lg ring-1 ring-primary/40 transition-all hover:scale-105 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <X className="size-5" />
+                </DialogPrimitive.Close>
+              </>
+            )}
+          </DialogPrimitive.Content>
+        </DialogPortal>
+      </Dialog>
     </>
   );
 }
