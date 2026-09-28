@@ -6,7 +6,8 @@ export function SiteFooter() {
     <footer className="relative mt-32 border-t border-border/50 bg-background">
       <div className="max-w-7xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2 space-y-5">
-          <img src={logo} alt="Luizaga Brothers" className="h-10 w-auto" />
+          <img src={logo} alt="Luizaga Brothers" className="h-20 w-auto" />
+          <div className="h-px w-24 bg-gradient-to-r from-primary via-gold/60 to-transparent" />
           <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
             Argentine tango, aerial performance and physical theatre — a
             multidisciplinary stage language born in Zárate and travelling
