@@ -6,6 +6,7 @@ import stage2 from "@/assets/stage/stage-2.jpg";
 import stageTango from "@/assets/stage/stage-tango.jpg";
 import stageAerial from "@/assets/stage/stage-5.jpg";
 import stageTheatre from "@/assets/stage/stage-4.jpg";
+import showLogoAsset from "@/assets/show/la-muerte-del-angel-official.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -85,10 +86,12 @@ function Index() {
             <p className="text-xs uppercase tracking-luxe text-primary-glow mb-5">Current Production</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-balance max-w-3xl">
-              La Muerte<br/>
-              <span className="italic text-primary-glow">del Ángel</span>
-            </h2>
+            <img
+              src={showLogoAsset.url}
+              alt="Tango — La Muerte del Ángel"
+              loading="lazy"
+              className="block w-full max-w-3xl h-auto object-contain shadow-deep"
+            />
           </Reveal>
           <Reveal delay={0.25}>
             <p className="mt-8 max-w-xl text-lg text-foreground/85 leading-relaxed">
