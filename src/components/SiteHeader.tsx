@@ -43,7 +43,7 @@ export function SiteHeader() {
           <img
             src={logo}
             alt="Luizaga Brothers"
-            className="h-9 md:h-10 w-auto transition-transform duration-500 group-hover:scale-105"
+            className="h-11 md:h-14 w-auto transition-transform duration-500 group-hover:scale-105"
           />
         </Link>
 

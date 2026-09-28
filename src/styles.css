@@ -6,7 +6,8 @@
 
 @theme inline {
   --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Jost", system-ui, sans-serif;
+  --color-gold: var(--gold);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -33,47 +34,50 @@
   --color-ring: var(--ring);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
-
 :root {
-  --radius: 0.5rem;
+  --radius: 0.25rem;
 
-  /* Theatrical dark palette */
-  --background: oklch(0.13 0.01 20);
-  --foreground: oklch(0.96 0.005 60);
-  --card: oklch(0.16 0.012 20);
-  --card-foreground: oklch(0.96 0.005 60);
-  --popover: oklch(0.16 0.012 20);
-  --popover-foreground: oklch(0.96 0.005 60);
+  /* Theatrical noir palette */
+  --background: oklch(0.11 0.008 20);
+  --foreground: oklch(0.95 0.012 75);
+  --card: oklch(0.15 0.015 18);
+  --card-foreground: oklch(0.95 0.012 75);
+  --popover: oklch(0.15 0.015 18);
+  --popover-foreground: oklch(0.95 0.012 75);
 
-  /* Deep theatrical red */
-  --primary: oklch(0.5 0.21 25);
-  --primary-foreground: oklch(0.98 0 0);
-  --primary-glow: oklch(0.62 0.24 28);
+  /* Brand red — deep, velvet-curtain crimson */
+  --primary: oklch(0.48 0.2 25);
+  --primary-foreground: oklch(0.98 0.005 75);
+  --primary-glow: oklch(0.6 0.23 27);
 
-  --secondary: oklch(0.22 0.015 20);
-  --secondary-foreground: oklch(0.96 0.005 60);
-  --muted: oklch(0.2 0.01 20);
-  --muted-foreground: oklch(0.65 0.015 40);
-  --accent: oklch(0.5 0.21 25);
+  /* Champagne gold from the logo, used sparingly */
+  --gold: oklch(0.82 0.07 80);
+
+  --secondary: oklch(0.2 0.03 18);
+  --secondary-foreground: oklch(0.95 0.012 75);
+  --muted: oklch(0.18 0.015 18);
+  --muted-foreground: oklch(0.7 0.02 60);
+  --accent: oklch(0.48 0.2 25);
   --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.25 0.015 20);
-  --input: oklch(0.22 0.015 20);
-  --ring: oklch(0.5 0.21 25);
+  --border: oklch(0.26 0.03 20);
+  --input: oklch(0.22 0.02 20);
+  --ring: oklch(0.55 0.2 25);
 
   --gradient-curtain: radial-gradient(
     ellipse at top,
-    oklch(0.18 0.04 25) 0%,
-    oklch(0.1 0.005 20) 70%
+    oklch(0.22 0.07 22) 0%,
+    oklch(0.12 0.02 20) 45%,
+    oklch(0.09 0.005 20) 85%
   );
   --gradient-red: linear-gradient(
     135deg,
-    var(--primary) 0%,
+    oklch(0.4 0.17 22) 0%,
+    var(--primary) 45%,
     var(--primary-glow) 100%
   );
-  --shadow-red: 0 20px 60px -20px oklch(0.5 0.21 25 / 0.5);
+  --shadow-red: 0 20px 60px -18px oklch(0.5 0.21 25 / 0.6);
   --shadow-deep: 0 30px 80px -20px oklch(0 0 0 / 0.7);
 }
 
