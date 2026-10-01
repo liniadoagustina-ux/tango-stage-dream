@@ -65,6 +65,25 @@ function ShowPage() {
         </div>
       </section>
 
+
+      {/* Official trailer */}
+      <section className="py-24 md:py-32 px-6 bg-curtain">
+        <div className="max-w-4xl mx-auto text-center">
+          <Reveal>
+            <p className="text-xs uppercase tracking-luxe text-primary-glow mb-4">Official Trailer</p>
+            <h2 className="font-serif text-4xl md:text-5xl mb-12">Trailer</h2>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <Trailer />
+          </Reveal>
+          <Reveal delay={0.3}>
+            <p className="mt-8 text-xs uppercase tracking-luxe text-muted-foreground">
+              La Muerte del Ángel — Watch it here, without leaving the stage
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="py-24 md:py-32 px-6 bg-curtain">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
           {[
