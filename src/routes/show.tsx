@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
+import { Trailer } from "@/components/Trailer";
 import { motion } from "framer-motion";
 import stage2 from "@/assets/stage/stage-2.jpg";
 import showLogoAsset from "@/assets/show/la-muerte-del-angel-official.png.asset.json";
