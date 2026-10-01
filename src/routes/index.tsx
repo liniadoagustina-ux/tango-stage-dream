@@ -7,7 +7,7 @@ import stage2 from "@/assets/stage/stage-2.jpg";
 import stageTango from "@/assets/stage/stage-tango.jpg";
 import stageAerial from "@/assets/stage/stage-5.jpg";
 import stageTheatre from "@/assets/stage/stage-4.jpg";
-import showLogoAsset from "@/assets/show/la-muerte-del-angel-official.png.asset.json";
+import showLogoAsset from "@/assets/show/la-muerte-del-angel-137.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -87,12 +87,16 @@ function Index() {
             <p className="text-xs uppercase tracking-luxe text-primary-glow mb-5">Current Production</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <img
-              src={showLogoAsset.url}
-              alt="Tango — La Muerte del Ángel"
-              loading="lazy"
-              className="block w-full max-w-3xl h-auto object-contain shadow-deep"
-            />
+            <figure className="relative block w-full max-w-4xl overflow-hidden shadow-deep ring-1 ring-primary/40">
+              <img src={showLogoAsset.url} alt="La Muerte del Ángel — Luizaga Brothers" className="block w-full h-auto" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-5 md:p-10">
+                <span className="block h-px w-16 bg-primary mb-4" />
+                <span className="block font-serif uppercase text-primary-glow tracking-[0.12em] leading-[0.95] text-3xl sm:text-5xl md:text-6xl drop-shadow-lg">La Muerte del Ángel</span>
+                <span className="mt-3 block text-[10px] md:text-xs uppercase tracking-luxe text-foreground/80">Luizaga Brothers · Tango Theatre</span>
+              </figcaption>
+            </figure>
+
           </Reveal>
           <Reveal delay={0.25}>
             <p className="mt-8 max-w-xl text-lg text-foreground/85 leading-relaxed">
