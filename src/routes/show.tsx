@@ -32,7 +32,7 @@ function ShowPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.13_0.01_20/0.85)_90%)]" />
         <div className="relative z-10 h-full flex items-end pb-12 md:pb-16 px-6">
           <div className="max-w-7xl mx-auto w-full">
-            <p className="text-xs uppercase tracking-luxe text-primary-glow mb-5">The Show · 2025 — 2026</p>
+            <p className="text-xs uppercase tracking-luxe text-primary-glow mb-5">{"\n"}</p>
             <motion.img
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
