@@ -78,7 +78,7 @@ function ShowPage() {
           </Reveal>
           <Reveal delay={0.3}>
             <p className="mt-8 text-xs uppercase tracking-luxe text-muted-foreground">
-              La Muerte del Ángel — Watch it here, without leaving the stage
+              {"\n"}
             </p>
           </Reveal>
         </div>
