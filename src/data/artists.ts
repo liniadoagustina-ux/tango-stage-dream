@@ -1,18 +1,25 @@
 import edgar from "@/assets/artists/edgar.jpg";
-import leonardo from "@/assets/artists/leonardo.jpg";
-import maia from "@/assets/artists/maia.jpg";
+import leonardoA from "@/assets/artists/leonardo-new.png.asset.json";
+import maiaA from "@/assets/artists/maia-roldan-new.png.asset.json";
 import luiza from "@/assets/artists/luiza.jpg";
-import camilaEzequiel from "@/assets/artists/camila-ezequiel.jpg";
+import camilaEzequielA from "@/assets/artists/camila-ezequiel-new.jpg.asset.json";
 import patricio from "@/assets/artists/patricio.jpg";
-import evangelinaNelson from "@/assets/artists/evangelina-nelson.jpg";
-import fabrizioFederica from "@/assets/artists/fabrizio-federica.jpg";
-import sofiaHeber from "@/assets/artists/sofia-heber.jpg";
-import soledadMangia from "@/assets/artists/soledad-mangia.jpg";
+import evangelinaNelsonA from "@/assets/artists/evangelina-nelson-new.png.asset.json";
+import fabrizioFedericaA from "@/assets/artists/fabrizio-federica-new.png.asset.json";
+import sofiaHeberA from "@/assets/artists/sofia-heber-new.png.asset.json";
+import soledadMangiaA from "@/assets/artists/soledad-mangia-new.png.asset.json";
 import matiasRubino from "@/assets/artists/matias-rubino.jpg";
 import sergioMilman from "@/assets/artists/sergio-milman.jpg";
 import robertoMinondi from "@/assets/artists/roberto-minondi.jpg";
 import francoZilocchi from "@/assets/artists/franco-zilocchi.jpg";
 import luciaOhyama from "@/assets/artists/lucia-ohyama.jpg";
+const leonardo = leonardoA.url;
+const maia = maiaA.url;
+const camilaEzequiel = camilaEzequielA.url;
+const evangelinaNelson = evangelinaNelsonA.url;
+const fabrizioFederica = fabrizioFedericaA.url;
+const sofiaHeber = sofiaHeberA.url;
+const soledadMangia = soledadMangiaA.url;
 
 export type Artist = {
   slug: string;

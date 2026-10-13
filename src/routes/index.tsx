@@ -3,7 +3,6 @@ import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { Trailer } from "@/components/Trailer";
 import { artists } from "@/data/artists";
-import stage2 from "@/assets/stage/stage-2.jpg";
 import stageTango from "@/assets/stage/stage-tango.jpg";
 import stageAerial from "@/assets/stage/stage-5.jpg";
 import stageTheatre from "@/assets/stage/stage-4.jpg";
@@ -76,10 +75,6 @@ function Index() {
 
       {/* Show teaser */}
       <section className="relative py-32 md:py-44 px-6 overflow-hidden bg-curtain">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{ backgroundImage: `url(${stage2})` }}
-        />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/30" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,oklch(0.32_0.16_25/0.5),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto">
