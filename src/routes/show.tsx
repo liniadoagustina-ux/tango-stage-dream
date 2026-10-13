@@ -21,13 +21,6 @@ function ShowPage() {
   return (
     <>
       <section className="relative h-[80vh] min-h-[520px] overflow-hidden vignette bg-background">
-        <motion.div
-          initial={{ scale: 1.1, opacity: 0.6 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 6, ease: "easeOut" }}
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${stage2})` }}
-        />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/20" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.13_0.01_20/0.85)_90%)]" />
         <div className="relative z-10 h-full flex items-end pb-12 md:pb-16 px-6">
