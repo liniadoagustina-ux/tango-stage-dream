@@ -1,0 +1,2 @@
+- [x] Shows: replace moving background photos with La Muerte del Ángel image + title
+- [x] Replace 7 artist portraits with new named photos
