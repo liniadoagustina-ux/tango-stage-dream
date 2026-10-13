@@ -1,3 +1,4 @@
+import arielPonceA from "@/assets/artists/ariel-ponce.png.asset.json";
 import edgar from "@/assets/artists/edgar.jpg";
 import leonardoA from "@/assets/artists/leonardo-new.png.asset.json";
 import maiaA from "@/assets/artists/maia-roldan-new.png.asset.json";
@@ -27,6 +28,8 @@ const evangelinaNelson = evangelinaNelsonA.url;
 const fabrizioFederica = fabrizioFedericaA.url;
 const sofiaHeber = sofiaHeberA.url;
 const soledadMangia = soledadMangiaA.url;
+
+const arielPonce = arielPonceA.url;
 
 export type Artist = {
   slug: string;
@@ -274,6 +277,24 @@ export const artists: Artist[] = [
       "Lucía is also an integral part of Luizaga Brothers Productions, where she serves as the executive producer, accompanying the full process of the brothers. In this capacity, she plays a pivotal role in overseeing production logistics, managing artistic curation, and ensuring the smooth execution of the company's various international initiatives.",
       "Currently, in addition to furthering her development as a dancer and producer, Lucía Ohyama is the creator of Tango en Vivo, an international digital platform dedicated to the global dissemination and connection of tango. She is also the co-creator of Duelo Criollo, an innovative scenic game with a unique identity of its own.",
       "Her profile combines expertise in integral production, artistic curation, logistical planning, tour management, and digital content creation, with a strong adaptability to dynamic and evolving environments. Lucía's work seeks to craft innovative scenic experiences that push the boundaries of tango and live arts, while fostering global cultural exchange.",
+    ],
+  },
+  {
+    slug: "ariel-ponce",
+    name: "Jorge Ariel “El Gato” Ponce",
+    role: "Lighting Director & Lighting Designer",
+    discipline: "Lighting · Design",
+    image: arielPonce,
+    poetic:
+      "He writes with light — shaping space, atmosphere and emotion on every stage.",
+    bio: [
+      "Born in Buenos Aires, Argentina, on 10 November 1976, Jorge Ariel Ponce is an Argentine Lighting Director and Lighting Designer with a career spanning nearly three decades across theatre, musical theatre, live entertainment, concerts and large-scale productions.",
+      "He began his professional career in April 1999, in the iconic theatres of Buenos Aires’ Avenida Corrientes, working alongside renowned producer Don Alejandro Romay. Since then, he has developed an extensive career as Lighting Director, Lighting Designer and Illuminator, contributing to a wide range of theatrical and entertainment productions.",
+      "His credits include Cuando Frank Conoció a Carlitos, Atte. Tus Vecinos, Persistencia (Más allá del Tiempo), Stravaganza, Edipo y Yocasta, Ficcionario, Camila, Nuestra Historia de Amor, Baby Boom en el Paraíso, Next to Normal, Perdon por ser tan puta, Pretty Woman, Rent, El Principito, Los dias perfectos by Leonardo Sbaraglia, Cabaret, 3001 by ElenaRoger, Soy Rada, Serendipia, Taboo, Navidad, Circo “Anima”, and the world acclaimed spectacle “Tanguera”, among many others.",
+      "His experience also extends to major artists and live events, including Fabiana Cantilo in La Fiesta del Sol, REBORD at Movistar Arena and Lollapalooza Festival, as well as Serendipia in its theatrical and Netflix versions and La Cúpula of Flavio Mendoza on 2026.",
+      "Ponce approaches lighting as an essential artistic and dramaturgical language, using light to shape space, atmosphere, rhythm and emotion while integrating seamlessly with direction, performance, music and scenography.",
+      "His nearly 30-year career has earned recognition through nominations for the Estrella de Mar Awards, Carlos Awards and ACE Awards, as well as two Hugo Award .",
+      "From the theatres of Avenida Corrientes to major musicals, festivals and arena productions, Ariel “El Gato” Ponce brings to every project a distinctive combination of artistic vision, technical expertise and extensive production experience, making him a versatile creative professional for international theatre and live performance.",
     ],
   },
 ];
