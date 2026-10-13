@@ -19,26 +19,20 @@ export const Route = createFileRoute("/show")({
 function ShowPage() {
   return (
     <>
-      <section className="relative h-[80vh] min-h-[520px] overflow-hidden vignette bg-background">
+      <section className="relative w-full overflow-hidden vignette bg-background">
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/20" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.13_0.01_20/0.85)_90%)]" />
-        <div className="relative z-10 h-full flex items-end pb-12 md:pb-16 px-6">
-          <div className="max-w-7xl mx-auto w-full">
-            <p className="text-xs uppercase tracking-luxe text-primary-glow mb-5">{"\n"}</p>
-            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.25 }}>
-<figure className="relative block w-full max-w-4xl overflow-hidden shadow-deep ring-1 ring-primary/40">
-              <img src={showLogoAsset.url} alt="La Muerte del Ángel — Luizaga Brothers" className="block w-full h-auto" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-              <figcaption className="absolute inset-x-0 bottom-0 p-5 md:p-10">
-                <span className="block h-px w-16 bg-primary mb-4" />
-                <span className="block font-serif uppercase text-primary-glow tracking-[0.12em] leading-[0.95] text-3xl sm:text-5xl md:text-6xl drop-shadow-lg">La Muerte del Ángel</span>
-                <span className="mt-3 block text-[10px] md:text-xs uppercase tracking-luxe text-foreground/80">Luizaga Brothers · Tango Theatre</span>
-              </figcaption>
-            </figure>
-
-</motion.div>
-          </div>
-        </div>
+        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.25 }} className="relative z-10">
+          <figure className="relative block w-full overflow-hidden shadow-deep ring-1 ring-primary/40">
+            <img src={showLogoAsset.url} alt="La Muerte del Ángel — Luizaga Brothers" className="block w-full h-auto" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+            <figcaption className="absolute inset-x-0 bottom-0 p-5 md:p-10">
+              <span className="block h-px w-16 bg-primary mb-4" />
+              <span className="block font-serif uppercase text-primary-glow tracking-[0.12em] leading-[0.95] text-3xl sm:text-5xl md:text-6xl drop-shadow-lg">La Muerte del Ángel</span>
+              <span className="mt-3 block text-[10px] md:text-xs uppercase tracking-luxe text-foreground/80">Luizaga Brothers · Tango Theatre</span>
+            </figcaption>
+          </figure>
+        </motion.div>
       </section>
 
       <section className="py-24 md:py-32 px-6">
