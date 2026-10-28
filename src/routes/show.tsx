@@ -28,7 +28,7 @@ function ShowPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
             <figcaption className="absolute inset-x-0 bottom-0 p-5 md:p-10">
               <span className="block h-px w-16 bg-primary mb-4" />
-              <span className="block font-serif uppercase text-primary-glow tracking-[0.12em] leading-[0.92] text-[clamp(2.6rem,8.2vw,10rem)] drop-shadow-lg">La Muerte del Ángel</span>
+              <h1 className="block font-serif uppercase text-primary-glow tracking-[0.12em] leading-[0.92] text-[clamp(2.6rem,8.2vw,10rem)] drop-shadow-lg">La Muerte del Ángel</h1>
               <span className="mt-3 block text-[10px] md:text-xs uppercase tracking-luxe text-foreground/80">Luizaga Brothers · Tango Theatre</span>
             </figcaption>
           </figure>
@@ -61,7 +61,7 @@ function ShowPage() {
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
             <p className="text-xs uppercase tracking-luxe text-primary-glow mb-4">Official Trailer</p>
-            <h2 className="font-serif text-4xl md:text-5xl mb-12">Trailer</h2>
+            <h2 className="font-serif text-4xl md:text-5xl mb-12">Watch the show</h2>
           </Reveal>
           <Reveal delay={0.15}>
             <Trailer />
@@ -83,7 +83,7 @@ function ShowPage() {
           <Reveal delay={0.1}>
             <a
               href="mailto:luizagabros@gmail.com"
-              className="mt-8 inline-flex items-center px-8 py-4 bg-gradient-red text-primary-foreground text-xs uppercase tracking-luxe rounded-sm shadow-red"
+              className="mt-8 inline-flex items-center px-8 py-4 bg-primary text-primary-foreground text-xs uppercase tracking-luxe rounded-sm shadow-red hover:bg-primary-glow transition-colors"
             >
               Booking & Enquiries
             </a>
