@@ -74,22 +74,6 @@ function ShowPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 px-6 bg-curtain">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
-          {[
-            { k: "70", l: "Minutes" },
-            { k: "12", l: "Artists on stage" },
-            { k: "7", l: "Movements" },
-          ].map((s, i) => (
-            <Reveal key={s.l} delay={i * 0.1}>
-              <div className="text-center md:text-left">
-                <div className="font-serif text-7xl md:text-8xl text-primary-glow leading-none">{s.k}</div>
-                <p className="mt-3 text-xs uppercase tracking-luxe text-muted-foreground">{s.l}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
 
       <section className="py-24 md:py-32 px-6">
         <div className="max-w-4xl mx-auto text-center">
