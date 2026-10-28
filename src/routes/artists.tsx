@@ -58,22 +58,29 @@ function ArtistsPage() {
         <DialogPortal>
           <DialogOverlay className="bg-background/85 backdrop-blur-xl" />
           <DialogPrimitive.Content
-            className="fixed left-[50%] top-[50%] z-50 grid w-[95vw] max-w-4xl max-h-[90vh] translate-x-[-50%] translate-y-[-50%] overflow-y-auto border border-border/40 bg-background/95 p-0 shadow-2xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 sm:rounded-sm"
+            className="fixed left-[50%] top-[50%] z-50 block w-[95vw] max-w-5xl max-h-[90vh] translate-x-[-50%] translate-y-[-50%] overflow-y-auto md:overflow-hidden border border-border/40 bg-background/95 p-0 shadow-2xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 sm:rounded-sm"
           >
             {active && (
               <>
                 <DialogTitle className="sr-only">{active.name}</DialogTitle>
                 <DialogDescription className="sr-only">{active.role}</DialogDescription>
 
-                <div className="grid md:grid-cols-[2fr_3fr]">
-                  <div className="aspect-[3/4] md:aspect-auto overflow-hidden bg-card">
+                <div className="flex flex-col md:flex-row md:max-h-[90vh]">
+                  <div className="relative overflow-hidden bg-background md:w-[42%] md:shrink-0 md:min-h-[60vh] md:max-h-[90vh]">
+                    <img
+                      src={active.image}
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 h-full w-full object-cover scale-110 blur-2xl opacity-40"
+                    />
+                    <div className="absolute inset-0 bg-background/50" />
                     <img
                       src={active.image}
                       alt={active.name}
-                      className="h-full w-full object-cover"
+                      className="relative block w-full h-auto md:absolute md:inset-0 md:h-full md:object-contain"
                     />
                   </div>
-                  <div className="p-7 md:p-10 lg:p-12">
+                  <div className="p-7 md:p-10 lg:p-12 md:flex-1 md:overflow-y-auto md:max-h-[90vh]">
                     <p className="text-[10px] uppercase tracking-luxe text-primary-glow mb-3">
                       {active.discipline}
                     </p>
@@ -90,6 +97,7 @@ function ArtistsPage() {
                       {active.bio.map((p, i) => <p key={i}>{p}</p>)}
                     </div>
                   </div>
+                </div>
                 </div>
 
                 <DialogPrimitive.Close

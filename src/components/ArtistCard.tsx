@@ -10,16 +10,24 @@ export function ArtistCard({ artist, onOpen }: { artist: Artist; onOpen: () => v
       animate="rest"
       className="group relative block w-full text-left overflow-hidden rounded-sm bg-card aspect-[3/4]"
     >
+      <img
+        src={artist.image}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover scale-110 blur-2xl opacity-35"
+      />
+      <div className="absolute inset-0 bg-background/50" />
       <motion.img
         src={artist.image}
         alt={artist.name}
         loading="lazy"
         variants={{
           rest: { scale: 1, filter: "grayscale(0.6) brightness(0.85)" },
-          hover: { scale: 1.06, filter: "grayscale(0) brightness(1)" },
+          hover: { scale: 1.03, filter: "grayscale(0) brightness(1)" },
         }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-contain"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
       <motion.div
