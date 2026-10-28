@@ -98,7 +98,6 @@ function ArtistsPage() {
                     </div>
                   </div>
                 </div>
-                </div>
 
                 <DialogPrimitive.Close
                   aria-label="Close"
