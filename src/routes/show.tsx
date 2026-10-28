@@ -28,7 +28,7 @@ function ShowPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
             <figcaption className="absolute inset-x-0 bottom-0 p-5 md:p-10">
               <span className="block h-px w-16 bg-primary mb-4" />
-              <span className="block font-serif uppercase text-primary-glow tracking-[0.12em] leading-[0.95] text-3xl sm:text-5xl md:text-6xl drop-shadow-lg">La Muerte del Ángel</span>
+              <span className="block font-serif uppercase text-primary-glow tracking-[0.12em] leading-[0.92] text-[clamp(2.6rem,8.2vw,10rem)] drop-shadow-lg">La Muerte del Ángel</span>
               <span className="mt-3 block text-[10px] md:text-xs uppercase tracking-luxe text-foreground/80">Luizaga Brothers · Tango Theatre</span>
             </figcaption>
           </figure>
