@@ -93,8 +93,8 @@ export function CompanyPage() {
           </Reveal>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-border/60">
             {reach.map((c, i) => (
-              <Reveal key={c} delay={i * 0.04}>
-                <div className="bg-background p-6 md:p-8">
+              <Reveal key={c} delay={i * 0.04} className="bg-background">
+                <div className="h-full p-6 md:p-8">
                   <p className="font-serif text-xl md:text-2xl">{c}</p>
                 </div>
               </Reveal>
