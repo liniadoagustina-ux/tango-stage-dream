@@ -39,7 +39,7 @@ export function SiteHeader() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-8">
-        <Button asChild className="h-auto p-0"><Link to="/" className="flex items-center gap-3 group">
+        <Link to="/" className="flex items-center gap-3 group">
           <img
             src={logo.url} width={logo.width} height={logo.height}
             alt="Luizaga Brothers"
@@ -73,6 +73,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden lg:block">
+          <Button asChild className="h-auto">
           <a
             href="mailto:luizagabros@gmail.com"
             className="inline-flex items-center justify-center px-5 py-2.5 text-sm uppercase tracking-[0.1em] font-medium bg-gradient-red text-primary-foreground rounded-sm shadow-red hover:opacity-90 transition-opacity"
@@ -101,7 +102,7 @@ export function SiteHeader() {
           >
             <nav className="flex flex-col px-6 py-6 gap-5">
               {nav.map((item) => (
-                <Button asChild className="h-auto p-0"><Link
+                <Link
                   key={item.to}
                   to={item.to}
                   className="text-sm uppercase tracking-luxe text-foreground/85"
@@ -109,6 +110,7 @@ export function SiteHeader() {
                   {item.label}
                 </Link>
               ))}
+              <Button asChild className="h-auto">
               <a
                 href="mailto:luizagabros@gmail.com"
                 className="mt-2 inline-flex justify-center px-5 py-3 text-sm uppercase tracking-[0.1em] bg-gradient-red text-primary-foreground rounded-sm"
