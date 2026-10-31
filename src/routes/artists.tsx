@@ -1,3 +1,4 @@
+import { pageSEO } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { X } from "lucide-react";
@@ -15,14 +16,8 @@ import {
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 
 export const Route = createFileRoute("/artists")({
-  head: () => ({
-    meta: [
-      { title: "Artists — Luizaga Brothers" },
-      { name: "description", content: "Meet the dancers, choreographers and musicians of Luizaga Brothers — world champions of tango and international stage artists." },
-      { property: "og:title", content: "Artists — Luizaga Brothers" },
-      { property: "og:description", content: "Bodies that speak. The ensemble of Luizaga Brothers." },
-    ],
-  }),
+  staticData: { sitemap: true },
+  head: () => pageSEO("/artists", "Artists — Luizaga Brothers", "Meet the dancers, choreographers and musicians of Luizaga Brothers — world champions of tango and international stage artists."),
   component: ArtistsPage,
 });
 
@@ -31,11 +26,8 @@ function ArtistsPage() {
 
   return (
     <>
-      <section className="pt-40 pb-16 md:pt-52 px-6">
+      <section className="pt-20 pb-8 md:pt-52 px-6">
         <div className="max-w-7xl mx-auto">
-          <Reveal>
-            <p className="text-xs uppercase tracking-luxe text-primary-glow mb-5">The Ensemble</p>
-          </Reveal>
           <Reveal delay={0.1}>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl">
               Artists who write with the body.
@@ -44,7 +36,7 @@ function ArtistsPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-24">
+      <section className="px-6 pb-12 md:pb-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {artists.map((a, i) => (
             <Reveal key={a.slug} delay={i * 0.04}>
@@ -68,22 +60,19 @@ function ArtistsPage() {
                 <div className="flex flex-col md:flex-row md:max-h-[90vh]">
                   <div className="relative overflow-hidden bg-background md:w-[42%] md:shrink-0 md:min-h-[60vh] md:max-h-[90vh]">
                     <img
-                      src={active.image}
+                      src={active.image} width={active.imageWidth} height={active.imageHeight}
                       alt=""
                       aria-hidden="true"
                       className="absolute inset-0 h-full w-full object-cover scale-110 blur-2xl opacity-40"
                     />
                     <div className="absolute inset-0 bg-background/50" />
                     <img
-                      src={active.image}
+                      src={active.image} width={active.imageWidth} height={active.imageHeight}
                       alt={active.name}
                       className="relative block w-full h-auto md:absolute md:inset-0 md:h-full md:object-contain"
                     />
                   </div>
                   <div className="p-7 md:p-10 lg:p-12 md:flex-1 md:overflow-y-auto md:max-h-[90vh]">
-                    <p className="text-[10px] uppercase tracking-luxe text-primary-glow mb-3">
-                      {active.discipline}
-                    </p>
                     <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight text-foreground">
                       {active.name}
                     </h2>

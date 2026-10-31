@@ -1,3 +1,7 @@
 # Project architecture
 
 - Store uploaded website media as Lovable Assets pointer files and import each pointer’s `.url`; this keeps binaries out of source control while preserving stable delivery.
+- Store intrinsic image dimensions in a shared image catalog and reference lossless WebP pointers; this preserves artwork while preventing layout shifts.
+- Centralize per-page canonical, social metadata and PerformingGroup data in the SEO helper so all public pages remain consistent.
+- Generate sitemap URLs from explicit router inclusion decisions; this keeps public routes synchronized without build-time lastmod values.
+- Keep the shared Reveal wrapper static; only hero presentations use reveal motion, guarded by reduced-motion preferences.
