@@ -1,25 +1,27 @@
-import arielPonceA from "@/assets/artists/ariel-ponce.png.asset.json";
-import edgar from "@/assets/artists/edgar.jpg";
-import leonardoA from "@/assets/artists/leonardo-new.png.asset.json";
-import maiaA from "@/assets/artists/maia-roldan-new.png.asset.json";
-import luizaA from "@/assets/artists/luiza-anastasio-new.png.asset.json";
+import { images } from "@/data/images";
+import arielPonceA from "@/assets/webp/ariel-ponce.webp.asset.json";
+import edgarA from "@/assets/webp/edgar.webp.asset.json";
+const edgar = edgarA.url;
+import leonardoA from "@/assets/webp/leonardo-new.webp.asset.json";
+import maiaA from "@/assets/webp/maia-roldan-new.webp.asset.json";
+import luizaA from "@/assets/webp/luiza-anastasio-new.webp.asset.json";
 const luiza = luizaA.url;
-import camilaEzequielA from "@/assets/artists/camila-ezequiel-new.jpg.asset.json";
-import patricioA from "@/assets/artists/patricio-cotella-new.png.asset.json";
+import camilaEzequielA from "@/assets/webp/camila-ezequiel-new.webp.asset.json";
+import patricioA from "@/assets/webp/patricio-cotella-new.webp.asset.json";
 const patricio = patricioA.url;
-import evangelinaNelsonA from "@/assets/artists/evangelina-nelson-new.png.asset.json";
-import fabrizioFedericaA from "@/assets/artists/fabrizio-federica-new.png.asset.json";
-import sofiaHeberA from "@/assets/artists/sofia-heber-new.png.asset.json";
-import soledadMangiaA from "@/assets/artists/soledad-mangia-new.png.asset.json";
-import matiasRubinoA from "@/assets/artists/matias-rubino-new.png.asset.json";
+import evangelinaNelsonA from "@/assets/webp/evangelina-nelson-new.webp.asset.json";
+import fabrizioFedericaA from "@/assets/webp/fabrizio-federica-new.webp.asset.json";
+import sofiaHeberA from "@/assets/webp/sofia-heber-new.webp.asset.json";
+import soledadMangiaA from "@/assets/webp/soledad-mangia-new.webp.asset.json";
+import matiasRubinoA from "@/assets/webp/matias-rubino-new.webp.asset.json";
 const matiasRubino = matiasRubinoA.url;
-import sergioMilmanA from "@/assets/artists/sergio-milman-new.png.asset.json";
+import sergioMilmanA from "@/assets/webp/sergio-milman-new.webp.asset.json";
 const sergioMilman = sergioMilmanA.url;
-import robertoMinondiA from "@/assets/artists/roberto-minondi-new.png.asset.json";
+import robertoMinondiA from "@/assets/webp/roberto-minondi-new.webp.asset.json";
 const robertoMinondi = robertoMinondiA.url;
-import francoZilocchiA from "@/assets/artists/franco-zilocchi-new.png.asset.json";
+import francoZilocchiA from "@/assets/webp/franco-zilocchi-new.webp.asset.json";
 const francoZilocchi = francoZilocchiA.url;
-import luciaOhyamaA from "@/assets/artists/lucia-ohyama-new.png.asset.json";
+import luciaOhyamaA from "@/assets/webp/lucia-ohyama-new.webp.asset.json";
 const luciaOhyama = luciaOhyamaA.url;
 const leonardo = leonardoA.url;
 const maia = maiaA.url;
@@ -37,6 +39,8 @@ export type Artist = {
   role: string;
   discipline: string;
   image: string;
+  imageWidth?: number;
+  imageHeight?: number;
   poetic: string;
   bio: string[];
 };
@@ -45,8 +49,8 @@ export const artists: Artist[] = [
   {
     slug: "leonardo-luizaga",
     name: "Leonardo Luizaga",
-    role: "Co-Founder · Artistic Director",
-    discipline: "Tango · Choreography · Direction",
+    role: "Co-Founder, Artistic Director",
+    discipline: "Tango, Choreography, Direction",
     image: leonardo,
     poetic:
       "He carries the silence of the bandoneón in his bones — a dancer of intensity who turns embrace into architecture.",
@@ -59,8 +63,8 @@ export const artists: Artist[] = [
   {
     slug: "edgar-luizaga",
     name: "Edgar Luizaga",
-    role: "Co-Founder · Artistic Director",
-    discipline: "Tango · Aerial Performance · Direction",
+    role: "Co-Founder, Artistic Director",
+    discipline: "Tango, Aerial Performance, Direction",
     image: edgar,
     poetic:
       "Half dancer, half flight. He invented a vocabulary where the embrace lifts off the ground.",
@@ -74,7 +78,7 @@ export const artists: Artist[] = [
     slug: "camila-ezequiel",
     name: "Camila Alegre & Ezequiel López",
     role: "Principal Dancers",
-    discipline: "Tango Escenario · World Champions",
+    discipline: "Tango Escenario, World Champions",
     image: camilaEzequiel,
     poetic:
       "World Champions of Tango Escenario — a couple who write entire stories in a single embrace.",
@@ -88,7 +92,7 @@ export const artists: Artist[] = [
     slug: "evangelina-nelson",
     name: "Evangelina Martínez & Nelson Leiva",
     role: "Principal Dancers",
-    discipline: "Tango · Folklore",
+    discipline: "Tango, Folklore",
     image: evangelinaNelson,
     poetic:
       "World Vice-Champions whose dance bridges the dust of the pampas with the velvet of the theatre.",
@@ -118,7 +122,7 @@ export const artists: Artist[] = [
     slug: "sofia-heber",
     name: "Sofía Orlando & Heber Mallorquín",
     role: "Principal Dancers",
-    discipline: "Tango · Folklore",
+    discipline: "Tango, Folklore",
     image: sofiaHeber,
     poetic:
       "Classical line meets the dust of the Malambo — a couple who carry tradition into every stage they touch.",
@@ -134,8 +138,8 @@ export const artists: Artist[] = [
   {
     slug: "maia-roldan",
     name: "Maia Roldán",
-    role: "Dancer · Choreographer",
-    discipline: "Contemporary · Musical Theatre · Tango",
+    role: "Dancer, Choreographer",
+    discipline: "Contemporary, Musical Theatre, Tango",
     image: maia,
     poetic:
       "A versatile body that speaks tango, theatre and contemporary in the same breath.",
@@ -151,8 +155,8 @@ export const artists: Artist[] = [
   {
     slug: "soledad-mangia",
     name: "Soledad Mangia",
-    role: "Dancer · Choreographer",
-    discipline: "Folklore · Classical · Contemporary",
+    role: "Dancer, Choreographer",
+    discipline: "Folklore, Classical, Contemporary",
     image: soledadMangia,
     poetic:
       "A champion of Cosquín whose body crosses ballet, folklore and the modern stage with the same gravity.",
@@ -168,7 +172,7 @@ export const artists: Artist[] = [
   {
     slug: "matias-rubino",
     name: "Matías Rubino",
-    role: "Music Director · Bandoneonist",
+    role: "Music Director, Bandoneonist",
     discipline: "Tango Orchestra",
     image: matiasRubino,
     poetic:
@@ -185,8 +189,8 @@ export const artists: Artist[] = [
   {
     slug: "sergio-milman",
     name: "Sergio Milman",
-    role: "Pianist · Arranger",
-    discipline: "Tango · Composition",
+    role: "Pianist, Arranger",
+    discipline: "Tango, Composition",
     image: sergioMilman,
     poetic:
       "His piano breathes between the bandoneon and the silence — the architecture under every embrace.",
@@ -203,7 +207,7 @@ export const artists: Artist[] = [
     slug: "roberto-minondi",
     name: "Roberto Minondi",
     role: "Singer",
-    discipline: "Tango · Voice",
+    discipline: "Tango, Voice",
     image: robertoMinondi,
     poetic:
       "A voice that holds the elegance of the old guard and the urgency of today — the living spirit of Argentine song.",
@@ -221,7 +225,7 @@ export const artists: Artist[] = [
     slug: "luiza-anastasio",
     name: "Luiza Anastásio",
     role: "Violinist",
-    discipline: "Strings · Tango Music",
+    discipline: "Strings, Tango Music",
     image: luiza,
     poetic:
       "Her violin is a second voice in the room — sometimes whispering, sometimes setting the air on fire.",
@@ -248,8 +252,8 @@ export const artists: Artist[] = [
   {
     slug: "franco-zilocchi",
     name: "Franco Zilocchi",
-    role: "Music Producer · Drummer",
-    discipline: "Production · Drums · Composition",
+    role: "Music Producer, Drummer",
+    discipline: "Production, Drums, Composition",
     image: francoZilocchi,
     poetic:
       "Where acoustic and electronic collide — he sculpts the contemporary pulse of the Luizaga sound.",
@@ -266,7 +270,7 @@ export const artists: Artist[] = [
     slug: "lucia-ohyama",
     name: "Lucía Ohyama",
     role: "Executive Producer",
-    discipline: "Production · Curation",
+    discipline: "Production, Curation",
     image: luciaOhyama,
     poetic:
       "The invisible hand behind the scene — turning vision into a living, touring reality.",
@@ -283,7 +287,7 @@ export const artists: Artist[] = [
     slug: "ariel-ponce",
     name: "Jorge Ariel “El Gato” Ponce",
     role: "Lighting Director & Lighting Designer",
-    discipline: "Lighting · Design",
+    discipline: "Lighting, Design",
     image: arielPonce,
     poetic:
       "He writes with light — shaping space, atmosphere and emotion on every stage.",
@@ -298,3 +302,9 @@ export const artists: Artist[] = [
     ],
   },
 ];
+
+for (const artist of artists) {
+  const image = Object.values(images).find((item) => item.url === artist.image);
+  artist.imageWidth = image?.width;
+  artist.imageHeight = image?.height;
+}

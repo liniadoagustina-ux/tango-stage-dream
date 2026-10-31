@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { images } from "@/data/images";
+import { Button } from "@/components/ui/button";
 
 const VIDEO_ID = "qsigoOSNGwc";
 
@@ -23,14 +24,14 @@ export function Trailer({ compact = false }: { compact?: boolean }) {
           className="absolute inset-0 h-full w-full"
         />
       ) : (
-        <button
+        <Button variant="ghost"
           type="button"
           onClick={() => setPlaying(true)}
           aria-label="Play the official trailer"
           className="absolute inset-0 h-full w-full cursor-pointer"
         >
           <img
-            src={`https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
+            src={images.trailer.url} width={images.trailer.width} height={images.trailer.height}
             alt="La Muerte del Ángel — Official Trailer"
             loading="lazy"
             className="absolute inset-0 h-full w-full object-cover"
@@ -41,12 +42,8 @@ export function Trailer({ compact = false }: { compact?: boolean }) {
 
           {/* Play button */}
           <span className="absolute inset-0 flex items-center justify-center">
-            <motion.span
-              whileHover={{ scale: 1.08 }}
-              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="relative flex h-20 w-20 md:h-24 md:w-24 items-center justify-center rounded-full bg-gradient-red shadow-red"
+            <span className="relative flex h-20 w-20 md:h-24 md:w-24 items-center justify-center rounded-full bg-gradient-red shadow-red"
             >
-              <span className="absolute inset-0 rounded-full border border-primary-glow/50 animate-ping [animation-duration:2.5s]" />
               <svg
                 viewBox="0 0 24 24"
                 fill="currentColor"
@@ -54,9 +51,9 @@ export function Trailer({ compact = false }: { compact?: boolean }) {
               >
                 <path d="M8 5.14v13.72L19 12 8 5.14Z" />
               </svg>
-            </motion.span>
+            </span>
           </span>
-        </button>
+        </Button>
       )}
     </div>
   );

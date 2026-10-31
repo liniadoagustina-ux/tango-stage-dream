@@ -57,8 +57,8 @@
   --secondary-foreground: oklch(0.95 0.012 75);
   --muted: oklch(0.18 0.015 18);
   --muted-foreground: oklch(0.7 0.02 60);
-  --accent: oklch(0.78 0.115 85);
-  --accent-foreground: oklch(0.16 0.02 60);
+  --accent: var(--muted);
+  --accent-foreground: var(--foreground);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.28 0.03 70);
@@ -100,14 +100,14 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-weight: 300;
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
     -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5 {
     font-family: var(--font-serif);
     font-weight: 500;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
   }
 
   ::selection {
@@ -155,7 +155,7 @@
     pointer-events: none;
   }
   .tracking-luxe {
-    letter-spacing: 0.25em;
+    letter-spacing: 0.1em;
   }
 }
 
@@ -170,3 +170,11 @@
   100% { transform: scale(1.15); }
 }
 .animate-slow-zoom { animation: slow-zoom 20s ease-in-out infinite alternate; }
+
+@layer base {
+  button, a[class*="inline-flex"] { font-size: 0.875rem; letter-spacing: 0.1em; }
+  h1, h2, h3, h4, h5 { color: var(--foreground); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition-duration: 0s !important; scroll-behavior: auto !important; }
+}

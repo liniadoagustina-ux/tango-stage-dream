@@ -7,14 +7,14 @@ function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="font-serif text-7xl text-primary-glow">404</h1>
+        <h1 className="font-serif text-7xl text-foreground">404</h1>
         <h2 className="mt-4 font-serif text-2xl text-foreground">Lost in the wings</h2>
         <p className="mt-3 text-sm text-muted-foreground">
           The page you're looking for has left the stage.
         </p>
         <Link
           to="/"
-          className="mt-8 inline-flex px-6 py-3 bg-gradient-red text-primary-foreground text-xs uppercase tracking-luxe rounded-sm"
+          className="mt-8 inline-flex px-6 py-3 bg-gradient-red text-primary-foreground text-sm uppercase tracking-[0.1em] rounded-sm"
         >
           Return home
         </Link>
@@ -24,18 +24,11 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
+  staticData: { sitemap: false },
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Luizaga Brothers — Argentine Tango, Aerial & Theatre" },
-      {
-        name: "description",
-        content:
-          "Luizaga Brothers — an Argentine stage company fusing tango, aerial performance and physical theatre. International tour and current production.",
-      },
-      { property: "og:title", content: "Luizaga Brothers" },
-      { property: "og:description", content: "Argentine tango, aerial performance and physical theatre." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

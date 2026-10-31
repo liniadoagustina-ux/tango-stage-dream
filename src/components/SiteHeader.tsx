@@ -2,7 +2,9 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
+import { images } from "@/data/images";
+import { Button } from "@/components/ui/button";
+const logo = images.logo;
 
 const nav = [
   { to: "/", label: "Home" },
@@ -28,10 +30,7 @@ export function SiteHeader() {
   }, [location.pathname]);
 
   return (
-    <motion.header
-      initial={{ y: -40, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+    <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-background/85 backdrop-blur-xl border-b border-border/60 py-3"
@@ -41,7 +40,7 @@ export function SiteHeader() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-8">
         <Link to="/" className="flex items-center gap-3 group">
           <img
-            src={logo}
+            src={logo.url} width={logo.width} height={logo.height}
             alt="Luizaga Brothers"
             className="h-11 md:h-14 w-auto transition-transform duration-500 group-hover:scale-105"
           />
@@ -57,7 +56,7 @@ export function SiteHeader() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="relative text-xs uppercase tracking-luxe font-medium text-foreground/80 hover:text-foreground transition-colors"
+                className="relative text-sm uppercase tracking-[0.1em] font-medium text-foreground/80 hover:text-foreground transition-colors"
               >
                 {item.label}
                 {active && (
@@ -74,19 +73,19 @@ export function SiteHeader() {
         <div className="hidden lg:block">
           <a
             href="mailto:luizagabros@gmail.com"
-            className="inline-flex items-center justify-center px-5 py-2.5 text-xs uppercase tracking-luxe font-medium bg-gradient-red text-primary-foreground rounded-sm shadow-red hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center px-5 py-2.5 text-sm uppercase tracking-[0.1em] font-medium bg-gradient-red text-primary-foreground rounded-sm shadow-red hover:opacity-90 transition-opacity"
           >
             Booking
           </a>
         </div>
 
-        <button
+        <Button variant="ghost" size="icon"
           onClick={() => setOpen((v) => !v)}
           className="lg:hidden text-foreground p-2"
           aria-label="Menu"
         >
           {open ? <X className="size-6" /> : <Menu className="size-6" />}
-        </button>
+        </Button>
       </div>
 
       <AnimatePresence>
@@ -109,7 +108,7 @@ export function SiteHeader() {
               ))}
               <a
                 href="mailto:luizagabros@gmail.com"
-                className="mt-2 inline-flex justify-center px-5 py-3 text-xs uppercase tracking-luxe bg-gradient-red text-primary-foreground rounded-sm"
+                className="mt-2 inline-flex justify-center px-5 py-3 text-sm uppercase tracking-[0.1em] bg-gradient-red text-primary-foreground rounded-sm"
               >
                 Booking
               </a>
@@ -117,6 +116,6 @@ export function SiteHeader() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </header>
   );
 }
