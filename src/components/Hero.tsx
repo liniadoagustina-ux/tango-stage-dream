@@ -69,23 +69,16 @@ export function Hero() {
               Discover the show
             </Link></Button>
             <Button asChild variant="outline" className="h-auto"><a
-              href="mailto:luizagabros@gmail.com"
+              href="#trailer"
+              onClick={() => window.dispatchEvent(new CustomEvent("play-trailer"))}
               className="inline-flex items-center px-8 py-4 border border-foreground/40 text-foreground text-sm uppercase tracking-[0.1em] font-medium rounded-sm hover:bg-foreground hover:text-background transition-colors"
             >
-              Booking
+              Watch the trailer
             </a></Button>
           </motion.div>
         </div>
       </div>
 
-      <motion.div
-        initial={reducedMotion ? false : { opacity: 0, y: 8 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: reducedMotion ? 0 : 0.4 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-sm uppercase tracking-[0.1em] text-foreground/60 z-10"
-      >
-        Scroll
-      </motion.div>
     </section>
   );
 }

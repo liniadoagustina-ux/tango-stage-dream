@@ -32,9 +32,9 @@ function Index() {
       <section className="py-12 md:py-32 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 md:gap-4">
           {[
-            { title: "Tango", text: "The embrace, fragmented and rebuilt.", image: stageTango },
-            { title: "Aerial", text: "Suspension. Flight. Risk. The body free of the floor.", image: stageAerial },
-            { title: "Theatre", text: "Atmosphere, dramaturgy and spatial composition.", image: stageTheatre },
+            { title: "Tango", text: "The embrace at the heart of every scene.", image: stageTango },
+            { title: "Aerial", text: "Straps, hoop and harness, flying over a live band.", image: stageAerial },
+            { title: "Theatre", text: "A story told without words, from a barrio birthday to the edge of the underworld.", image: stageTheatre },
           ].map((p, i) => (
             <Reveal key={p.title} delay={i * 0.1}>
               <div className="group relative aspect-[3/4] overflow-hidden rounded-sm border border-border/60 bg-card">
@@ -84,7 +84,7 @@ function Index() {
             </Link></Button>
           </Reveal>
           <Reveal delay={0.45}>
-            <div className="mt-16 max-w-3xl">
+            <div id="trailer" className="mt-16 max-w-3xl scroll-mt-24">
               <Trailer compact />
             </div>
           </Reveal>
