@@ -34,7 +34,7 @@ export function Hero() {
         />
       </AnimatePresence>
       <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-background/15 to-background" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.13_0.01_20/0.85)_90%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.13_0.01_20/0.6)_90%)]" />
 
       <div className="relative z-10 h-full flex flex-col justify-end pb-24 md:pb-32 px-6">
         <div className="max-w-7xl mx-auto w-full">
