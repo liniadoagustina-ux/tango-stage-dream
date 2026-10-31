@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -12,12 +13,12 @@ function NotFoundComponent() {
         <p className="mt-3 text-sm text-muted-foreground">
           The page you're looking for has left the stage.
         </p>
-        <Link
+        <Button asChild className="h-auto p-0"><Link
           to="/"
           className="mt-8 inline-flex px-6 py-3 bg-gradient-red text-primary-foreground text-sm uppercase tracking-[0.1em] rounded-sm"
         >
           Return home
-        </Link>
+        </Link></Button>
       </div>
     </div>
   );

@@ -39,7 +39,7 @@ export function SiteFooter() {
       <div className="border-t border-border/50">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-muted-foreground tracking-wide">
           <span>© {new Date().getFullYear()} Luizaga Brothers Production. All rights reserved.</span>
-          <span className="uppercase tracking-luxe">Tango / Aerial / Theatre</span>
+          <span className="uppercase tracking-luxe">Tango, Aerial, Theatre</span>
         </div>
       </div>
     </footer>

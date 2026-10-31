@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
@@ -61,18 +62,18 @@ export function Hero() {
             transition={{ duration: reducedMotion ? 0 : 0.4 }}
             className="mt-10 flex flex-wrap gap-4"
           >
-            <Link
+            <Button asChild className="h-auto p-0"><Link
               to="/show"
               className="inline-flex items-center px-8 py-4 bg-gradient-red text-primary-foreground text-sm uppercase tracking-[0.1em] font-medium rounded-sm shadow-red hover:translate-y-[-2px] transition-transform"
             >
               Discover the show
-            </Link>
-            <a
+            </Link></Button>
+            <Button asChild className="h-auto p-0"><a
               href="mailto:luizagabros@gmail.com"
               className="inline-flex items-center px-8 py-4 border border-foreground/40 text-foreground text-sm uppercase tracking-[0.1em] font-medium rounded-sm hover:bg-foreground hover:text-background transition-colors"
             >
               Booking
-            </a>
+            </a></Button>
           </motion.div>
         </div>
       </div>

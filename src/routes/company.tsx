@@ -25,8 +25,6 @@ export function CompanyPage() {
       <section className="relative pt-20 pb-12 md:pt-52 md:pb-32 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
         <div className="relative max-w-5xl mx-auto">
-          <Reveal>
-          </Reveal>
           <Reveal delay={0.1}>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-balance">
               An Argentine language,<br/>
@@ -76,8 +74,6 @@ export function CompanyPage() {
       {/* Global reach */}
       <section className="py-12 md:py-32 px-6">
         <div className="max-w-6xl mx-auto">
-          <Reveal>
-          </Reveal>
           <Reveal delay={0.05}>
             <h2 className="font-serif text-4xl md:text-5xl mb-16 max-w-3xl">
               Their creations have been presented across Europe, Asia and the Americas

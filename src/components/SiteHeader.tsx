@@ -1,6 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { images } from "@/data/images";
 import { Button } from "@/components/ui/button";
@@ -14,6 +14,7 @@ const nav = [
 ] as const;
 
 export function SiteHeader() {
+  const reducedMotion = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -38,7 +39,7 @@ export function SiteHeader() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-8">
-        <Link to="/" className="flex items-center gap-3 group">
+        <Button asChild className="h-auto p-0"><Link to="/" className="flex items-center gap-3 group">
           <img
             src={logo.url} width={logo.width} height={logo.height}
             alt="Luizaga Brothers"
@@ -61,7 +62,8 @@ export function SiteHeader() {
                 {item.label}
                 {active && (
                   <motion.span
-                    layoutId="nav-underline"
+                    layoutId={reducedMotion ? undefined : "nav-underline"}
+                    transition={{ duration: reducedMotion ? 0 : 0.2 }}
                     className="absolute -bottom-2 left-0 right-0 h-px bg-primary"
                   />
                 )}
@@ -76,7 +78,7 @@ export function SiteHeader() {
             className="inline-flex items-center justify-center px-5 py-2.5 text-sm uppercase tracking-[0.1em] font-medium bg-gradient-red text-primary-foreground rounded-sm shadow-red hover:opacity-90 transition-opacity"
           >
             Booking
-          </a>
+          </a></Button>
         </div>
 
         <Button variant="ghost" size="icon"
@@ -91,14 +93,15 @@ export function SiteHeader() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
+            initial={reducedMotion ? false : { opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: reducedMotion ? 0 : 0.2 }}
             className="lg:hidden overflow-hidden bg-background/95 backdrop-blur-xl border-t border-border/60"
           >
             <nav className="flex flex-col px-6 py-6 gap-5">
               {nav.map((item) => (
-                <Link
+                <Button asChild className="h-auto p-0"><Link
                   key={item.to}
                   to={item.to}
                   className="text-sm uppercase tracking-luxe text-foreground/85"
@@ -111,7 +114,7 @@ export function SiteHeader() {
                 className="mt-2 inline-flex justify-center px-5 py-3 text-sm uppercase tracking-[0.1em] bg-gradient-red text-primary-foreground rounded-sm"
               >
                 Booking
-              </a>
+              </a></Button>
             </nav>
           </motion.div>
         )}

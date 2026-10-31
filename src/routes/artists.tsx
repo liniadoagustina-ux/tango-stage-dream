@@ -28,8 +28,6 @@ function ArtistsPage() {
     <>
       <section className="pt-20 pb-8 md:pt-52 px-6">
         <div className="max-w-7xl mx-auto">
-          <Reveal>
-          </Reveal>
           <Reveal delay={0.1}>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl">
               Artists who write with the body.

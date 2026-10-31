@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { pageSEO } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
@@ -25,8 +26,8 @@ function ShowPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
             <figcaption className="absolute inset-x-0 bottom-0 p-5 md:p-10">
               <span className="block h-px w-16 bg-primary mb-4" />
-              <h1 className="block font-serif uppercase text-foreground tracking-[0.12em] leading-[0.92] text-[clamp(2.6rem,8.2vw,10rem)] drop-shadow-lg">La Muerte del Ángel</h1>
-              <span className="mt-3 block text-xs md:text-xs uppercase tracking-luxe text-foreground/80">Luizaga Brothers / Tango Theatre</span>
+              <h1 className="block font-serif uppercase text-foreground tracking-[0.12em] leading-[0.92] text-[2.6rem] md:text-7xl lg:text-[7rem] xl:text-[10rem] drop-shadow-lg">La Muerte del Ángel</h1>
+              <span className="mt-3 block text-xs md:text-xs uppercase tracking-luxe text-foreground/80">Luizaga Brothers, Tango Theatre</span>
             </figcaption>
           </figure>
         </motion.div>
@@ -77,12 +78,12 @@ function ShowPage() {
             <h2 className="font-serif text-4xl md:text-5xl">See it live.</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <a
+            <Button asChild className="h-auto p-0"><a
               href="mailto:luizagabros@gmail.com"
               className="mt-8 inline-flex items-center px-8 py-4 bg-primary text-primary-foreground text-sm uppercase tracking-[0.1em] rounded-sm shadow-red hover:bg-primary-glow transition-colors"
             >
               Booking & Enquiries
-            </a>
+            </a></Button>
           </Reveal>
         </div>
       </section>

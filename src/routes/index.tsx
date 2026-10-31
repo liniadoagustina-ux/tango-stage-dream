@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { pageSEO } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
@@ -58,8 +59,6 @@ function Index() {
       <section className="relative py-16 md:py-44 px-6 overflow-hidden bg-background">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/30" />
         <div className="relative max-w-7xl mx-auto">
-          <Reveal>
-          </Reveal>
           <Reveal delay={0.1}>
             <figure className="relative block w-full max-w-4xl overflow-hidden shadow-deep ring-1 ring-primary/40">
               <img width={showLogoAsset.width} height={showLogoAsset.height} loading="lazy" src={showLogoAsset.url} alt="La Muerte del Ángel — Luizaga Brothers" className="block w-full h-auto" />
@@ -67,7 +66,7 @@ function Index() {
               <figcaption className="absolute inset-x-0 bottom-0 p-5 md:p-10">
                 <span className="block h-px w-16 bg-primary mb-4" />
                 <span className="block font-serif uppercase text-foreground tracking-[0.12em] leading-[0.95] text-3xl sm:text-5xl md:text-6xl drop-shadow-lg">Tango – La Muerte del Ángel</span>
-                <span className="mt-3 block text-xs md:text-xs uppercase tracking-luxe text-foreground/80">Luizaga Brothers / Tango Theatre</span>
+                <span className="mt-3 block text-xs md:text-xs uppercase tracking-luxe text-foreground/80">Luizaga Brothers, Tango Theatre</span>
               </figcaption>
             </figure>
 
@@ -78,12 +77,12 @@ function Index() {
             </p>
           </Reveal>
           <Reveal delay={0.35}>
-            <Link
+            <Button asChild className="h-auto p-0"><Link
               to="/show"
               className="mt-10 inline-flex items-center px-8 py-4 bg-gradient-red text-primary-foreground text-sm uppercase tracking-[0.1em] rounded-sm shadow-red"
             >
               Discover the show
-            </Link>
+            </Link></Button>
           </Reveal>
           <Reveal delay={0.45}>
             <div className="mt-16 max-w-3xl">
