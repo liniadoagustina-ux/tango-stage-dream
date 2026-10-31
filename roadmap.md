@@ -12,3 +12,5 @@
 - [x] Verify Company mobile/desktop layout and Show links
 - [x] Group Artists into Direction, Dancers, Musicians and Creative team with supplied roles and credits
 - [x] Verify artist photos, full biographies and mobile/desktop grids
+- [x] Add Spanish version under /es (shared parts + home translated; show/company/artists in English until texts arrive)
+- [ ] Translate /es/show, /es/company and /es/artists when the user sends the Spanish texts
