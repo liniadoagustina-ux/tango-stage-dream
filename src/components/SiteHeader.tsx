@@ -4,20 +4,34 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { images } from "@/data/images";
 import { Button } from "@/components/ui/button";
+import { bookingLabel, LANG_STORAGE_KEY, langFromPath, navItems, pathForLang, type Lang } from "@/lib/i18n";
 const logo = images.logo;
 
-const nav = [
-  { to: "/", label: "Home" },
-  { to: "/show", label: "The Show" },
-  { to: "/company", label: "The Company" },
-  { to: "/artists", label: "Artists" },
-] as const;
+function LangSwitch({ pathname, className = "" }: { pathname: string; className?: string }) {
+  const lang = langFromPath(pathname);
+  const remember = (l: Lang) => {
+    try { localStorage.setItem(LANG_STORAGE_KEY, l); } catch { /* storage unavailable */ }
+  };
+  const linkClass = (l: Lang) =>
+    `text-xs uppercase tracking-[0.1em] font-medium transition-colors ${
+      lang === l ? "text-foreground" : "text-foreground/50 hover:text-foreground"
+    }`;
+  return (
+    <div className={`flex items-center gap-2 ${className}`} aria-label="Language">
+      <a href={pathForLang(pathname, "es")} onClick={() => remember("es")} aria-current={lang === "es" ? "true" : undefined} className={linkClass("es")}>ES</a>
+      <span className="text-foreground/30 text-xs">|</span>
+      <a href={pathForLang(pathname, "en")} onClick={() => remember("en")} aria-current={lang === "en" ? "true" : undefined} className={linkClass("en")}>EN</a>
+    </div>
+  );
+}
 
 export function SiteHeader() {
   const reducedMotion = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const lang = langFromPath(location.pathname);
+  const nav = navItems[lang];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -39,7 +53,7 @@ export function SiteHeader() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-8">
-        <Link to="/" className="flex items-center gap-3 group">
+        <Link to={lang === "es" ? "/es" : "/"} className="flex items-center gap-3 group">
           <img
             src={logo.url} width={logo.width} height={logo.height}
             alt="Luizaga Brothers"
@@ -50,8 +64,8 @@ export function SiteHeader() {
         <nav className="hidden lg:flex items-center gap-9">
           {nav.map((item) => {
             const active =
-              item.to === "/"
-                ? location.pathname === "/"
+              item.to === "/" || item.to === "/es"
+                ? location.pathname === item.to
                 : location.pathname.startsWith(item.to);
             return (
               <Link
@@ -72,13 +86,14 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-6">
+          <LangSwitch pathname={location.pathname} />
           <Button asChild className="h-auto">
           <a
             href="mailto:luizagabros@gmail.com"
             className="inline-flex items-center justify-center px-5 py-2.5 text-sm uppercase tracking-[0.1em] font-medium bg-gradient-red text-primary-foreground rounded-sm shadow-red hover:opacity-90 transition-opacity"
           >
-            Booking
+            {bookingLabel[lang]}
           </a></Button>
         </div>
 
@@ -110,12 +125,13 @@ export function SiteHeader() {
                   {item.label}
                 </Link>
               ))}
+              <LangSwitch pathname={location.pathname} className="pt-1" />
               <Button asChild className="h-auto">
               <a
                 href="mailto:luizagabros@gmail.com"
                 className="mt-2 inline-flex justify-center px-5 py-3 text-sm uppercase tracking-[0.1em] bg-gradient-red text-primary-foreground rounded-sm"
               >
-                Booking
+                {bookingLabel[lang]}
               </a></Button>
             </nav>
           </motion.div>

@@ -1,3 +1,5 @@
+import { englishPath } from "./i18n";
+
 export const SITE_URL = "https://luizagabrothers.com";
 
 export const performingGroup = {
@@ -19,6 +21,8 @@ export const performingGroup = {
 
 export function pageSEO(path: string, title: string, description: string) {
   const url = new URL(path, SITE_URL).href;
+  const en = englishPath(path);
+  const es = en === "/" ? "/es" : `/es${en}`;
   return {
     meta: [
       { title },
@@ -29,7 +33,12 @@ export function pageSEO(path: string, title: string, description: string) {
       { property: "og:url", content: url },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: url }],
+    links: [
+      { rel: "canonical", href: url },
+      { rel: "alternate", hrefLang: "en", href: new URL(en, SITE_URL).href },
+      { rel: "alternate", hrefLang: "es", href: new URL(es, SITE_URL).href },
+      { rel: "alternate", hrefLang: "x-default", href: new URL(en, SITE_URL).href },
+    ],
     scripts: [{ type: "application/ld+json", children: JSON.stringify(performingGroup) }],
   };
 }

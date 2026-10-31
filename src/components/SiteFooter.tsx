@@ -1,8 +1,14 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { images } from "@/data/images";
+import { footerCopy, langFromPath, navItems } from "@/lib/i18n";
 const logo = images.logo;
 
 export function SiteFooter() {
+  const location = useLocation();
+  const lang = langFromPath(location.pathname);
+  const copy = footerCopy[lang];
+  const exploreLinks = navItems[lang].slice(1);
+
   return (
     <footer className="relative mt-8 md:mt-16 border-t border-border/50 bg-background">
       <div className="max-w-7xl mx-auto px-6 py-8 md:py-16 grid gap-12 md:grid-cols-4">
@@ -10,22 +16,22 @@ export function SiteFooter() {
           <img src={logo.url} width={logo.width} height={logo.height} loading="lazy" alt="Luizaga Brothers" className="h-20 w-auto" />
           <div className="h-px w-24 bg-gradient-to-r from-primary via-gold/60 to-transparent" />
           <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
-            Argentine tango, aerial performance and physical theatre. From Zárate to stages in Europe, Asia and the Americas.
+            {copy.tagline}
           </p>
         </div>
         <div>
           <h4 className="text-xs uppercase tracking-luxe text-foreground mb-4">
-            Explore
+            {copy.explore}
           </h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/show" className="hover:text-foreground">The Show</Link></li>
-            <li><Link to="/company" className="hover:text-foreground">The Company</Link></li>
-            <li><Link to="/artists" className="hover:text-foreground">Artists</Link></li>
+            {exploreLinks.map((item) => (
+              <li key={item.to}><Link to={item.to} className="hover:text-foreground">{item.label}</Link></li>
+            ))}
           </ul>
         </div>
         <div>
           <h4 className="text-xs uppercase tracking-luxe text-foreground mb-4">
-            Bookings
+            {copy.bookings}
           </h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>
@@ -38,7 +44,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border/50">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-muted-foreground tracking-wide">
-          <span>© {new Date().getFullYear()} Luizaga Brothers Production. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Luizaga Brothers Production. {copy.rights}</span>
         </div>
       </div>
     </footer>

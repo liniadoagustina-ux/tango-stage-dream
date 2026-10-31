@@ -14,6 +14,10 @@ import { Route as ArtistsRouteImport } from './routes/artists'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ShowRouteImport } from './routes/show'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as EsIndexRouteImport } from './routes/es/index'
+import { Route as EsArtistsRouteImport } from './routes/es/artists'
+import { Route as EsCompanyRouteImport } from './routes/es/company'
+import { Route as EsShowRouteImport } from './routes/es/show'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +44,26 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EsIndexRoute = EsIndexRouteImport.update({
+  id: '/es/',
+  path: '/es/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsArtistsRoute = EsArtistsRouteImport.update({
+  id: '/es/artists',
+  path: '/es/artists',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsCompanyRoute = EsCompanyRouteImport.update({
+  id: '/es/company',
+  path: '/es/company',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsShowRoute = EsShowRouteImport.update({
+  id: '/es/show',
+  path: '/es/show',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +71,10 @@ export interface FileRoutesByFullPath {
   '/company': typeof CompanyRoute
   '/show': typeof ShowRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/es/artists': typeof EsArtistsRoute
+  '/es/company': typeof EsCompanyRoute
+  '/es/show': typeof EsShowRoute
+  '/es/': typeof EsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +82,10 @@ export interface FileRoutesByTo {
   '/company': typeof CompanyRoute
   '/show': typeof ShowRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/es/artists': typeof EsArtistsRoute
+  '/es/company': typeof EsCompanyRoute
+  '/es/show': typeof EsShowRoute
+  '/es': typeof EsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +94,45 @@ export interface FileRoutesById {
   '/company': typeof CompanyRoute
   '/show': typeof ShowRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/es/artists': typeof EsArtistsRoute
+  '/es/company': typeof EsCompanyRoute
+  '/es/show': typeof EsShowRoute
+  '/es/': typeof EsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/artists' | '/company' | '/show' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/artists'
+    | '/company'
+    | '/show'
+    | '/sitemap.xml'
+    | '/es/artists'
+    | '/es/company'
+    | '/es/show'
+    | '/es/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/artists' | '/company' | '/show' | '/sitemap.xml'
-  id: '__root__' | '/' | '/artists' | '/company' | '/show' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/artists'
+    | '/company'
+    | '/show'
+    | '/sitemap.xml'
+    | '/es/artists'
+    | '/es/company'
+    | '/es/show'
+    | '/es'
+  id:
+    | '__root__'
+    | '/'
+    | '/artists'
+    | '/company'
+    | '/show'
+    | '/sitemap.xml'
+    | '/es/artists'
+    | '/es/company'
+    | '/es/show'
+    | '/es/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,6 +141,10 @@ export interface RootRouteChildren {
   CompanyRoute: typeof CompanyRoute
   ShowRoute: typeof ShowRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  EsArtistsRoute: typeof EsArtistsRoute
+  EsCompanyRoute: typeof EsCompanyRoute
+  EsShowRoute: typeof EsShowRoute
+  EsIndexRoute: typeof EsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -116,6 +184,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/es/': {
+      id: '/es/'
+      path: '/es'
+      fullPath: '/es/'
+      preLoaderRoute: typeof EsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es/artists': {
+      id: '/es/artists'
+      path: '/es/artists'
+      fullPath: '/es/artists'
+      preLoaderRoute: typeof EsArtistsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es/company': {
+      id: '/es/company'
+      path: '/es/company'
+      fullPath: '/es/company'
+      preLoaderRoute: typeof EsCompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es/show': {
+      id: '/es/show'
+      path: '/es/show'
+      fullPath: '/es/show'
+      preLoaderRoute: typeof EsShowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -125,6 +221,10 @@ const rootRouteChildren: RootRouteChildren = {
   CompanyRoute: CompanyRoute,
   ShowRoute: ShowRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  EsArtistsRoute: EsArtistsRoute,
+  EsCompanyRoute: EsCompanyRoute,
+  EsShowRoute: EsShowRoute,
+  EsIndexRoute: EsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
