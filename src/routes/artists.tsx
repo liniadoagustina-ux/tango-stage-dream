@@ -27,7 +27,7 @@ function ArtistsPage() {
       <section className="pt-28 pb-12 md:pt-52 md:pb-24 px-6">
         <div className="max-w-7xl mx-auto">
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl">
-              Artists who write with the body.
+              The cast
             </h1>
         </div>
       </section>
