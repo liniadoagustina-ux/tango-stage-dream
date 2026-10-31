@@ -3,9 +3,11 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { images } from "@/data/images";
+import { heroCopy, type Lang } from "@/lib/i18n";
 const slides = [images["stage-1"], images["stage-3"], images["stage-5"], images["stage-4"]];
 
-export function Hero() {
+export function Hero({ lang = "en" }: { lang?: Lang }) {
+  const copy = heroCopy[lang];
   const reducedMotion = useReducedMotion();
   const [index, setIndex] = useState(0);
 
@@ -44,8 +46,8 @@ export function Hero() {
             transition={{ duration: reducedMotion ? 0 : 0.4 }}
             className="font-serif text-5xl md:text-7xl lg:text-[8rem] leading-[0.95] text-balance text-foreground text-shadow-dramatic max-w-5xl"
           >
-            Where the embrace<br/>
-            <span className="text-foreground">takes flight.</span>
+            {copy.titleA}<br/>
+            <span className="text-foreground">{copy.titleB}</span>
           </motion.h1>
           <motion.p
             initial={reducedMotion ? false : { opacity: 0, y: 8 }}
@@ -53,7 +55,7 @@ export function Hero() {
             transition={{ duration: reducedMotion ? 0 : 0.4 }}
             className="mt-8 max-w-xl text-base md:text-lg text-foreground/80 leading-relaxed"
           >
-            Leonardo and Edgar Luizaga fuse Argentine tango, aerial performance and physical theatre.
+            {copy.text}
           </motion.p>
 
           <motion.div
@@ -63,22 +65,21 @@ export function Hero() {
             className="mt-10 flex flex-wrap gap-4"
           >
             <Button asChild className="h-auto"><Link
-              to="/show"
+              to={copy.primaryTo}
               className="inline-flex items-center px-8 py-4 bg-gradient-red text-primary-foreground text-sm uppercase tracking-[0.1em] font-medium rounded-sm shadow-red hover:translate-y-[-2px] transition-transform"
             >
-              Discover the show
+              {copy.primary}
             </Link></Button>
             <Button asChild variant="outline" className="h-auto"><a
               href="#trailer"
               onClick={() => window.dispatchEvent(new CustomEvent("play-trailer"))}
               className="inline-flex items-center px-8 py-4 border border-foreground/40 text-foreground text-sm uppercase tracking-[0.1em] font-medium rounded-sm hover:bg-foreground hover:text-background transition-colors"
             >
-              Watch the trailer
+              {copy.secondary}
             </a></Button>
           </motion.div>
         </div>
       </div>
-
     </section>
   );
 }
