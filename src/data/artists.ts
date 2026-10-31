@@ -38,6 +38,7 @@ export type Artist = {
   name: string;
   role: string;
   discipline: string;
+  character?: string;
   image: string;
   imageWidth?: number;
   imageHeight?: number;
@@ -51,6 +52,7 @@ export const artists: Artist[] = [
     name: "Leonardo Luizaga",
     role: "Co-Founder, Artistic Director",
     discipline: "Tango, Choreography, Direction",
+    character: "Gabino",
     image: leonardo,
     poetic:
       "He carries the silence of the bandoneón in his bones — a dancer of intensity who turns embrace into architecture.",
@@ -65,6 +67,7 @@ export const artists: Artist[] = [
     name: "Edgar Luizaga",
     role: "Co-Founder, Artistic Director",
     discipline: "Tango, Aerial Performance, Direction",
+    character: "Charon",
     image: edgar,
     poetic:
       "Half dancer, half flight. He invented a vocabulary where the embrace lifts off the ground.",
@@ -79,6 +82,7 @@ export const artists: Artist[] = [
     name: "Camila Alegre & Ezequiel López",
     role: "Principal Dancers",
     discipline: "Tango Escenario, World Champions",
+    character: "Co-choreographers",
     image: camilaEzequiel,
     poetic:
       "World Champions of Tango Escenario — a couple who write entire stories in a single embrace.",
@@ -93,6 +97,7 @@ export const artists: Artist[] = [
     name: "Evangelina Martínez & Nelson Leiva",
     role: "Principal Dancers",
     discipline: "Tango, Folklore",
+    character: "Griseta & Osvaldo",
     image: evangelinaNelson,
     poetic:
       "World Vice-Champions whose dance bridges the dust of the pampas with the velvet of the theatre.",

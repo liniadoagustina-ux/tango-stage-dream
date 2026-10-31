@@ -30,11 +30,11 @@ export function Hero() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: reducedMotion ? 0 : 0.4 }}
-          className="absolute inset-0 h-full w-full object-contain"
+          className="absolute inset-0 h-full w-full object-cover object-top"
         />
       </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/30 to-background" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.13_0.01_20/0.85)_90%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-background/15 to-background" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.13_0.01_20/0.6)_90%)]" />
 
       <div className="relative z-10 h-full flex flex-col justify-end pb-24 md:pb-32 px-6">
         <div className="max-w-7xl mx-auto w-full">

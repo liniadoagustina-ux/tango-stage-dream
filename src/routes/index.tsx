@@ -42,7 +42,7 @@ function Index() {
                   width={1920} height={1280} src={p.image}
                   alt={p.title}
                   loading="lazy"
-                  className="absolute inset-0 h-full w-full object-contain "
+                  className="absolute inset-0 h-full w-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-8">
@@ -65,8 +65,7 @@ function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
               <figcaption className="absolute inset-x-0 bottom-0 p-5 md:p-10">
                 <span className="block h-px w-16 bg-primary mb-4" />
-                <span className="block font-serif uppercase text-foreground tracking-[0.12em] leading-[0.95] text-3xl sm:text-5xl md:text-6xl drop-shadow-lg">Tango – La Muerte del Ángel</span>
-                <span className="mt-3 block text-xs md:text-xs uppercase tracking-luxe text-foreground/80">Luizaga Brothers, Tango Theatre</span>
+                <span className="block font-serif text-foreground leading-[0.95] text-3xl sm:text-5xl md:text-6xl drop-shadow-lg">Tango – La Muerte del Ángel</span>
               </figcaption>
             </figure>
 
@@ -93,7 +92,7 @@ function Index() {
       </section>
 
       {/* Artists strip */}
-      <section className="py-12 md:py-32 px-6 bg-background">
+      <section className="pt-12 pb-6 md:pt-32 md:pb-16 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
             <Reveal>
@@ -124,7 +123,7 @@ function Index() {
                   <div className="absolute inset-x-0 bottom-0 p-4">
                     <p className="font-serif text-lg leading-tight">{a.name}</p>
                     <p className="text-xs uppercase tracking-luxe text-muted-foreground mt-1">
-                      {a.discipline}
+                      {a.character ?? a.discipline}
                     </p>
                   </div>
                 </Link>
