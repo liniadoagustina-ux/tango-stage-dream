@@ -8,5 +8,5 @@
 - [x] Home: hero fills from top, pillar cards fill, production card title case, cast role labels, tighter footer gap
 - [x] Rewrite Show page with supplied audience copy, characters, gallery, practical details and credits
 - [x] Verify Show page on mobile and desktop, gallery enlargement and inline trailer embedding (YouTube blocks automated playback with a sign-in challenge)
-- [ ] Rewrite Company in third person with supplied origins, approach, trajectories, regions and booking
-- [ ] Verify Company mobile/desktop layout and Show links
+- [x] Rewrite Company in third person with supplied origins, approach, trajectories, regions and booking
+- [x] Verify Company mobile/desktop layout and Show links
