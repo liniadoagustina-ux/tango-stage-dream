@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
-import type { Artist } from "@/data/artists";
+import type { PresentedArtist } from "@/data/artist-presentation";
 
-export function ArtistCard({ artist, onOpen }: { artist: Artist; onOpen: () => void }) {
+export function ArtistCard({ artist, onOpen }: { artist: PresentedArtist; onOpen: () => void }) {
   return (
     <Button variant="ghost"
       onClick={onOpen}
-      className="group relative block h-auto w-full p-0 whitespace-normal text-left overflow-hidden rounded-sm bg-card aspect-[3/4]"
+      aria-label={`Read biography of ${artist.name}`}
+      className="group relative flex h-full w-full flex-col items-stretch justify-start p-0 whitespace-normal text-left overflow-hidden rounded-sm bg-background hover:bg-background"
     >
+      <div className="relative w-full aspect-[3/4] overflow-hidden bg-background">
       <img
         src={artist.image}
         width={artist.imageWidth}
@@ -25,17 +27,18 @@ export function ArtistCard({ artist, onOpen }: { artist: Artist; onOpen: () => v
         loading="lazy"
         className="absolute inset-0 h-full w-full object-contain"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-
-      <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-        <h3 className="font-serif text-2xl md:text-3xl text-foreground leading-tight">
+      </div>
+      <div className="w-full border-t border-primary/40 pt-5 pb-6">
+        <h3 className="font-serif text-xl md:text-3xl text-foreground leading-tight">
           {artist.name}
         </h3>
         <p
-          className="mt-3 text-sm text-foreground/85 italic font-serif leading-relaxed"
+          className="mt-3 text-sm tracking-normal text-foreground/85 leading-relaxed"
         >
-          “{artist.poetic}”
+          {artist.role}
         </p>
+        {artist.responsibilities && <p className="mt-1 text-sm tracking-normal text-foreground/85 leading-relaxed">{artist.responsibilities}</p>}
+        <p className="mt-3 text-sm tracking-normal text-muted-foreground leading-relaxed font-normal">{artist.credit}</p>
       </div>
     </Button>
   );
