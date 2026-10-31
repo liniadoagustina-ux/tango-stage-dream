@@ -1,7 +1,7 @@
 - [x] Shows: replace moving background photos with La Muerte del Ángel image + title
 - [x] Replace 7 artist portraits with new named photos
-- [ ] Simplify typography, gold accents, spacing, and non-hero motion across all pages
-- [ ] Update homepage and footer copy
-- [ ] Deliver WebP images with dimensions and below-fold lazy loading
-- [ ] Add canonical metadata, PerformingGroup data, robots, and sitemap
-- [ ] Verify desktop/mobile pages and central interactions
+- [x] Simplify typography, gold accents, spacing, and non-hero motion across all pages
+- [x] Update homepage and footer copy
+- [x] Deliver WebP images with dimensions and below-fold lazy loading
+- [x] Add canonical metadata, PerformingGroup data, robots, and sitemap
+- [x] Verify desktop/mobile pages and central interactions
