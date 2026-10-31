@@ -24,6 +24,15 @@ import sofia_heber_new from '@/assets/webp/sofia-heber-new.webp.asset.json';
 import soledad_mangia_new from '@/assets/webp/soledad-mangia-new.webp.asset.json';
 import la_muerte_del_angel_137 from '@/assets/webp/la-muerte-del-angel-137.webp.asset.json';
 import trailer from '@/assets/webp/trailer.webp.asset.json';
+import gallery_1 from '@/assets/webp/02-galeria-1.webp.asset.json';
+import gallery_2 from '@/assets/webp/03-galeria-2.webp.asset.json';
+import gallery_3 from '@/assets/webp/04-galeria-3.webp.asset.json';
+import gallery_4 from '@/assets/webp/05-galeria-4.webp.asset.json';
+import gallery_5 from '@/assets/webp/06-galeria-5.webp.asset.json';
+import gallery_6 from '@/assets/webp/07-galeria-6.webp.asset.json';
+import gallery_7 from '@/assets/webp/08-galeria-7.webp.asset.json';
+import gallery_8 from '@/assets/webp/09-galeria-8.webp.asset.json';
+import gallery_9 from '@/assets/webp/10-galeria-9.webp.asset.json';
 export const images = {
   'stage-1': { url: stage_1.url, width: 1920, height: 1280 },
   'stage-2': { url: stage_2.url, width: 1920, height: 1280 },
@@ -50,4 +59,13 @@ export const images = {
   'soledad-mangia-new': { url: soledad_mangia_new.url, width: 1010, height: 1164 },
   'la-muerte-del-angel-137': { url: la_muerte_del_angel_137.url, width: 1920, height: 1280 },
   'trailer': { url: trailer.url, width: 1280, height: 720 },
+  'gallery-1': { url: gallery_1.url, width: 1920, height: 1212 },
+  'gallery-2': { url: gallery_2.url, width: 1920, height: 1280 },
+  'gallery-3': { url: gallery_3.url, width: 1920, height: 1280 },
+  'gallery-4': { url: gallery_4.url, width: 1920, height: 1280 },
+  'gallery-5': { url: gallery_5.url, width: 1920, height: 1193 },
+  'gallery-6': { url: gallery_6.url, width: 1920, height: 1280 },
+  'gallery-7': { url: gallery_7.url, width: 1920, height: 1280 },
+  'gallery-8': { url: gallery_8.url, width: 1920, height: 1280 },
+  'gallery-9': { url: gallery_9.url, width: 1920, height: 1196 },
 };
