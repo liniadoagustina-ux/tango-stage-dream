@@ -2,12 +2,10 @@ import { pageSEO } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { X } from "lucide-react";
-import { artists, type Artist } from "@/data/artists";
+import { artistGroups, type PresentedArtist } from "@/data/artist-presentation";
 import { ArtistCard } from "@/components/ArtistCard";
-import { Reveal } from "@/components/Reveal";
 import {
   Dialog,
-  DialogContent,
   DialogTitle,
   DialogDescription,
   DialogPortal,
@@ -17,34 +15,33 @@ import * as DialogPrimitive from "@radix-ui/react-dialog";
 
 export const Route = createFileRoute("/artists")({
   staticData: { sitemap: true },
-  head: () => pageSEO("/artists", "Artists — Luizaga Brothers", "Meet the dancers, choreographers and musicians of Luizaga Brothers — world champions of tango and international stage artists."),
+  head: () => pageSEO("/artists", "Artists — Luizaga Brothers", "The cast of La Muerte del Ángel: world tango champions, aerialists and a live tango band, directed by Leonardo and Edgar Luizaga."),
   component: ArtistsPage,
 });
 
 function ArtistsPage() {
-  const [active, setActive] = useState<Artist | null>(null);
+  const [active, setActive] = useState<PresentedArtist | null>(null);
 
   return (
     <>
-      <section className="pt-20 pb-8 md:pt-52 px-6">
+      <section className="pt-28 pb-12 md:pt-52 md:pb-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <Reveal delay={0.1}>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl">
               Artists who write with the body.
             </h1>
-          </Reveal>
         </div>
       </section>
 
-      <section className="px-6 pb-12 md:pb-24">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {artists.map((a, i) => (
-            <Reveal key={a.slug} delay={i * 0.04}>
-              <ArtistCard artist={a} onOpen={() => setActive(a)} />
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      {artistGroups.map(group => (
+        <section key={group.heading} className="px-6 pb-16 md:pb-32">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl mb-8 md:mb-12">{group.heading}</h2>
+            <div className={group.heading === 'Direction' ? 'grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10' : 'grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-8 gap-y-8'}>
+              {group.members.map(artist => <ArtistCard key={artist.slug} artist={artist} onOpen={() => setActive(artist)} />)}
+            </div>
+          </div>
+        </section>
+      ))}
 
       <Dialog open={!!active} onOpenChange={(o) => !o && setActive(null)}>
         <DialogPortal>
@@ -76,12 +73,11 @@ function ArtistsPage() {
                     <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight text-foreground">
                       {active.name}
                     </h2>
-                    <p className="mt-2 text-xs md:text-sm uppercase tracking-luxe text-muted-foreground">
+                    <p className="mt-2 text-sm text-muted-foreground">
                       {active.role}
                     </p>
-                    <p className="mt-6 font-serif italic text-lg md:text-xl text-foreground/85 border-l-2 border-primary pl-5">
-                      “{active.poetic}”
-                    </p>
+                    {active.responsibilities && <p className="mt-1 text-sm text-muted-foreground">{active.responsibilities}</p>}
+                    <p className="mt-6 text-sm text-foreground/85 leading-relaxed">{active.credit}</p>
                     <div className="mt-7 space-y-4 text-[15px] md:text-base text-foreground/90 leading-relaxed">
                       {active.bio.map((p, i) => <p key={i}>{p}</p>)}
                     </div>
