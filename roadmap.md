@@ -5,3 +5,4 @@
 - [x] Deliver WebP images with dimensions and below-fold lazy loading
 - [x] Add canonical metadata, PerformingGroup data, robots, and sitemap
 - [x] Verify desktop/mobile pages and central interactions
+- [x] Home: hero fills from top, pillar cards fill, production card title case, cast role labels, tighter footer gap

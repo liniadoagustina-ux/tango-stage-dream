@@ -14,6 +14,6 @@ describe("Home cast strip labels", () => {
   });
 
   test("no cast card falls back to its discipline label", () => {
-    for (const a of cast) expect(a.character).toInclude(/\S/);
+    for (const a of cast) expect(a.character?.trim().length ?? 0).toBeGreaterThan(0);
   });
 });
