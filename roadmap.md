@@ -6,3 +6,5 @@
 - [x] Add canonical metadata, PerformingGroup data, robots, and sitemap
 - [x] Verify desktop/mobile pages and central interactions
 - [x] Home: hero fills from top, pillar cards fill, production card title case, cast role labels, tighter footer gap
+- [ ] Rewrite Show page with supplied audience copy, characters, gallery, practical details and credits
+- [ ] Verify Show page on mobile and desktop, gallery enlargement and inline trailer
