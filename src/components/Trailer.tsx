@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { images } from "@/data/images";
 import { Button } from "@/components/ui/button";
 
@@ -6,6 +6,12 @@ const VIDEO_ID = "qsigoOSNGwc";
 
 export function Trailer({ compact = false }: { compact?: boolean }) {
   const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    const play = () => setPlaying(true);
+    window.addEventListener("play-trailer", play);
+    return () => window.removeEventListener("play-trailer", play);
+  }, []);
 
   return (
     <div
