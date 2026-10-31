@@ -10,5 +10,5 @@
 - [x] Verify Show page on mobile and desktop, gallery enlargement and inline trailer embedding (YouTube blocks automated playback with a sign-in challenge)
 - [x] Rewrite Company in third person with supplied origins, approach, trajectories, regions and booking
 - [x] Verify Company mobile/desktop layout and Show links
-- [ ] Group Artists into Direction, Dancers, Musicians and Creative team with supplied roles and credits
-- [ ] Verify artist photos, full biographies and mobile/desktop grids
+- [x] Group Artists into Direction, Dancers, Musicians and Creative team with supplied roles and credits
+- [x] Verify artist photos, full biographies and mobile/desktop grids
