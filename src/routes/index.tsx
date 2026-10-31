@@ -77,7 +77,7 @@ function Index() {
             </p>
           </Reveal>
           <Reveal delay={0.35}>
-            <Button asChild className="h-auto p-0"><Link
+            <Button asChild className="h-auto"><Link
               to="/show"
               className="mt-10 inline-flex items-center px-8 py-4 bg-gradient-red text-primary-foreground text-sm uppercase tracking-[0.1em] rounded-sm shadow-red"
             >

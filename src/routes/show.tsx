@@ -78,7 +78,7 @@ function ShowPage() {
             <h2 className="font-serif text-4xl md:text-5xl">See it live.</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <Button asChild className="h-auto p-0"><a
+            <Button asChild className="h-auto"><a
               href="mailto:luizagabros@gmail.com"
               className="mt-8 inline-flex items-center px-8 py-4 bg-primary text-primary-foreground text-sm uppercase tracking-[0.1em] rounded-sm shadow-red hover:bg-primary-glow transition-colors"
             >
