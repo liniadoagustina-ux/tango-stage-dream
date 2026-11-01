@@ -19,5 +19,5 @@
 - [x] Verify Spanish home on desktop/mobile, mobile-menu language switch, remembered-language redirect and lowercase hreflang output
 - [x] Add French pages, supplied home/shared copy, three-language navigation and first-visit preference
 - [x] Verify French pages, mobile menu, remembered choice, language metadata and sitemap
-- [ ] Apply supplied French Show text, credits and description without changing images or other languages
-- [ ] Verify French Show, gallery and inline trailer on desktop and mobile
+- [x] Apply supplied French Show text, credits and description without changing images or other languages
+- [x] Verify French Show, gallery and inline trailer on desktop and mobile
