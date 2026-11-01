@@ -26,3 +26,5 @@
 - [x] Apply English Home, Show and Company text fixes, remove Show subtitle and Good to know; verify other languages remain unchanged
 
 - [x] Apply and verify the eight supplied Spanish full biographies, preserving other artist content and languages
+
+- [ ] Apply and verify the remaining eight supplied Spanish biographies without changing cards or other languages
