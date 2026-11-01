@@ -11,14 +11,15 @@ import {
 } from "@/components/ui/dialog";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 
-import { artistsCopyEs, artistsCopyFr, artistBiographiesEs, artistGroupHeadingsEs, artistGroupHeadingsFr, mediaCopy, type Lang } from "@/lib/i18n";
+import { artistsCopyEs, artistsCopyFr, artistBiographiesEs, artistBiographiesFr, artistGroupHeadingsEs, artistGroupHeadingsFr, mediaCopy, type Lang } from "@/lib/i18n";
 
 export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
   const artistCopy = lang === "fr" ? artistsCopyFr : lang === "es" ? artistsCopyEs : null;
   const groupHeadings = lang === "fr" ? artistGroupHeadingsFr : lang === "es" ? artistGroupHeadingsEs : null;
+  const biographies = lang === "fr" ? artistBiographiesFr : lang === "es" ? artistBiographiesEs : null;
   const groups = artistCopy ? artistGroups.map(group => ({ ...group, members: group.members.map(artist => {
     const copy = artistCopy[artist.slug];
-    return copy ? { ...artist, ...copy, responsibilities: copy.responsibilities ?? undefined, bio: lang === "es" ? artistBiographiesEs[artist.slug] ?? artist.bio : artist.bio } : artist;
+    return copy ? { ...artist, ...copy, responsibilities: copy.responsibilities ?? undefined, bio: biographies?.[artist.slug] ?? artist.bio } : artist;
   }) })) : artistGroups;
   const [active, setActive] = useState<PresentedArtist | null>(null);
 
