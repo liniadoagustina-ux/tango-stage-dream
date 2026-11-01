@@ -25,4 +25,4 @@
 - [x] Apply supplied French Artists cards, headings and description; verify photos, biographies and desktop/mobile presentation
 - [x] Apply English Home, Show and Company text fixes, remove Show subtitle and Good to know; verify other languages remain unchanged
 
-- [ ] Apply and verify the eight supplied Spanish full biographies, preserving other artist content and languages
+- [x] Apply and verify the eight supplied Spanish full biographies, preserving other artist content and languages
