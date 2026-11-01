@@ -174,11 +174,38 @@ export const mediaCopy = {
     play: "Lire la bande-annonce officielle",
     trailer: "La Muerte del Ángel — Bande-annonce officielle",
     close: "Fermer",
+    biography: "Lire la biographie de",
     enlarge: "Agrandir la photo de la galerie",
     gallery: "Galerie de Tango – La Muerte del Ángel, photo",
     previous: "Photo précédente",
     next: "Photo suivante",
   },
+};
+
+export const artistGroupHeadingsFr: Record<string, string> = {
+  Direction: "Direction artistique",
+  Dancers: "Danseurs",
+  Musicians: "Musiciens",
+  "Creative team": "Équipe de création",
+};
+
+export const artistsCopyFr: typeof artistsCopyEs = {
+  "leonardo-luizaga": { name: "Leonardo Luizaga", role: "Gabino", responsibilities: "Mise en scène, chorégraphie et costumes", credit: "Plus jeune danseur de « Tango Pasión », membre de la compagnie de Juan Carlos Copes et lauréat du prix du Meilleur danseur aux « Premios Carlos »." },
+  "edgar-luizaga": { name: "Edgar Luizaga", role: "Charon", responsibilities: "Mise en scène et chorégraphie aérienne", credit: "Formé au ballet au « Teatro Colón » et aux disciplines aériennes à l'Académie Fratellini, à Paris." },
+  "maia-roldan": { name: "Maia Roldán", role: "Amanda", responsibilities: "Chorégraphie", credit: "Danseuse de la tournée « Soy » de Lali Espósito et de Wild Tango à Londres ; prix de la Meilleure chorégraphie jeune public aux « Premios Hugo »." },
+  "camila-ezequiel": { name: "Camila Alegre et Ezequiel López", role: "Chorégraphes associés", responsibilities: null, credit: "Champions du monde de « Tango Escenario » et membres du jury des championnats du monde et d'Europe de tango." },
+  "evangelina-nelson": { name: "Evangelina Martínez et Nelson Leiva", role: "Griseta et Osvaldo", responsibilities: null, credit: "Vice-champions du monde de « Tango Escenario », dont la danse jette des ponts entre tango et folklore." },
+  "soledad-mangia": { name: "Soledad Mangia", role: "Nocturna", responsibilities: null, credit: "Championne du « Festival Nacional de Cosquín » et partenaire de Julio Bocca." },
+  "fabrizio-federica": { name: "Fabrizio Muñoz et Federica Tobares", role: "Ivone et El Niño Bien", responsibilities: null, credit: "Une nouvelle génération du tango, à l'affiche de « Rojo Tango » (Faena Hotel), du « Café de los Angelitos » et de « Señor Tango »." },
+  "sofia-heber": { name: "Sofía Orlando et Heber Mallorquín", role: "Charro et Esthercita", responsibilities: null, credit: "Couple vedette de Buenos Ayres Wine en Corée du Sud et de la tournée européenne d'« El Sonido de mi Tierra », de Luis Pereyra." },
+  "matias-rubino": { name: "Matías Rubino", role: "Direction musicale et bandonéon", responsibilities: null, credit: "Membre de l'« Orquesta Típica » de Rodolfo Mederos et des formations Otros Aires, Tanghetto et Narcotango." },
+  "roberto-minondi": { name: "Roberto Minondi", role: "Chant et guitare (El Tano)", responsibilities: null, credit: "Cinq ans à l'« Esquina Carlos Gardel » ; chanteur de l'« Orquesta Típica Tanturi » et de « Romántica Milonguera »." },
+  "sergio-milman": { name: "Sergio Milman", role: "Piano", responsibilities: null, credit: "Pendant douze ans, pianiste, arrangeur et directeur musical de l'« Orquesta Típica Percal »." },
+  "luiza-anastasio": { name: "Luiza Anastásio", role: "Violon", responsibilities: null, credit: "Docteure en musique de l'Université fédérale du Minas Gerais, au Brésil." },
+  "patricio-cotella": { name: "Patricio Cotella", role: "Contrebasse", responsibilities: null, credit: "Formé au sein de l'« Orquesta Escuela de Tango » dirigée par Emilio Balcarce." },
+  "franco-zilocchi": { name: "Franco Zilocchi", role: "Batterie et production musicale", responsibilities: null, credit: "Ingénieur du son et producteur." },
+  "ariel-ponce": { name: "Jorge Ariel « El Gato » Ponce", role: "Création lumière", responsibilities: null, credit: "Près de trente ans dans les théâtres de l'« Avenida Corrientes », avec des spectacles tels que « Stravaganza », Rent et Pretty Woman." },
+  "lucia-ohyama": { name: "Lucía Ohyama", role: "Production", responsibilities: null, credit: "Production exécutive et direction de tournée." },
 };
 
 export const companyCopyFr = {

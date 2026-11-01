@@ -11,11 +11,13 @@ import {
 } from "@/components/ui/dialog";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 
-import { artistsCopyEs, artistGroupHeadingsEs, mediaCopy, type Lang } from "@/lib/i18n";
+import { artistsCopyEs, artistsCopyFr, artistGroupHeadingsEs, artistGroupHeadingsFr, mediaCopy, type Lang } from "@/lib/i18n";
 
 export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
-  const groups = lang === "es" ? artistGroups.map(group => ({ ...group, members: group.members.map(artist => {
-    const copy = artistsCopyEs[artist.slug];
+  const artistCopy = lang === "fr" ? artistsCopyFr : lang === "es" ? artistsCopyEs : null;
+  const groupHeadings = lang === "fr" ? artistGroupHeadingsFr : lang === "es" ? artistGroupHeadingsEs : null;
+  const groups = artistCopy ? artistGroups.map(group => ({ ...group, members: group.members.map(artist => {
+    const copy = artistCopy[artist.slug];
     return copy ? { ...artist, ...copy, responsibilities: copy.responsibilities ?? undefined } : artist;
   }) })) : artistGroups;
   const [active, setActive] = useState<PresentedArtist | null>(null);
@@ -25,7 +27,7 @@ export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
       <section className="pt-28 pb-12 md:pt-52 md:pb-24 px-6">
         <div className="max-w-7xl mx-auto">
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl">
-              {lang === "es" ? "El elenco" : "The cast"}
+              {lang === "fr" ? "La distribution" : lang === "es" ? "El elenco" : "The cast"}
             </h1>
         </div>
       </section>
@@ -33,7 +35,7 @@ export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
       {groups.map(group => (
         <section key={group.heading} className="px-6 pb-16 md:pb-32">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl mb-8 md:mb-12">{lang === "es" ? artistGroupHeadingsEs[group.heading] : group.heading}</h2>
+            <h2 className="font-serif text-4xl md:text-5xl mb-8 md:mb-12">{groupHeadings?.[group.heading] ?? group.heading}</h2>
             <div className={group.heading === 'Direction' ? 'grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10' : 'grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-8 gap-y-8'}>
               {group.members.map(artist => <ArtistCard key={artist.slug} lang={lang} artist={artist} onOpen={() => setActive(artist)} />)}
             </div>
