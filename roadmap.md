@@ -27,4 +27,4 @@
 
 - [x] Apply and verify the eight supplied Spanish full biographies, preserving other artist content and languages
 
-- [ ] Apply and verify the remaining eight supplied Spanish biographies without changing cards or other languages
+- [x] Apply and verify the remaining eight supplied Spanish biographies without changing cards or other languages
