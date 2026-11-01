@@ -1,8 +1,14 @@
 import { describe, test, expect } from "bun:test";
-import { langFromPath, pathForLang, englishPath, navItems, homeCopy, heroCopy, footerCopy, showCopyEs, preferredLanguage } from "./i18n";
+import { langFromPath, pathForLang, englishPath, navItems, homeCopy, heroCopy, footerCopy, showCopyEs, showCopyFr, preferredLanguage } from "./i18n";
 import { pageSEO } from "./seo";
 
 describe("Language routing", () => {
+  test("French aerial choreography is credited to Edgar Luizaga", () => {
+    expect(showCopyFr.credits.find(credit => credit.role === "Chorégraphie aérienne")?.name).toBe("Edgar Luizaga");
+  });
+  test("French production assistance is credited to Lucía Ohyama", () => {
+    expect(showCopyFr.credits.find(credit => credit.role === "Assistante de production")?.name).toBe("Lucía Ohyama");
+  });
   test("Spanish aerial choreography is credited to Edgar Luizaga", () => {
     expect(showCopyEs.credits.find(credit => credit.role === "Coreografía aérea")?.name).toBe("Edgar Luizaga");
   });

@@ -50,9 +50,9 @@ export function ShowGallery({ lang = "en" }: { lang?: Lang }) {
           <DialogTitle className="sr-only">{copy.gallery} {selected === null ? '' : selected + 1}</DialogTitle>
           {active && <img src={active.url} width={active.width} height={active.height} alt={selected === null ? "" : copy.alts[selected]} className="block w-full h-auto max-h-[calc(90dvh-8rem)] object-contain" />}
           <div className="flex items-center justify-center gap-6">
-            <Button variant="outline" size="icon" onClick={() => move(-1)} aria-label={copy.previous} title={lang === "es" ? copy.previous : "Previous photo"}><ChevronLeft /></Button>
+            <Button variant="outline" size="icon" onClick={() => move(-1)} aria-label={copy.previous} title={lang !== "en" ? copy.previous : "Previous photo"}><ChevronLeft /></Button>
             <span className="text-sm text-muted-foreground">{selected === null ? '' : selected + 1} / {gallery.length}</span>
-            <Button variant="outline" size="icon" onClick={() => move(1)} aria-label={copy.next} title={lang === "es" ? copy.next : "Next photo"}><ChevronRight /></Button>
+            <Button variant="outline" size="icon" onClick={() => move(1)} aria-label={copy.next} title={lang !== "en" ? copy.next : "Next photo"}><ChevronRight /></Button>
           </div>
         </DialogContent>
       </Dialog>
