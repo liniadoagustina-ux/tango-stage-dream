@@ -1,5 +1,5 @@
 import { describe, test, expect } from "bun:test";
-import { langFromPath, pathForLang, englishPath, navItems, homeCopy, showCopyEs } from "./i18n";
+import { langFromPath, pathForLang, englishPath, navItems, homeCopy, heroCopy, footerCopy, showCopyEs } from "./i18n";
 import { pageSEO } from "./seo";
 
 describe("Language routing", () => {
