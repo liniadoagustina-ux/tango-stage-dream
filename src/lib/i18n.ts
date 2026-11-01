@@ -47,7 +47,7 @@ export const footerCopy = {
   },
   es: {
     tagline:
-      "Tango argentino, danza aérea y teatro físico. De Zárate a escenarios de Europa, Asia y América.",
+      "Tango argentino, danza aérea y teatro físico. De Zárate a los escenarios de Europa, Asia y América.",
     explore: "Explorar",
     bookings: "Contrataciones",
     rights: "Todos los derechos reservados.",
@@ -64,9 +64,9 @@ export const heroCopy = {
     secondary: "Watch the trailer",
   },
   es: {
-    titleA: "Donde el abrazo",
-    titleB: "levanta vuelo.",
-    text: "Leonardo y Edgar Luizaga fusionan tango argentino, danza aérea y teatro físico.",
+    titleA: "Donde el tango",
+    titleB: "alza vuelo.",
+    text: "Leonardo y Edgar Luizaga funden el tango argentino con la danza aérea y el teatro físico en un lenguaje escénico propio.",
     primary: "Conocé el show",
     primaryTo: "/es/show",
     secondary: "Ver el trailer",
@@ -93,18 +93,18 @@ export const homeCopy = {
   },
   es: {
     manifesto:
-      "El tango es su punto de partida: lo desarman y lo vuelven a armar con circo, teatro físico y diseño visual.",
+      "El tango es su punto de partida: un lenguaje vivo que deconstruyen y reconfiguran en diálogo con el circo, el teatro físico y el diseño visual.",
     pillars: [
-      { title: "Tango", text: "El abrazo, en el centro de cada escena." },
-      { title: "Aéreo", text: "Straps, aro y arnés, volando sobre una banda en vivo." },
-      { title: "Teatro", text: "Una historia contada sin palabras, desde un cumpleaños de barrio hasta el borde del inframundo." },
+      { title: "Tango", text: "La pareja, origen y centro de cada escena." },
+      { title: "Aéreo", text: "Straps, aro y arnés: cuerpos suspendidos sobre la orquesta en vivo." },
+      { title: "Teatro", text: "Una historia narrada sin palabras, desde una celebración de barrio hasta los umbrales del inframundo." },
     ],
     showTitle: "Tango – La Muerte del Ángel",
-    showText: "El mito de Caronte contado con tango, folklore, danza aérea y una banda en vivo.",
+    showText: "El mito de Caronte, narrado a través del tango, el folklore y la danza aérea, con orquesta en vivo.",
     showCta: "Conocé el show",
     showTo: "/es/show",
     castHeading: "El elenco",
-    castLink: "Ver todos los artistas",
+    castLink: "Conocé a los artistas",
     castLinkTo: "/es/artists",
     castRoles: ["Gabino", "Caronte", "Coreógrafos asociados", "Griseta y Osvaldo"],
   },
