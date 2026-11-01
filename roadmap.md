@@ -31,3 +31,5 @@
 
 - [x] Apply and verify seven complete supplied French biographies, preserving design and other languages
 - [ ] French Sofía/Heber biography: waiting for the complete text; uploaded file ends mid-sentence
+
+- [ ] Apply and verify eight supplied French musician and creative-team biographies
