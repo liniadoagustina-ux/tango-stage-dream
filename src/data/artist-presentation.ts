@@ -2,27 +2,27 @@ import { artists } from './artists';
 
 const presentation = [
   { heading: 'Direction', members: [
-    { slug: 'leonardo-luizaga', role: 'Gabino', responsibilities: 'Direction, choreography, costumes', credit: 'Youngest dancer of Tango Pasión; Juan Carlos Copes company; Best Dancer, Premios Carlos.' },
-    { slug: 'edgar-luizaga', role: 'Charon', responsibilities: 'Direction, aerial choreography', credit: "Ballet at the Teatro Colón; aerial training at L'Académie Fratellini, Paris." },
+    { slug: 'leonardo-luizaga', role: 'Gabino', responsibilities: 'Direction, choreography, costumes', credit: "Youngest dancer of \"Tango Pasión\"; member of Juan Carlos Copes' company; Best Dancer at the \"Premios Carlos\"." },
+    { slug: 'edgar-luizaga', role: 'Charon', responsibilities: 'Direction, aerial choreography', credit: "Trained in ballet at the \"Teatro Colón\" and in aerial arts at L'Académie Fratellini, Paris." },
   ] },
   { heading: 'Dancers', members: [
-    { slug: 'maia-roldan', role: 'Amanda', responsibilities: 'Choreography', credit: "Lali Espósito's Soy Tour; Wild Tango, London; Premios Hugo for choreography." },
-    { slug: 'camila-ezequiel', role: 'Co-choreographers', credit: 'World Champions of Tango Escenario; judges at the World and European Tango Championships.' },
-    { slug: 'evangelina-nelson', role: 'Griseta & Osvaldo', credit: 'World Vice-Champions of Tango Escenario.' },
-    { slug: 'soledad-mangia', role: 'Nocturna', credit: 'Champion of the Cosquín Festival; dance partner of Julio Bocca.' },
-    { slug: 'fabrizio-federica', role: 'Ivone & El Niño Bien', credit: 'Rojo Tango (Faena Hotel), Café de los Angelitos, Señor Tango.' },
-    { slug: 'sofia-heber', role: 'Charro & Esthercita', credit: 'Toured Europe with El Sonido de mi Tierra by Luis Pereyra.' },
+    { slug: 'maia-roldan', role: 'Amanda', responsibilities: 'Choreography', credit: "Dancer on Lali Espósito's \"Soy\" tour and in Wild Tango, London; Best Children's Choreography at the \"Premios Hugo\"." },
+    { slug: 'camila-ezequiel', role: 'Co-choreographers', credit: "World Champions of \"Tango Escenario\" and judges at the World and European Tango Championships." },
+    { slug: 'evangelina-nelson', role: 'Griseta & Osvaldo', credit: "World Vice-Champions of \"Tango Escenario\", bridging tango and folklore." },
+    { slug: 'soledad-mangia', role: 'Nocturna', credit: "Champion of the \"Festival Nacional de Cosquín\" and dance partner of Julio Bocca." },
+    { slug: 'fabrizio-federica', role: 'Ivone & El Niño Bien', credit: "A new generation of tango, featured at \"Rojo Tango\" (Faena Hotel), \"Café de los Angelitos\" and \"Señor Tango\"." },
+    { slug: 'sofia-heber', role: 'Charro & Esthercita', credit: "Leading couple of Buenos Ayres Wine in South Korea and of the European tour of Luis Pereyra's \"El Sonido de mi Tierra\"." },
   ] },
   { heading: 'Musicians', members: [
-    { slug: 'matias-rubino', role: 'Musical direction, bandoneon', credit: "Rodolfo Mederos' Orquesta Típica; Otros Aires, Tanghetto, Narcotango." },
-    { slug: 'roberto-minondi', role: 'Voice and guitar (El Tano)', credit: 'Esquina Carlos Gardel; lead singer of Orquesta Típica Tanturi.' },
-    { slug: 'sergio-milman', role: 'Piano', credit: 'Twelve years as musical director of the Percal Tango Orchestra.' },
+    { slug: 'matias-rubino', role: 'Musical direction, bandoneon', credit: "Member of Rodolfo Mederos' \"Orquesta Típica\" and of Otros Aires, Tanghetto and Narcotango." },
+    { slug: 'roberto-minondi', role: 'Voice and guitar (El Tano)', credit: "Five years at \"Esquina Carlos Gardel\"; singer of the \"Orquesta Típica Tanturi\" and \"Romántica Milonguera\"." },
+    { slug: 'sergio-milman', role: 'Piano', credit: "For twelve years, pianist, arranger and musical director of the \"Orquesta Típica Percal\"." },
     { slug: 'luiza-anastasio', role: 'Violin', credit: 'Doctorate in Music, Federal University of Minas Gerais, Brazil.' },
-    { slug: 'patricio-cotella', role: 'Double bass', credit: 'Orquesta Escuela de Tango under Emilio Balcarce.' },
+    { slug: 'patricio-cotella', role: 'Double bass', credit: "Trained in the \"Orquesta Escuela de Tango\" led by Emilio Balcarce." },
     { slug: 'franco-zilocchi', role: 'Drums, music production', credit: 'Sound engineer and music producer.' },
   ] },
   { heading: 'Creative team', members: [
-    { slug: 'ariel-ponce', role: 'Lighting design', credit: 'Nearly 30 years on Avenida Corrientes: Stravaganza, Rent, Pretty Woman.' },
+    { slug: 'ariel-ponce', role: 'Lighting design', credit: "Nearly three decades in the theatres of \"Avenida Corrientes\", with shows such as \"Stravaganza\", Rent and Pretty Woman." },
     { slug: 'lucia-ohyama', role: 'Production', credit: 'Executive production and tour management.' },
   ] },
 ];
