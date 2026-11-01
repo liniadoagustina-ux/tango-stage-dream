@@ -92,7 +92,7 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
           <h2 className="font-serif text-xl mb-6">{copy?.creditsHeading ?? "Credits"}</h2>
           <dl className="space-y-3 text-sm text-muted-foreground leading-relaxed">
             {pageCredits.map(credit => (
-              <div key={credit.role}><dt className="inline text-foreground">{credit.role}: </dt><dd className="inline">{credit.name}</dd></div>
+              <div key={credit.role}><dt className="inline text-foreground">{credit.role}{lang === "fr" ? "\u00a0: " : ": "}</dt><dd className="inline">{credit.name}</dd></div>
             ))}
           </dl>
           <p className="mt-12 text-sm text-muted-foreground">{lang === "fr" ? "Diffusion :" : `${bookingLabel[lang]}:`} <a href="mailto:luizagabros@gmail.com" className="text-foreground underline underline-offset-4 hover:text-foreground/80">luizagabros@gmail.com</a></p>
