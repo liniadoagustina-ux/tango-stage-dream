@@ -1,5 +1,5 @@
 import { describe, test, expect } from "bun:test";
-import { langFromPath, pathForLang, englishPath, navItems, homeCopy, heroCopy, footerCopy, showCopyEs } from "./i18n";
+import { langFromPath, pathForLang, englishPath, navItems, homeCopy, heroCopy, footerCopy, showCopyEs, preferredLanguage } from "./i18n";
 import { pageSEO } from "./seo";
 
 describe("Language routing", () => {
@@ -23,12 +23,13 @@ describe("Language routing", () => {
     expect(langFromPath("/")).toBe("en");
     expect(langFromPath("/show")).toBe("en");
   });
-  test("every page carries en, es and x-default hreflang links", () => {
+  test("every page carries en, es, fr and x-default hreflang links", () => {
     const head = pageSEO("/es/show", "T", "D");
     const alternates = head.links.filter((l) => l.rel === "alternate");
     expect(alternates).toEqual([
       { rel: "alternate", hreflang: "en", href: "https://luizagabrothers.com/show" },
       { rel: "alternate", hreflang: "es", href: "https://luizagabrothers.com/es/show" },
+      { rel: "alternate", hreflang: "fr", href: "https://luizagabrothers.com/fr/show" },
       { rel: "alternate", hreflang: "x-default", href: "https://luizagabrothers.com/show" },
     ]);
     expect(head.links[0]).toEqual({ rel: "canonical", href: "https://luizagabrothers.com/es/show" });
@@ -72,6 +73,34 @@ describe("Language routing", () => {
   test("englishPath round-trips with pathForLang", () => {
     for (const p of ["/", "/show", "/company", "/artists"]) {
       expect(englishPath(pathForLang(p, "es"))).toBe(p);
+    }
+  });
+  test("French URLs preserve the matching page across all three languages", () => {
+    for (const page of ["/", "/show", "/company", "/artists"]) {
+      const french = page === "/" ? "/fr" : `/fr${page}`;
+      expect(pathForLang(page, "fr")).toBe(french);
+      expect(langFromPath(french)).toBe("fr");
+      expect(englishPath(french)).toBe(page);
+      expect(pathForLang(french, "en")).toBe(page);
+      expect(pathForLang(french, "es")).toBe(page === "/" ? "/es" : `/es${page}`);
+    }
+  });
+  test("a French browser chooses French on the first visit", () => {
+    expect(preferredLanguage(null, "fr-FR")).toBe("fr");
+    expect(preferredLanguage(null, "fr-CA")).toBe("fr");
+    expect(preferredLanguage(null, "es-AR")).toBe("es");
+    expect(preferredLanguage(null, "en-US")).toBe("en");
+  });
+  test("a saved visitor choice overrides the browser language", () => {
+    expect(preferredLanguage("fr", "en-US")).toBe("fr");
+    expect(preferredLanguage("en", "fr-FR")).toBe("en");
+    expect(preferredLanguage("es", "fr-FR")).toBe("es");
+  });
+  test("French pages expose same-page language alternates and their own canonical", () => {
+    for (const path of ["/fr", "/fr/show", "/fr/company", "/fr/artists"]) {
+      const head = pageSEO(path, "Title", "Description");
+      expect(head.links[0].href).toBe(`https://luizagabrothers.com${path}`);
+      expect(head.links.find(link => link.hreflang === "fr")?.href).toBe(`https://luizagabrothers.com${path}`);
     }
   });
 });

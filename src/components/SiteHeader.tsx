@@ -21,6 +21,8 @@ function LangSwitch({ pathname, className = "" }: { pathname: string; className?
       <a href={pathForLang(pathname, "es")} onClick={() => remember("es")} aria-current={lang === "es" ? "true" : undefined} className={linkClass("es")}>ES</a>
       <span className="text-foreground/30 text-xs">|</span>
       <a href={pathForLang(pathname, "en")} onClick={() => remember("en")} aria-current={lang === "en" ? "true" : undefined} className={linkClass("en")}>EN</a>
+      <span className="text-foreground/30 text-xs">|</span>
+      <a href={pathForLang(pathname, "fr")} onClick={() => remember("fr")} aria-current={lang === "fr" ? "true" : undefined} className={linkClass("fr")}>FR</a>
     </div>
   );
 }
@@ -53,7 +55,7 @@ export function SiteHeader() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-8">
-        <Link to={lang === "es" ? "/es" : "/"} className="flex items-center gap-3 group">
+        <Link to={lang === "fr" ? "/fr" : lang === "es" ? "/es" : "/"} className="flex items-center gap-3 group">
           <img
             src={logo.url} width={logo.width} height={logo.height}
             alt="Luizaga Brothers"
@@ -64,7 +66,7 @@ export function SiteHeader() {
         <nav className="hidden lg:flex items-center gap-9">
           {nav.map((item) => {
             const active =
-              item.to === "/" || item.to === "/es"
+              item.to === "/" || item.to === "/es" || item.to === "/fr"
                 ? location.pathname === item.to
                 : location.pathname.startsWith(item.to);
             return (

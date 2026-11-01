@@ -1,12 +1,15 @@
-export type Lang = "en" | "es";
+export type Lang = "en" | "es" | "fr";
 
 export const LANG_STORAGE_KEY = "lb-lang";
 
 export function langFromPath(pathname: string): Lang {
+  if (pathname === "/fr" || pathname.startsWith("/fr/")) return "fr";
   return pathname === "/es" || pathname.startsWith("/es/") ? "es" : "en";
 }
 
 export function englishPath(pathname: string): string {
+  if (pathname === "/fr") return "/";
+  if (pathname.startsWith("/fr/")) return pathname.slice(3);
   if (pathname === "/es") return "/";
   if (pathname.startsWith("/es/")) return pathname.slice(3);
   return pathname;
@@ -14,10 +17,22 @@ export function englishPath(pathname: string): string {
 
 export function pathForLang(pathname: string, lang: Lang): string {
   const en = englishPath(pathname);
-  return lang === "es" ? (en === "/" ? "/es" : `/es${en}`) : en;
+  return lang === "en" ? en : (en === "/" ? `/${lang}` : `/${lang}${en}`);
+}
+
+export function preferredLanguage(stored: string | null, browserLanguage: string): Lang {
+  if (stored === "es" || stored === "en" || stored === "fr") return stored;
+  const language = browserLanguage.toLowerCase().split("-")[0];
+  return language === "es" || language === "fr" ? language : "en";
 }
 
 export const navItems = {
+  fr: [
+    { to: "/fr", label: "Accueil" },
+    { to: "/fr/show", label: "Le spectacle" },
+    { to: "/fr/company", label: "La compagnie" },
+    { to: "/fr/artists", label: "Artistes" },
+  ],
   en: [
     { to: "/", label: "Home" },
     { to: "/show", label: "The Show" },
@@ -33,11 +48,18 @@ export const navItems = {
 } as const;
 
 export const bookingLabel: Record<Lang, string> = {
+  fr: "Contact",
   en: "Booking",
   es: "Contrataciones",
 };
 
 export const footerCopy = {
+  fr: {
+    tagline: "Tango argentin, danse aérienne et théâtre physique. De Zárate aux scènes d'Europe, d'Asie et d'Amérique.",
+    explore: "Explorer",
+    bookings: "Diffusion",
+    rights: "Tous droits réservés.",
+  },
   en: {
     tagline:
       "Argentine tango, aerial performance and physical theatre. From Zárate to stages in Europe, Asia and the Americas.",
@@ -55,6 +77,14 @@ export const footerCopy = {
 } as const;
 
 export const heroCopy = {
+  fr: {
+    titleA: "Là où le tango",
+    titleB: "prend son envol.",
+    text: "Leonardo et Edgar Luizaga fondent le tango argentin, la danse aérienne et le théâtre physique en un langage scénique singulier.",
+    primary: "Découvrir le spectacle",
+    primaryTo: "/fr/show",
+    secondary: "Voir la bande-annonce",
+  },
   en: {
     titleA: "Where the embrace",
     titleB: "takes flight.",
@@ -74,6 +104,22 @@ export const heroCopy = {
 } as const;
 
 export const homeCopy = {
+  fr: {
+    manifesto: "Le tango est leur point de départ : un langage vivant qu'ils déconstruisent et recomposent en dialogue avec le cirque, le théâtre physique et la création visuelle.",
+    pillars: [
+      { title: "Tango", text: "Le couple, origine et cœur de chaque scène." },
+      { title: "Aérien", text: "Sangles, cerceau et harnais : des corps suspendus au-dessus de l'orchestre." },
+      { title: "Théâtre", text: "Une histoire racontée sans paroles, d'une fête de quartier jusqu'au seuil des enfers." },
+    ],
+    showTitle: "Tango – La Muerte del Ángel",
+    showText: "Le mythe de Charon, raconté à travers le tango, le folklore argentin et la danse aérienne, avec un orchestre sur scène.",
+    showCta: "Découvrir le spectacle",
+    showTo: "/fr/show",
+    castHeading: "La distribution",
+    castLink: "Découvrir les artistes",
+    castLinkTo: "/fr/artists",
+    castRoles: ["Gabino", "Charon", "Chorégraphes associés", "Griseta et Osvaldo"],
+  },
   en: {
     manifesto:
       "Tango is their starting point: taken apart and rebuilt with circus, physical theatre and visual design.",
@@ -118,4 +164,15 @@ export const artistsCopyEs: Record<string, { name: string; role: string; respons
 
 export const artistGroupHeadingsEs: Record<string, string> = {"Direction": "Dirección", "Dancers": "Bailarines", "Musicians": "Músicos", "Creative team": "Equipo creativo"};
 
-export const mediaCopy = { en: { play: "Play the official trailer", trailer: "La Muerte del Ángel — Official Trailer", close: "Close", biography: "Read biography of", enlarge: "Enlarge gallery photo", gallery: "Tango – La Muerte del Ángel gallery, photo", previous: "Previous gallery photo", next: "Next gallery photo", alts: ["A tango couple embraces with the live band behind them", "The ensemble dances beneath pink stage lights", "Two couples perform tango on stage", "A tango couple in a sweeping embrace", "Aerial straps rise above the dancers", "A dancer lifts his partner in the spotlight", "The ensemble in a dramatic blue and pink stage scene", "Two characters wearing hats against a red theatre curtain", "An aerial performer suspended over the ensemble"] }, es: { play: "Reproducir el trailer oficial", trailer: "La Muerte del Ángel — Trailer oficial", close: "Cerrar", biography: "Leer biografía de", enlarge: "Ampliar foto de la galería", gallery: "Galería de Tango – La Muerte del Ángel, foto", previous: "Foto anterior", next: "Foto siguiente", alts: ["Una pareja de tango se abraza frente a la orquesta en vivo", "El elenco baila bajo luces rosadas", "Dos parejas bailan tango sobre el escenario", "Una pareja de tango en un abrazo extendido", "Los straps aéreos se elevan sobre los bailarines", "Un bailarín levanta a su pareja bajo el reflector", "El elenco en una escena con luces azules y rosadas", "Dos personajes con sombrero frente a un telón rojo", "Un artista aéreo suspendido sobre el elenco"] } };
+const baseMediaCopy = { en: { play: "Play the official trailer", trailer: "La Muerte del Ángel — Official Trailer", close: "Close", biography: "Read biography of", enlarge: "Enlarge gallery photo", gallery: "Tango – La Muerte del Ángel gallery, photo", previous: "Previous gallery photo", next: "Next gallery photo", alts: ["A tango couple embraces with the live band behind them", "The ensemble dances beneath pink stage lights", "Two couples perform tango on stage", "A tango couple in a sweeping embrace", "Aerial straps rise above the dancers", "A dancer lifts his partner in the spotlight", "The ensemble in a dramatic blue and pink stage scene", "Two characters wearing hats against a red theatre curtain", "An aerial performer suspended over the ensemble"] }, es: { play: "Reproducir el trailer oficial", trailer: "La Muerte del Ángel — Trailer oficial", close: "Cerrar", biography: "Leer biografía de", enlarge: "Ampliar foto de la galería", gallery: "Galería de Tango – La Muerte del Ángel, foto", previous: "Foto anterior", next: "Foto siguiente", alts: ["Una pareja de tango se abraza frente a la orquesta en vivo", "El elenco baila bajo luces rosadas", "Dos parejas bailan tango sobre el escenario", "Una pareja de tango en un abrazo extendido", "Los straps aéreos se elevan sobre los bailarines", "Un bailarín levanta a su pareja bajo el reflector", "El elenco en una escena con luces azules y rosadas", "Dos personajes con sombrero frente a un telón rojo", "Un artista aéreo suspendido sobre el elenco"] } };
+
+
+export const mediaCopy = {
+  ...baseMediaCopy,
+  fr: {
+    ...baseMediaCopy.en,
+    play: "Lire la bande-annonce officielle",
+    trailer: "La Muerte del Ángel — Bande-annonce officielle",
+    close: "Fermer",
+  },
+};

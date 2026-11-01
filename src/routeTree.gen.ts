@@ -18,6 +18,10 @@ import { Route as EsIndexRouteImport } from './routes/es/index'
 import { Route as EsArtistsRouteImport } from './routes/es/artists'
 import { Route as EsCompanyRouteImport } from './routes/es/company'
 import { Route as EsShowRouteImport } from './routes/es/show'
+import { Route as FrIndexRouteImport } from './routes/fr/index'
+import { Route as FrArtistsRouteImport } from './routes/fr/artists'
+import { Route as FrCompanyRouteImport } from './routes/fr/company'
+import { Route as FrShowRouteImport } from './routes/fr/show'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -64,6 +68,26 @@ const EsShowRoute = EsShowRouteImport.update({
   path: '/es/show',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FrIndexRoute = FrIndexRouteImport.update({
+  id: '/fr/',
+  path: '/fr/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrArtistsRoute = FrArtistsRouteImport.update({
+  id: '/fr/artists',
+  path: '/fr/artists',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrCompanyRoute = FrCompanyRouteImport.update({
+  id: '/fr/company',
+  path: '/fr/company',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrShowRoute = FrShowRouteImport.update({
+  id: '/fr/show',
+  path: '/fr/show',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -74,7 +98,11 @@ export interface FileRoutesByFullPath {
   '/es/artists': typeof EsArtistsRoute
   '/es/company': typeof EsCompanyRoute
   '/es/show': typeof EsShowRoute
+  '/fr/artists': typeof FrArtistsRoute
+  '/fr/company': typeof FrCompanyRoute
+  '/fr/show': typeof FrShowRoute
   '/es/': typeof EsIndexRoute
+  '/fr/': typeof FrIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -85,7 +113,11 @@ export interface FileRoutesByTo {
   '/es/artists': typeof EsArtistsRoute
   '/es/company': typeof EsCompanyRoute
   '/es/show': typeof EsShowRoute
+  '/fr/artists': typeof FrArtistsRoute
+  '/fr/company': typeof FrCompanyRoute
+  '/fr/show': typeof FrShowRoute
   '/es': typeof EsIndexRoute
+  '/fr': typeof FrIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -97,7 +129,11 @@ export interface FileRoutesById {
   '/es/artists': typeof EsArtistsRoute
   '/es/company': typeof EsCompanyRoute
   '/es/show': typeof EsShowRoute
+  '/fr/artists': typeof FrArtistsRoute
+  '/fr/company': typeof FrCompanyRoute
+  '/fr/show': typeof FrShowRoute
   '/es/': typeof EsIndexRoute
+  '/fr/': typeof FrIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -110,7 +146,11 @@ export interface FileRouteTypes {
     | '/es/artists'
     | '/es/company'
     | '/es/show'
+    | '/fr/artists'
+    | '/fr/company'
+    | '/fr/show'
     | '/es/'
+    | '/fr/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -121,7 +161,11 @@ export interface FileRouteTypes {
     | '/es/artists'
     | '/es/company'
     | '/es/show'
+    | '/fr/artists'
+    | '/fr/company'
+    | '/fr/show'
     | '/es'
+    | '/fr'
   id:
     | '__root__'
     | '/'
@@ -132,7 +176,11 @@ export interface FileRouteTypes {
     | '/es/artists'
     | '/es/company'
     | '/es/show'
+    | '/fr/artists'
+    | '/fr/company'
+    | '/fr/show'
     | '/es/'
+    | '/fr/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -144,7 +192,11 @@ export interface RootRouteChildren {
   EsArtistsRoute: typeof EsArtistsRoute
   EsCompanyRoute: typeof EsCompanyRoute
   EsShowRoute: typeof EsShowRoute
+  FrArtistsRoute: typeof FrArtistsRoute
+  FrCompanyRoute: typeof FrCompanyRoute
+  FrShowRoute: typeof FrShowRoute
   EsIndexRoute: typeof EsIndexRoute
+  FrIndexRoute: typeof FrIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -212,6 +264,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EsShowRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fr/': {
+      id: '/fr/'
+      path: '/fr'
+      fullPath: '/fr/'
+      preLoaderRoute: typeof FrIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/artists': {
+      id: '/fr/artists'
+      path: '/fr/artists'
+      fullPath: '/fr/artists'
+      preLoaderRoute: typeof FrArtistsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/company': {
+      id: '/fr/company'
+      path: '/fr/company'
+      fullPath: '/fr/company'
+      preLoaderRoute: typeof FrCompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/show': {
+      id: '/fr/show'
+      path: '/fr/show'
+      fullPath: '/fr/show'
+      preLoaderRoute: typeof FrShowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -224,7 +304,11 @@ const rootRouteChildren: RootRouteChildren = {
   EsArtistsRoute: EsArtistsRoute,
   EsCompanyRoute: EsCompanyRoute,
   EsShowRoute: EsShowRoute,
+  FrArtistsRoute: FrArtistsRoute,
+  FrCompanyRoute: FrCompanyRoute,
+  FrShowRoute: FrShowRoute,
   EsIndexRoute: EsIndexRoute,
+  FrIndexRoute: FrIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
