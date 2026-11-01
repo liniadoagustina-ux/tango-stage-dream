@@ -17,5 +17,5 @@
 - [x] Remove duration from Spanish home production copy and verify Spanish navigation, gallery and artist popups
 - [x] Replace Spanish home copy with the supplied texts (hero, manifesto line, cards, production card, cast link, footer, meta description)
 - [x] Verify Spanish home on desktop/mobile, mobile-menu language switch, remembered-language redirect and lowercase hreflang output
-- [ ] Add French pages, supplied home/shared copy, three-language navigation and first-visit preference
-- [ ] Verify French pages, mobile menu, remembered choice, language metadata and sitemap
+- [x] Add French pages, supplied home/shared copy, three-language navigation and first-visit preference
+- [x] Verify French pages, mobile menu, remembered choice, language metadata and sitemap
