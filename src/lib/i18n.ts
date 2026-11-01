@@ -86,7 +86,7 @@ export const heroCopy = {
     secondary: "Voir la bande-annonce",
   },
   en: {
-    titleA: "Where the embrace",
+    titleA: "Where tango",
     titleB: "takes flight.",
     text: "Leonardo and Edgar Luizaga fuse Argentine tango, aerial performance and physical theatre.",
     primary: "Discover the show",
@@ -124,12 +124,12 @@ export const homeCopy = {
     manifesto:
       "Tango is their starting point: taken apart and rebuilt with circus, physical theatre and visual design.",
     pillars: [
-      { title: "Tango", text: "The embrace at the heart of every scene." },
-      { title: "Aerial", text: "Straps, hoop and harness, flying over a live band." },
-      { title: "Theatre", text: "A story told without words, from a barrio birthday to the edge of the underworld." },
+      { title: "Tango", text: "The couple, origin and heart of every scene." },
+      { title: "Aerial", text: "Straps, hoop and harness: bodies suspended above the live orchestra." },
+      { title: "Theatre", text: "A story told without words, from a neighbourhood celebration to the threshold of the underworld." },
     ],
     showTitle: "Tango – La Muerte del Ángel",
-    showText: "The myth of Charon, told through tango, folklore, aerial dance and a live band. 70 minutes.",
+    showText: "The myth of Charon, told through tango, folklore, aerial dance and a live band.",
     showCta: "Discover the show",
     showTo: "/show",
     castHeading: "The cast",

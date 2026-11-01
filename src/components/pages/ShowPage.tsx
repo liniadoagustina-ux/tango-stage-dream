@@ -2,7 +2,7 @@ import { Trailer } from "@/components/Trailer";
 import { ShowGallery } from "@/components/ShowGallery";
 import { motion, useReducedMotion } from "framer-motion";
 import { images } from "@/data/images";
-import { characters, credits, showDetails } from "@/data/show";
+import { characters, credits } from "@/data/show";
 import { showCopyEs, showCopyFr, bookingLabel, type Lang } from "@/lib/i18n";
 const showLogoAsset = images["la-muerte-del-angel-137"];
 
@@ -21,7 +21,6 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
             <figcaption className="relative px-6 pt-6 pb-10 md:absolute md:inset-x-0 md:bottom-0 md:p-10">
               <span className="block h-px w-16 bg-primary mb-4" />
               <h1 className="font-serif text-foreground leading-none text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-balance drop-shadow-lg">Tango – La Muerte del Ángel</h1>
-              {!copy && <p className="mt-4 font-serif text-2xl md:text-3xl text-foreground">A Charon Story</p>}
               <p className="mt-3 text-base md:text-lg text-foreground/90">{copy?.line ?? "In Buenos Aires, death dances to the rhythm of tango."}</p>
             </figcaption>
           </figure>
@@ -40,7 +39,7 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
           <h2 className="font-serif text-4xl md:text-5xl mb-10">{copy?.storyHeading ?? "The story"}</h2>
           <div className="space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed">
             {copy ? copy.story.map(paragraph => <p key={paragraph}>{paragraph}</p>) : <>
-            <p>In a timeless barrio of Buenos Aires, Gabino and Amanda share a simple, lasting love, born in a milonga and sealed in the embrace.</p>
+            <p>In a timeless neighbourhood of Buenos Aires, Gabino and Amanda share a simple, lasting love, born in a milonga and sealed in the embrace.</p>
             <p>One stormy afternoon, in the middle of Gabino's birthday lunch, Charon, the ferryman of the dead, comes for Amanda. She doesn't resist. She dances with him.</p>
             <p>Only Nocturna, a medium who can see beyond this world, perceives his presence. Left behind, Gabino wanders through grief: the town fair, a mistaken kiss, nights with no way out. In the end he chooses to follow Amanda, and Charon guides them both across.</p>
             </>}
@@ -75,17 +74,6 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
           <ShowGallery lang={lang} />
         </div>
       </section>
-
-      {!copy && <section className="py-16 md:py-32 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl mb-10">Good to know</h2>
-          <ul className="space-y-5 text-base md:text-lg text-foreground/90 leading-relaxed list-none">
-            <li>{showDetails.durationMinutes} minutes</li>
-            <li>Live band on stage: {showDetails.instruments.slice(0, -1).join(', ')} and {showDetails.instruments.at(-1)}</li>
-            <li>Tango, folklore and aerial dance on {showDetails.aerialApparatus.slice(0, -1).join(', ')} and {showDetails.aerialApparatus.at(-1)}</li>
-          </ul>
-        </div>
-      </section>}
 
       <section className="px-6 pb-16 md:pb-32">
         <div className="max-w-4xl mx-auto border-t border-primary/40 pt-8">

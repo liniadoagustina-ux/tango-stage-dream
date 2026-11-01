@@ -23,3 +23,4 @@
 - [x] Verify French Show, gallery and inline trailer on desktop and mobile
 - [x] Apply supplied French Company text and description, preserving design and other languages; verify desktop/mobile and Show links
 - [x] Apply supplied French Artists cards, headings and description; verify photos, biographies and desktop/mobile presentation
+- [ ] Apply English Home, Show and Company text fixes, remove Show subtitle and Good to know; verify other languages remain unchanged
