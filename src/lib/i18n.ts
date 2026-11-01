@@ -291,3 +291,58 @@ export const showCopyFr = {
     { role: "Assistante de production", name: "Lucía Ohyama" },
   ],
 };
+
+// Supplied Spanish full biographies; artists not listed retain their original biography.
+export const artistBiographiesEs: Record<string, string[]> = {
+  "leonardo-luizaga": [
+    "Coreógrafo, intérprete y fuerza creativa del tango contemporáneo en la escena internacional. Fue el bailarín más joven convocado por la legendaria compañía Tango Pasión, elegido personalmente por Héctor Zaraspe, de la Juilliard School.",
+    "Premio Carlos al Mejor Bailarín. Fue artista principal de la compañía de Juan Carlos Copes, de Malbec Tango House (Nueva York), Stravaganza Tango, Estampas Porteñas e Immortal Tango, en giras que lo llevaron de Tokio a Londres.",
+    "Formado en tango, ballet, jazz, danza contemporánea y straps aéreos, domina además el diseño de vestuario, la iluminación y la dramaturgia. Un creador de mundos inmersivos, de intensa carga emocional."
+  ],
+  "edgar-luizaga": [
+    "Cocreador y productor general de Luizaga Brothers. Se formó en el Instituto Superior de Arte del Teatro Colón con los maestros Mario Galizzi y Leandro Regueiro. Comenzó a los cinco años con la gimnasia artística; luego llegaron el ballet y, más tarde, el tango.",
+    "Debutó en Piazzolla Tango, integró la compañía TangoX2 en Europa y el Ballet del Mercosur. Perfeccionó su lenguaje aéreo en el Circo Criollo, en L'Académie Fratellini de París y en La Central de Barcelona.",
+    "Participó en Wild Tango, Break the Tango, America's Got Talent, Spain's Got Talent, Park Chinois (Londres), Lío Ibiza y en producciones internacionales para firmas como Marriott, Bulgari y The Moon Wolf Co."
+  ],
+  "maia-roldan": [
+    "Bailarina y coreógrafa argentina, reconocida por su versatilidad y su presencia escénica en el teatro musical, la televisión y las producciones internacionales. A lo largo de su carrera recibió numerosos premios y becas, entre ellas una beca para el Summer Dance Intensive de la Point Park University (Pittsburgh, Estados Unidos), otorgada por Gustavo Zajac, y continuó su formación en la Fundación Julio Bocca, en Buenos Aires.",
+    "Prosiguió sus estudios en Nueva York, en el Broadway Dance Center, junto a la reconocida coreógrafa Ashley Dawson. En baile de salón obtuvo el primer premio del certamen World Promotions Sheraton (2011–2012) junto a Alexis Mariani. En 2018 recibió el Premio Hugo a la Mejor Coreografía Infantil por Aladín… será genial, creada junto a Rosario Asencio.",
+    "Como intérprete construyó una extensa trayectoria en teatro, televisión y giras internacionales. Trabajó en grandes producciones de la televisión argentina, como Susana Giménez y ShowMatch – Bailando por un Sueño (2018–2019); acompañó a Lali Espósito en la gira Soy (2016–2019) y formó parte de Disney – Una Navidad Inolvidable, dirigida por Ariel del Mastro; Pan – El Musical, como capitana de baile; y Stravaganza, dirigida por Flavio Mendoza.",
+    "En la danza contemporánea trabajó con la compañía CEM en obras como Pies pa' Volar, Rayuela y Estados del Tiempo, y con Choque Urbano en el Teatro Konex y en gira nacional (2011–2013).",
+    "En el plano internacional fue bailarina y asistente en Wild Tango, de la compañía de Germán Cornejo, en Londres (2022–2023), y en Papillon, cena show en Dubái dirigida por Layla Kardan. Recorrió además Rusia, Armenia, Bielorrusia, Kazajistán, Kirguistán, Moldavia e Italia con Freedom, de Los Potros Malambo, bajo la dirección de Isaac y Javier Gardela.",
+    "Como coreógrafa firmó American Idiot – El Musical, Simona en Vivo en el Luna Park y Aladín… será genial en el Teatro Gran Rex; coreografió para Burnet en Turquía y Egipto (2021–2022) y colaboró en Wild Tango con la compañía de Germán Cornejo. Recientemente participó en Papá por Siempre, en el Teatro Liceo (2026)."
+  ],
+  "camila-ezequiel": [
+    "Campeones mundiales de Tango Escenario y jurados del Campeonato Mundial y del Campeonato Europeo de Tango. Integraron las compañías Tango Legends, Tanguera, Tango Fire, Break the Tango y Tango After Dark (Peacock Theatre, Londres).",
+    "Se presentaron en las casas de tango más prestigiosas de Buenos Aires, como Café de los Angelitos, Tango Porteño y Piazzolla Tango, y participaron en la película Un Tango Más, junto a María Nieves y Juan Carlos Copes.",
+    "Forman parte del equipo coreográfico de La Muerte del Ángel, la nueva producción de Luizaga Brothers."
+  ],
+  "evangelina-nelson": [
+    "Subcampeones mundiales de Tango Escenario, reconocidos internacionalmente por su arte y su presencia escénica. Su danza tiende puentes entre el tango tradicional y las influencias contemporáneas y folklóricas.",
+    "Participaron en Michelangelo Tango Show, Madero Tango Iguazú, El Viejo Almacén, Tango Dynasty y Tango 01, y realizaron giras internacionales con Malevo y el CRXCE Ballet.",
+    "En 2025 fueron convocados por Luizaga Brothers para integrar su nueva producción."
+  ],
+  "soledad-mangia": [
+    "Coreógrafa y bailarina argentina. Campeona del prestigioso Festival Nacional de Cosquín, reconocida por su excelencia en el folklore argentino y por su refinada versatilidad en múltiples disciplinas. Fue partenaire de Julio Bocca, lo que consolidó su prestigio en la escena internacional.",
+    "Fue seleccionada para participar en PROTÉGÉS III – International Ballet Academy Festival, en Washington D. C., donde se formó y bailó junto a artistas de compañías de renombre mundial como el Ballet Bolshói, el Tokyo Ballet y el Royal Danish Ballet.",
+    "Construyó una sólida base clásica en el Ballet de San Martín, en Buenos Aires, y continuó sus estudios en la Point Park University de Pittsburgh (Estados Unidos), bajo la dirección de Susan Stowe, con especialización en ballet clásico, danza moderna, jazz y tap. Amplió su formación en Nueva York con la Jennifer Muller Company, guiada por su fundadora y directora artística.",
+    "En 2018 se sumó a la gira Tango Seducción, dirigida por Gustavo Russo, y bailó con el Ballet Folklórico Nacional en los festivales de Cosquín y del Chamamé, en Corrientes. Ese mismo año participó en ARGENTUM para la Cumbre del G20, dirigida por Ricky Pashkus, y acompañó a Julio Bocca como bailarina. Bailó también en Un Instante, de la Compañía en Movimiento (C.E.M.), dirigida por Analía González; integró Choque Urbano (2011) y participó en producciones emblemáticas como la reapertura del Teatro Colón, dirigida por Carlos Veiga.",
+    "Fue bailarina del Ballet Argentino (Fundación Julio Bocca), bajo la dirección de Julio Bocca y Ricky Pashkus. Entre 2005 y 2009 integró el Ballet Neoclásico de Buenos Aires, dirigido por Guido De Benedetti, y bailó con la compañía Pies Desnudos (2009–2010), el Ballet Compacto (2007) y en la apertura de ShowMatch (2008), conducido por Marcelo Tinelli.",
+    "Como coreógrafa y colaboradora creativa desarrolló una destacada trayectoria. En 2023 cocreó la coreografía de Comunidad para el Ballet Folklórico Nacional, junto a Gustavo Carrizo y Eduardo Virasoro. Fue asistente de coreografía en Club 57 Live (Nickelodeon) y Topa, El Viajero (2019), y colaboró en Waitress (Camarera) junto a Nina Iraolagoitia. Asistió a Analía González en Después del Sol, en el Ballet Contemporáneo del Teatro San Martín (2012), y presentó obra propia en el Ciclo de Jóvenes Coreógrafos (Sub 25) del Centro Cultural Rojas (2009)."
+  ],
+  "fabrizio-federica": [
+    "Una distinguida pareja de tango argentino que representa a una nueva generación de artistas y aporta refinamiento, versatilidad y una presencia escénica cautivante a la escena internacional. Radicados en Buenos Aires, su dupla se define por una fusión natural de precisión técnica, sensibilidad musical y profundidad emocional.",
+    "Ambos se formaron en tango argentino, ballet clásico, danza contemporánea, jazz y folklore. Su aprendizaje compartido junto a los maestros Vanesa Villalba y Facundo Piñero moldeó un estilo sofisticado y dinámico, arraigado en la tradición y concebido para las exigencias del escenario contemporáneo.",
+    "Se presentaron en algunas de las casas de tango más prestigiosas de Buenos Aires, como Rojo Tango en el Faena Hotel, Café de los Angelitos y Señor Tango, en producciones de alto nivel para públicos internacionales.",
+    "En lo individual, Federica participó en espectáculos como El Show Debe Continuar, dirigido por Hernán Piquín, y en producciones de gran escala como Servian El Circo y Circo Rodas; su experiencia como bailarina, actriz y modelo le aporta una fuerte presencia teatral. Fabrizio se destacó en el circuito competitivo del tango y llegó a las semifinales del Mundial de Tango de Buenos Aires en 2025. Ambos fueron elegidos por Luizaga Brothers para formar parte de La Muerte del Ángel.",
+    "Juntos encarnan una visión refinada y contemporánea del tango escenario, que combina elegancia, fuerza y claridad expresiva."
+  ],
+  "sofia-heber": [
+    "Su base artística se apoya en una sólida formación técnica. Sofía perfeccionó su técnica clásica en el ballet del Teatro Colón, y Heber se formó en danzas folklóricas tradicionales y malambo, como integrante del grupo Los Bombos Supay. Esa doble raíz aporta a la pareja un refinado sentido de la línea, el control y la musicalidad.",
+    "En 2013 fueron elegidos como pareja protagonista de Buenos Ayres Wine en Corea del Sur, experiencia que los llevó a vivir un año en el exterior difundiendo la esencia del tango argentino. En 2014 se sumaron a El Sonido de mi Tierra, dirigido por Luis Pereyra, en una gira de cinco meses por Europa.",
+    "Su excelencia técnica y su madurez artística les valieron el reconocimiento como finalistas del certamen Pelando Variación (2017–2018), donde obtuvieron el tercer y el segundo puesto.",
+    "En 2019 se incorporaron a la compañía de Marcos Ayala, con la que realizaron dos temporadas consecutivas a bordo de los cruceros Silja Symphony y Serenade, y luego giras por los países bálticos, Rusia y China.",
+    "A lo largo de su carrera se presentaron en Rusia, Alemania, Austria, Suiza, Suecia, República Checa, Países Bajos, Finlandia y Catar, en escenarios como el Teatro Mariinski de San Petersburgo y el Teatro Coliseo de Buenos Aires.",
+    "Desde 2023 forman parte de la reconocida cena show Michelangelo Tango. Recientemente fueron convocados por Luizaga Brothers para integrar su nueva producción."
+  ]
+};
