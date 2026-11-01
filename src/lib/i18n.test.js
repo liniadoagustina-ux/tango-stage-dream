@@ -1,5 +1,5 @@
 import { describe, test, expect } from "bun:test";
-import { langFromPath, pathForLang, englishPath, navItems, homeCopy, heroCopy, footerCopy, showCopyEs, showCopyFr, preferredLanguage } from "./i18n";
+import { langFromPath, pathForLang, englishPath, navItems, homeCopy, heroCopy, footerCopy, showCopyEs, showCopyFr, preferredLanguage, artistBiographiesFr } from "./i18n";
 import { pageSEO } from "./seo";
 
 describe("Language routing", () => {
@@ -108,5 +108,18 @@ describe("Language routing", () => {
       expect(head.links[0].href).toBe(`https://luizagabrothers.com${path}`);
       expect(head.links.find(link => link.hreflang === "fr")?.href).toBe(`https://luizagabrothers.com${path}`);
     }
+  });
+});
+
+describe("French artist biographies", () => {
+  test("Sofía and Heber show the supplied French biography", () => {
+    const bio = artistBiographiesFr["sofia-heber"];
+    expect(bio[0]).toContain("Los Bombos Supay");
+    expect(bio[1]).toContain("Buenos Ayres Wine");
+    expect(bio[2]).toContain("Pelando Variación");
+    expect(bio[3]).toContain("Marcos Ayala");
+    expect(bio[4]).toContain("Théâtre Mariinsky");
+    expect(bio[5]).toContain("Michelangelo Tango");
+    expect(bio.some(p => p.includes("In 2013") || p.includes("She has a"))).toBe(false);
   });
 });
