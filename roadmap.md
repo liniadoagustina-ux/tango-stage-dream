@@ -21,3 +21,4 @@
 - [x] Verify French pages, mobile menu, remembered choice, language metadata and sitemap
 - [x] Apply supplied French Show text, credits and description without changing images or other languages
 - [x] Verify French Show, gallery and inline trailer on desktop and mobile
+- [ ] Apply supplied French Company text and description, preserving design and other languages; verify desktop/mobile and Show links
