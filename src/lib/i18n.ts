@@ -445,6 +445,14 @@ export const artistBiographiesFr: Record<string, string[]> = {
     "Individuellement, Federica a joué dans « El Show Debe Continuar », mis en scène par Hernán Piquín, et dans de grandes productions comme « Servian El Circo » et « Circo Rodas » ; son parcours de danseuse, comédienne et mannequin lui confère une forte présence théâtrale. Fabrizio s'est distingué dans le circuit compétitif du tango, atteignant les demi-finales du Championnat du monde de tango de Buenos Aires en 2025. Tous deux ont été choisis par Luizaga Brothers pour La Muerte del Ángel.",
     "Ensemble, ils incarnent une vision raffinée et contemporaine du tango de scène, alliant élégance, force et clarté expressive."
   ],
+  "sofia-heber": [
+    "Leur art repose sur une solide formation technique. Sofía a perfectionné sa technique classique au ballet du « Teatro Colón », et Heber s'est formé aux danses folkloriques traditionnelles et au malambo, au sein du groupe « Los Bombos Supay ». Cette double racine donne au couple un sens raffiné de la ligne, de la maîtrise et de la musicalité.",
+    "En 2013, ils ont été choisis comme couple vedette de Buenos Ayres Wine en Corée du Sud, une expérience qui les a menés à vivre un an à l'étranger pour y transmettre l'essence du tango argentin. En 2014, ils ont rejoint « El Sonido de mi Tierra », dirigé par Luis Pereyra, pour une tournée de cinq mois en Europe.",
+    "Leur excellence technique et leur maturité artistique leur ont valu d'être finalistes du concours « Pelando Variación » (2017–2018), où ils ont obtenu la troisième puis la deuxième place.",
+    "En 2019, ils ont rejoint la compagnie de Marcos Ayala, avec laquelle ils ont réalisé deux saisons consécutives à bord des navires Silja Symphony et Serenade, puis des tournées dans les pays baltes, en Russie et en Chine.",
+    "Ils se sont produits en Russie, en Allemagne, en Autriche, en Suisse, en Suède, en République tchèque, aux Pays-Bas, en Finlande et au Qatar, sur des scènes comme le Théâtre Mariinsky de Saint-Pétersbourg et le « Teatro Coliseo » de Buenos Aires.",
+    "Depuis 2023, ils font partie du célèbre dîner-spectacle « Michelangelo Tango ». Récemment, Luizaga Brothers les a invités à rejoindre leur nouvelle production."
+  ],
   "matias-rubino": [
     "Il commence ses études au « Conservatorio Superior de Música Manuel de Falla », puis approfondit le tango auprès du maître Rodolfo Mederos, avec qui il étudie le bandonéon, l'arrangement et l'orchestration, avant de suivre l'enseignement de Julio Pane et Carlos Lazzari.",
     "Il s'est produit dans des maisons de tango renommées comme « El Viejo Almacén », dont il a été directeur musical, « Legendario Buenos Aires », l'Hôtel Faena, le « Piazzolla Tango », l'« Esquina Carlos Gardel », l'« Esquina Homero Manzi » et « Señor Tango ». En 2006, il participe à « El tango y la sombra », avec Noelia Moncada et Esteban Riera, au « Teatro Maipo ».",
