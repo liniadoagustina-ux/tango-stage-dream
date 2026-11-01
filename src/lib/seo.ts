@@ -23,6 +23,7 @@ export function pageSEO(path: string, title: string, description: string) {
   const url = new URL(path, SITE_URL).href;
   const en = englishPath(path);
   const es = en === "/" ? "/es" : `/es${en}`;
+  const fr = en === "/" ? "/fr" : `/fr${en}`;
   return {
     meta: [
       { title },
@@ -37,6 +38,7 @@ export function pageSEO(path: string, title: string, description: string) {
       { rel: "canonical", href: url },
       { rel: "alternate", hreflang: "en", href: new URL(en, SITE_URL).href },
       { rel: "alternate", hreflang: "es", href: new URL(es, SITE_URL).href },
+      { rel: "alternate", hreflang: "fr", href: new URL(fr, SITE_URL).href },
       { rel: "alternate", hreflang: "x-default", href: new URL(en, SITE_URL).href },
     ],
     scripts: [{ type: "application/ld+json", children: JSON.stringify(performingGroup) }],

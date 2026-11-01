@@ -3,7 +3,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } f
 import { useEffect } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { LANG_STORAGE_KEY, langFromPath, pathForLang } from "@/lib/i18n";
+import { LANG_STORAGE_KEY, langFromPath, pathForLang, preferredLanguage } from "@/lib/i18n";
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -68,10 +68,7 @@ function LanguageRedirect() {
     let stored: string | null = null;
     try { stored = localStorage.getItem(LANG_STORAGE_KEY); } catch { return; }
     const current = langFromPath(pathname);
-    const preferred =
-      stored === "es" || stored === "en"
-        ? stored
-        : navigator.language?.toLowerCase().startsWith("es") ? "es" : "en";
+    const preferred = preferredLanguage(stored, navigator.language ?? "en");
     if (!stored) {
       try { localStorage.setItem(LANG_STORAGE_KEY, preferred); } catch { /* storage unavailable */ }
     }

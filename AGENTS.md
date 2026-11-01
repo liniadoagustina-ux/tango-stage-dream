@@ -8,4 +8,4 @@
 - Keep Show facts and credits in shared data and gallery enlargement in a focused component; this separates audience content from image interaction without adding a Gallery route.
 - Keep Company biographical facts and trajectory lists in shared data; this makes factual dates and ages testable independently of page presentation.
 - Keep Artists-page grouping, show roles and credits in a presentation catalog keyed by existing artist slugs; this preserves original portraits, full biographies and homepage cast ordering.
-- Keep language paths, translated page copy and media-control labels in src/lib/i18n.ts and render pages through shared components with an explicit language prop; this preserves English content and shared design while allowing language-specific sections.
+- Keep language paths, preference detection, translated page copy and media-control labels in src/lib/i18n.ts and render pages through shared components with an explicit language prop; untranslated language sections fall back to English while the shared shell retains the selected language, preserving content and design.

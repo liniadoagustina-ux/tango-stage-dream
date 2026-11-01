@@ -115,7 +115,7 @@ export function HomePage({ lang }: { lang: Lang }) {
                   <div className="absolute inset-x-0 bottom-0 p-4">
                     <p className="font-serif text-lg leading-tight">{a.name}</p>
                     <p className="text-xs uppercase tracking-luxe text-muted-foreground mt-1">
-                      {lang === "es" ? copy.castRoles[i] : (a.character ?? a.discipline)}
+                      {lang !== "en" ? copy.castRoles[i] : (a.character ?? a.discipline)}
                     </p>
                   </div>
                 </Link>
