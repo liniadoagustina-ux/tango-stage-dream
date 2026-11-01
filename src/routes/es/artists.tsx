@@ -4,6 +4,6 @@ import { ArtistsPage } from "@/components/pages/ArtistsPage";
 
 export const Route = createFileRoute("/es/artists")({
   staticData: { sitemap: true },
-  head: () => pageSEO("/es/artists", "Artists — Luizaga Brothers", "The cast of La Muerte del Ángel: world tango champions, aerialists and a live tango band, directed by Leonardo and Edgar Luizaga."),
-  component: ArtistsPage,
+  head: () => pageSEO("/es/artists", "El elenco — Luizaga Brothers", "El elenco de La Muerte del Ángel: campeones mundiales de tango, artistas aéreos y una orquesta en vivo, bajo la dirección de Leonardo y Edgar Luizaga."),
+  component: () => <ArtistsPage lang="es" />,
 });

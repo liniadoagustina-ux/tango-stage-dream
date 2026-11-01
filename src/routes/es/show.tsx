@@ -4,6 +4,6 @@ import { ShowPage } from "@/components/pages/ShowPage";
 
 export const Route = createFileRoute("/es/show")({
   staticData: { sitemap: true },
-  head: () => pageSEO("/es/show", "Tango – La Muerte del Ángel | Luizaga Brothers", "Tango – La Muerte del Ángel by Luizaga Brothers: the myth of Charon told through Argentine tango, folklore, aerial dance and a live band."),
-  component: ShowPage,
+  head: () => pageSEO("/es/show", "Tango – La Muerte del Ángel | Luizaga Brothers", "Tango – La Muerte del Ángel, de Luizaga Brothers: el mito de Caronte narrado a través del tango argentino, el folklore y la danza aérea, con orquesta en vivo."),
+  component: () => <ShowPage lang="es" />,
 });

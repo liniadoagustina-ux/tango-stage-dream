@@ -11,7 +11,13 @@ import {
 } from "@/components/ui/dialog";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 
-export function ArtistsPage() {
+import { artistsCopyEs, artistGroupHeadingsEs, mediaCopy, type Lang } from "@/lib/i18n";
+
+export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
+  const groups = lang === "es" ? artistGroups.map(group => ({ ...group, members: group.members.map(artist => {
+    const copy = artistsCopyEs[artist.slug];
+    return copy ? { ...artist, ...copy, responsibilities: copy.responsibilities ?? undefined } : artist;
+  }) })) : artistGroups;
   const [active, setActive] = useState<PresentedArtist | null>(null);
 
   return (
@@ -19,17 +25,17 @@ export function ArtistsPage() {
       <section className="pt-28 pb-12 md:pt-52 md:pb-24 px-6">
         <div className="max-w-7xl mx-auto">
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl">
-              The cast
+              {lang === "es" ? "El elenco" : "The cast"}
             </h1>
         </div>
       </section>
 
-      {artistGroups.map(group => (
+      {groups.map(group => (
         <section key={group.heading} className="px-6 pb-16 md:pb-32">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl mb-8 md:mb-12">{group.heading}</h2>
+            <h2 className="font-serif text-4xl md:text-5xl mb-8 md:mb-12">{lang === "es" ? artistGroupHeadingsEs[group.heading] : group.heading}</h2>
             <div className={group.heading === 'Direction' ? 'grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10' : 'grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-8 gap-y-8'}>
-              {group.members.map(artist => <ArtistCard key={artist.slug} artist={artist} onOpen={() => setActive(artist)} />)}
+              {group.members.map(artist => <ArtistCard key={artist.slug} lang={lang} artist={artist} onOpen={() => setActive(artist)} />)}
             </div>
           </div>
         </section>
@@ -77,7 +83,7 @@ export function ArtistsPage() {
                 </div>
 
                 <DialogPrimitive.Close
-                  aria-label="Close"
+                  aria-label={mediaCopy[lang].close}
                   className="absolute right-4 top-4 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground size-10 shadow-lg ring-1 ring-primary/40 transition-all hover:scale-105 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <X className="size-5" />

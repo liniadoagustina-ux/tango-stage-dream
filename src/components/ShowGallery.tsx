@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { images } from '@/data/images';
 
+import { mediaCopy, type Lang } from "@/lib/i18n";
+
 const gallery = [
   { ...images['gallery-1'], alt: 'A tango couple embraces with the live band behind them' },
   { ...images['gallery-2'], alt: 'The ensemble dances beneath pink stage lights' },
@@ -16,7 +18,8 @@ const gallery = [
   { ...images['gallery-9'], alt: 'An aerial performer suspended over the ensemble' },
 ];
 
-export function ShowGallery() {
+export function ShowGallery({ lang = "en" }: { lang?: Lang }) {
+  const copy = mediaCopy[lang];
   const [selected, setSelected] = useState<number | null>(null);
   const active = selected === null ? undefined : gallery[selected];
   const move = (direction: number) => setSelected(current => current === null ? null : (current + direction + gallery.length) % gallery.length);
@@ -37,19 +40,19 @@ export function ShowGallery() {
     <>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
         {gallery.map((image, index) => (
-          <Button key={image.url} variant="ghost" className="h-auto w-full rounded-none p-0 bg-background overflow-hidden" aria-label={`Enlarge gallery photo ${index + 1}`} onClick={() => setSelected(index)}>
-            <img src={image.url} width={image.width} height={image.height} alt={image.alt} loading="lazy" className="block w-full h-auto" />
+          <Button key={image.url} variant="ghost" className="h-auto w-full rounded-none p-0 bg-background overflow-hidden" aria-label={`${copy.enlarge} ${index + 1}`} onClick={() => setSelected(index)}>
+            <img src={image.url} width={image.width} height={image.height} alt={copy.alts[index]} loading="lazy" className="block w-full h-auto" />
           </Button>
         ))}
       </div>
       <Dialog open={selected !== null} onOpenChange={open => { if (!open) setSelected(null); }}>
-        <DialogContent aria-describedby={undefined} className="w-[calc(100%-2rem)] max-w-6xl max-h-[90dvh] gap-3 p-3 pt-12 bg-background">
-          <DialogTitle className="sr-only">Tango – La Muerte del Ángel gallery, photo {selected === null ? '' : selected + 1}</DialogTitle>
-          {active && <img src={active.url} width={active.width} height={active.height} alt={active.alt} className="block w-full h-auto max-h-[calc(90dvh-8rem)] object-contain" />}
+        <DialogContent closeLabel={copy.close} aria-describedby={undefined} className="w-[calc(100%-2rem)] max-w-6xl max-h-[90dvh] gap-3 p-3 pt-12 bg-background">
+          <DialogTitle className="sr-only">{copy.gallery} {selected === null ? '' : selected + 1}</DialogTitle>
+          {active && <img src={active.url} width={active.width} height={active.height} alt={selected === null ? "" : copy.alts[selected]} className="block w-full h-auto max-h-[calc(90dvh-8rem)] object-contain" />}
           <div className="flex items-center justify-center gap-6">
-            <Button variant="outline" size="icon" onClick={() => move(-1)} aria-label="Previous gallery photo" title="Previous photo"><ChevronLeft /></Button>
+            <Button variant="outline" size="icon" onClick={() => move(-1)} aria-label={copy.previous} title={lang === "es" ? copy.previous : "Previous photo"}><ChevronLeft /></Button>
             <span className="text-sm text-muted-foreground">{selected === null ? '' : selected + 1} / {gallery.length}</span>
-            <Button variant="outline" size="icon" onClick={() => move(1)} aria-label="Next gallery photo" title="Next photo"><ChevronRight /></Button>
+            <Button variant="outline" size="icon" onClick={() => move(1)} aria-label={copy.next} title={lang === "es" ? copy.next : "Next photo"}><ChevronRight /></Button>
           </div>
         </DialogContent>
       </Dialog>
