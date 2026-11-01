@@ -15,3 +15,5 @@
 - [x] Add Spanish version under /es (shared parts + home translated; show/company/artists in English until texts arrive)
 - [x] Apply supplied Spanish Show, Company and Artists texts while preserving English and imagery
 - [x] Remove duration from Spanish home production copy and verify Spanish navigation, gallery and artist popups
+- [x] Replace Spanish home copy with the supplied texts (hero, manifesto line, cards, production card, cast link, footer, meta description)
+- [x] Verify Spanish home on desktop/mobile, mobile-menu language switch, remembered-language redirect and lowercase hreflang output
