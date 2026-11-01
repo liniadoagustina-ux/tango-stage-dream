@@ -1,7 +1,7 @@
 export const companyFacts = {
   trainingAge: 5,
   internationalDebutAge: 17,
-  showPremiereYear: 2026,
+  hasPremiered: false,
 };
 
 export const trajectories = [
