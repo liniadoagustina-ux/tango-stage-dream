@@ -28,3 +28,6 @@
 - [x] Apply and verify the eight supplied Spanish full biographies, preserving other artist content and languages
 
 - [x] Apply and verify the remaining eight supplied Spanish biographies without changing cards or other languages
+
+- [ ] Apply and verify seven complete supplied French biographies, preserving design and other languages
+- [ ] French Sofía/Heber biography: waiting for the complete text; uploaded file ends mid-sentence

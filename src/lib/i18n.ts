@@ -399,3 +399,50 @@ export const artistBiographiesEs: Record<string, string[]> = {
     "Es además creadora de Tango en Vivo, una plataforma digital internacional dedicada a la difusión del tango en el mundo, y cocreadora de Duelo Criollo, un innovador juego escénico con identidad propia."
   ]
 };
+
+// Only complete supplied translations replace original biographies.
+export const artistBiographiesFr: Record<string, string[]> = {
+  "leonardo-luizaga": [
+    "Chorégraphe, interprète et force créatrice du tango contemporain sur la scène internationale. Il fut le plus jeune danseur jamais invité dans la légendaire compagnie « Tango Pasión », choisi personnellement par Héctor Zaraspe, de la Juilliard School.",
+    "Lauréat du prix du Meilleur danseur aux « Premios Carlos ». Artiste principal de la compagnie de Juan Carlos Copes, du « Malbec Tango House » (New York), de « Stravaganza Tango », d'« Estampas Porteñas » et d'Immortal Tango, il a tourné de Tokyo à Londres.",
+    "Formé au tango, au ballet, au jazz, à la danse contemporaine et aux sangles aériennes, il maîtrise aussi la création de costumes, la lumière et la dramaturgie. Un bâtisseur de mondes immersifs, d'une intense charge émotionnelle."
+  ],
+  "edgar-luizaga": [
+    "Cocréateur et producteur général de Luizaga Brothers. Formé à l'« Instituto Superior de Arte » du « Teatro Colón » auprès des maîtres Mario Galizzi et Leandro Regueiro, il commence à cinq ans par la gymnastique artistique, avant le ballet puis le tango.",
+    "Il débute au « Piazzolla Tango », rejoint la compagnie TangoX2 en Europe et le « Ballet del Mercosur ». Il affine son langage aérien au « Circo Criollo », à l'Académie Fratellini à Paris et à « La Central » à Barcelone.",
+    "On l'a vu dans Wild Tango, Break the Tango, America's Got Talent, Spain's Got Talent, au Park Chinois (Londres), au « Lío Ibiza » et dans des productions internationales pour des maisons telles que Marriott, Bulgari et The Moon Wolf Co."
+  ],
+  "maia-roldan": [
+    "Danseuse et chorégraphe argentine, reconnue pour sa polyvalence et sa présence scénique dans la comédie musicale, la télévision et les productions internationales. Au fil de sa carrière, elle a reçu de nombreux prix et bourses, dont une bourse pour le Summer Dance Intensive de la Point Park University (Pittsburgh, États-Unis), attribuée par Gustavo Zajac, et a poursuivi sa formation à la « Fundación Julio Bocca », à Buenos Aires.",
+    "Elle a ensuite étudié à New York, au Broadway Dance Center, auprès de la chorégraphe Ashley Dawson. En danse de salon, elle a remporté le premier prix du concours World Promotions Sheraton (2011–2012) avec Alexis Mariani. En 2018, elle a reçu le prix de la Meilleure chorégraphie jeune public aux « Premios Hugo » pour « Aladín… será genial », créé avec Rosario Asencio.",
+    "Interprète, elle a mené une riche carrière entre scène, télévision et tournées internationales : les grandes émissions argentines « Susana Giménez » et « ShowMatch – Bailando por un Sueño » (2018–2019), la tournée « Soy » de Lali Espósito (2016–2019), ainsi que « Disney – Una Navidad Inolvidable », mis en scène par Ariel del Mastro, « Pan – El Musical », comme capitaine de danse, et « Stravaganza », mis en scène par Flavio Mendoza.",
+    "En danse contemporaine, elle a travaillé avec la compagnie CEM dans « Pies pa' Volar », « Rayuela » et « Estados del Tiempo », et avec « Choque Urbano » au « Teatro Konex » et en tournée nationale (2011–2013).",
+    "À l'international, elle a été danseuse et assistante dans Wild Tango, de la compagnie de Germán Cornejo, à Londres (2022–2023), et dans Papillon, dîner-spectacle à Dubaï mis en scène par Layla Kardan. Elle a également tourné en Russie, en Arménie, en Biélorussie, au Kazakhstan, au Kirghizistan, en Moldavie et en Italie avec Freedom, de « Los Potros Malambo », sous la direction d'Isaac et Javier Gardela.",
+    "Chorégraphe, elle signe American Idiot – The Musical, « Simona en Vivo » au « Luna Park » et « Aladín… será genial » au « Teatro Gran Rex » ; elle a chorégraphié pour Burnet en Turquie et en Égypte (2021–2022) et collaboré à Wild Tango avec la compagnie de Germán Cornejo. Récemment, elle a participé à « Papá por Siempre », au « Teatro Liceo » (2026)."
+  ],
+  "camila-ezequiel": [
+    "Champions du monde de « Tango Escenario » et membres du jury des championnats du monde et d'Europe de tango. Ils ont fait partie des compagnies Tango Legends, « Tanguera », Tango Fire, Break the Tango et Tango After Dark (Peacock Theatre, Londres).",
+    "Ils se sont produits dans les plus prestigieuses maisons de tango de Buenos Aires, comme le « Café de los Angelitos », « Tango Porteño » et le « Piazzolla Tango », et ont joué dans le film « Un Tango Más », aux côtés de María Nieves et Juan Carlos Copes.",
+    "Ils font partie de l'équipe chorégraphique de La Muerte del Ángel, la nouvelle production de Luizaga Brothers."
+  ],
+  "evangelina-nelson": [
+    "Vice-champions du monde de « Tango Escenario », reconnus internationalement pour leur art et leur présence scénique. Leur danse jette des ponts entre le tango traditionnel et les influences contemporaines et folkloriques.",
+    "Ils ont participé à « Michelangelo Tango Show », « Madero Tango Iguazú », « El Viejo Almacén », Tango Dynasty et Tango 01, et ont tourné à l'international avec « Malevo » et le CRXCE Ballet.",
+    "En 2025, Luizaga Brothers les a invités à rejoindre leur nouvelle production."
+  ],
+  "soledad-mangia": [
+    "Chorégraphe et danseuse argentine, championne du prestigieux « Festival Nacional de Cosquín », reconnue pour l'excellence de son folklore argentin et sa grande polyvalence. Partenaire de Julio Bocca, elle a ainsi affirmé son nom sur la scène internationale.",
+    "Sélectionnée pour PROTÉGÉS III – International Ballet Academy Festival, à Washington, elle s'y est formée et produite aux côtés d'artistes de compagnies de renommée mondiale comme le Ballet du Bolchoï, le Tokyo Ballet et le Royal Danish Ballet.",
+    "Elle a acquis une solide base classique au « Ballet de San Martín », à Buenos Aires, puis a poursuivi ses études à la Point Park University de Pittsburgh (États-Unis), sous la direction de Susan Stowe, en ballet classique, danse moderne, jazz et claquettes. Elle a complété sa formation à New York au sein de la Jennifer Muller Company, auprès de sa fondatrice.",
+    "En 2018, elle rejoint la tournée « Tango Seducción », dirigée par Gustavo Russo, et danse avec le « Ballet Folklórico Nacional » aux festivals de Cosquín et du chamamé, à Corrientes. La même année, elle participe à « ARGENTUM » pour le sommet du G20, mis en scène par Ricky Pashkus, et accompagne Julio Bocca comme danseuse. Elle a également dansé dans « Un Instante », de la « Compañía en Movimiento » (C.E.M.), dirigée par Analía González, fait partie de « Choque Urbano » (2011) et participé à des productions emblématiques comme la réouverture du « Teatro Colón », mise en scène par Carlos Veiga.",
+    "Danseuse du « Ballet Argentino » (« Fundación Julio Bocca »), sous la direction de Julio Bocca et Ricky Pashkus, elle a été membre du « Ballet Neoclásico de Buenos Aires » de 2005 à 2009, dirigé par Guido De Benedetti, et a dansé avec la compagnie « Pies Desnudos » (2009–2010), le « Ballet Compacto » (2007) et dans l'ouverture de « ShowMatch » (2008), présenté par Marcelo Tinelli.",
+    "Chorégraphe et collaboratrice artistique, elle a cosigné en 2023 la chorégraphie de « Comunidad » pour le « Ballet Folklórico Nacional », avec Gustavo Carrizo et Eduardo Virasoro. Elle a été assistante chorégraphe sur Club 57 Live (Nickelodeon) et « Topa, El Viajero » (2019), a collaboré à Waitress avec Nina Iraolagoitia, assisté Analía González pour « Después del Sol » au Ballet contemporain du « Teatro San Martín » (2012), et présenté sa propre pièce au cycle des Jeunes chorégraphes (moins de 25 ans) du « Centro Cultural Rojas » (2009)."
+  ],
+  "fabrizio-federica": [
+    "Un couple de tango argentin distingué, représentant d'une nouvelle génération d'artistes qui apporte raffinement, polyvalence et une présence scénique saisissante à la scène internationale. Établis à Buenos Aires, ils allient avec naturel précision technique, sensibilité musicale et profondeur émotionnelle.",
+    "Tous deux formés au tango argentin, au ballet classique, à la danse contemporaine, au jazz et au folklore, ils ont travaillé auprès des maîtres Vanesa Villalba et Facundo Piñero, qui ont façonné un style sophistiqué et dynamique, ancré dans la tradition et pensé pour les exigences de la scène contemporaine.",
+    "Ils se sont produits dans quelques-unes des plus prestigieuses maisons de tango de Buenos Aires, comme « Rojo Tango » au Faena Hotel, le « Café de los Angelitos » et « Señor Tango », dans des productions de haut niveau destinées à un public international.",
+    "Individuellement, Federica a joué dans « El Show Debe Continuar », mis en scène par Hernán Piquín, et dans de grandes productions comme « Servian El Circo » et « Circo Rodas » ; son parcours de danseuse, comédienne et mannequin lui confère une forte présence théâtrale. Fabrizio s'est distingué dans le circuit compétitif du tango, atteignant les demi-finales du Championnat du monde de tango de Buenos Aires en 2025. Tous deux ont été choisis par Luizaga Brothers pour La Muerte del Ángel.",
+    "Ensemble, ils incarnent une vision raffinée et contemporaine du tango de scène, alliant élégance, force et clarté expressive."
+  ]
+};
