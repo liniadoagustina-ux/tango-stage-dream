@@ -181,6 +181,50 @@ export const mediaCopy = {
   },
 };
 
+export const companyCopyFr = {
+  title: "La compagnie",
+  intro: "Chorégraphes, directeurs artistiques et fondateurs de Luizaga Brothers Production, Leonardo et Edgar Luizaga ont porté le tango argentin sur les scènes d'Europe, d'Asie et d'Amérique, à travers un langage qui mêle danse, théâtre et mouvement aérien.",
+  originsHeading: "Les débuts",
+  origins: "Nés à Zárate, en Argentine, Leonardo et Edgar commencent leur formation dès l'âge de cinq ans, au sein d'une famille de danseurs et de gymnastes. Formés à l'« Instituto Superior de Arte » du « Teatro Colón », ils pratiquent le tango, le ballet, le flamenco, la danse contemporaine et les arts du cirque. Tous deux entament leur carrière internationale à dix-sept ans.",
+  approachHeading: "Leur regard",
+  approach: "Leur travail prend racine dans le tango argentin, envisagé non comme une tradition figée mais comme un langage vivant et mouvant, qu'ils déconstruisent et recomposent en dialogue avec le cirque, le théâtre physique et la création visuelle. De cette rencontre naît un langage traversé de tensions : entre maîtrise et lâcher-prise, entre ancrage et élévation, entre intimité et monumentalité.",
+  trajectoryHeading: "Parcours",
+  togetherHeading: "Ensemble",
+  regionsHeading: "Leurs scènes",
+  showCta: "Découvrir le spectacle",
+  showTo: "/fr/show",
+  trajectories: [
+    { name: "Leonardo Luizaga", achievements: [
+      "Plus jeune danseur de la compagnie « Tango Pasión », choisi par Héctor Zaraspe, de la Juilliard School",
+      "Membre de la compagnie de Juan Carlos Copes",
+      "Danseur principal au « Malbec Tango House », New York",
+      "Prix du Meilleur danseur aux « Premios Carlos » (Argentine)",
+      "Représentant de l'Argentine à l'Expo Yeosu, en Corée",
+      "Tournée dans plus de trente villes du Japon avec la Fondation Min-On",
+      "Danseur principal dans « Stravaganza »",
+    ] },
+    { name: "Edgar Luizaga", achievements: [
+      "Formation professionnelle en ballet à l'« Instituto Superior de Arte » du « Teatro Colón »",
+      "Membre du « Ballet del Mercosur » et de la compagnie TangoX2 en Europe",
+      "Spécialisation dans les disciplines aériennes à l'Académie Fratellini (Paris) et à « La Central » (Barcelone)",
+      "Tournées dans les théâtres et festivals d'Europe et d'Asie avec Wild Tango et Break the Tango",
+      "Artiste invité au Park Chinois, Londres",
+      "Prestations dans America's Got Talent et Spain's Got Talent",
+    ] },
+  ],
+  together: [
+    "Création et chorégraphie de projets à New York, Londres, Shanghai et Dubaï pour des maisons telles que Marriott International, Bulgari et The Moon Wolf Co.",
+    "Fondation de Luizaga Brothers Production",
+  ],
+  premierePrefix: "Création de «",
+  premiereSuffix: "» en 2026",
+  regions: [
+    { name: "Europe", countries: ["Royaume-Uni", "Espagne", "France", "Italie"] },
+    { name: "Asie", countries: ["Japon", "Chine", "Corée du Sud", "Émirats arabes unis"] },
+    { name: "Amériques", countries: ["Argentine", "États-Unis"] },
+  ],
+};
+
 export const showCopyFr = {
   title: "Tango – La Muerte del Ángel",
   line: "À Buenos Aires, la mort danse au rythme du tango.",
