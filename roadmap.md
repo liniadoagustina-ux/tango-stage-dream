@@ -22,4 +22,4 @@
 - [x] Apply supplied French Show text, credits and description without changing images or other languages
 - [x] Verify French Show, gallery and inline trailer on desktop and mobile
 - [x] Apply supplied French Company text and description, preserving design and other languages; verify desktop/mobile and Show links
-- [ ] Apply supplied French Artists cards, headings and description; verify photos, biographies and desktop/mobile presentation
+- [x] Apply supplied French Artists cards, headings and description; verify photos, biographies and desktop/mobile presentation
