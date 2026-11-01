@@ -77,7 +77,7 @@ export function HomePage({ lang }: { lang: Lang }) {
           </Reveal>
           <Reveal delay={0.45}>
             <div id="trailer" className="mt-16 max-w-3xl scroll-mt-24">
-              <Trailer compact />
+              <Trailer compact lang={lang} />
             </div>
           </Reveal>
         </div>
