@@ -1,8 +1,14 @@
 import { describe, test, expect } from "bun:test";
-import { langFromPath, pathForLang, englishPath, navItems, homeCopy } from "./i18n";
+import { langFromPath, pathForLang, englishPath, navItems, homeCopy, showCopyEs } from "./i18n";
 import { pageSEO } from "./seo";
 
 describe("Language routing", () => {
+  test("Spanish aerial choreography is credited to Edgar Luizaga", () => {
+    expect(showCopyEs.credits.find(credit => credit.role === "Coreografía aérea")?.name).toBe("Edgar Luizaga");
+  });
+  test("Spanish production assistance is credited to Lucía Ohyama", () => {
+    expect(showCopyEs.credits.find(credit => credit.role === "Asistencia de producción")?.name).toBe("Lucía Ohyama");
+  });
   test("Spanish pages live under /es and English paths stay unchanged", () => {
     expect(pathForLang("/", "es")).toBe("/es");
     expect(pathForLang("/show", "es")).toBe("/es/show");

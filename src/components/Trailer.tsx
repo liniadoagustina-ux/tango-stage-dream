@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { images } from "@/data/images";
 import { Button } from "@/components/ui/button";
 
+import { mediaCopy, type Lang } from "@/lib/i18n";
+
 const VIDEO_ID = "qsigoOSNGwc";
 
-export function Trailer({ compact = false }: { compact?: boolean }) {
+export function Trailer({ compact = false, lang = "en" }: { compact?: boolean; lang?: Lang }) {
   const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ export function Trailer({ compact = false }: { compact?: boolean }) {
       {playing ? (
         <iframe
           src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
-          title="La Muerte del Ángel — Official Trailer"
+          title={mediaCopy[lang].trailer}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
           className="absolute inset-0 h-full w-full"
@@ -33,12 +35,12 @@ export function Trailer({ compact = false }: { compact?: boolean }) {
         <Button variant="ghost"
           type="button"
           onClick={() => setPlaying(true)}
-          aria-label="Play the official trailer"
+          aria-label={mediaCopy[lang].play}
           className="absolute inset-0 h-full w-full cursor-pointer"
         >
           <img
             src={images.trailer.url} width={images.trailer.width} height={images.trailer.height}
-            alt="La Muerte del Ángel — Official Trailer"
+            alt={mediaCopy[lang].trailer}
             loading="lazy"
             className="absolute inset-0 h-full w-full object-cover"
           />

@@ -13,4 +13,5 @@
 - [x] Group Artists into Direction, Dancers, Musicians and Creative team with supplied roles and credits
 - [x] Verify artist photos, full biographies and mobile/desktop grids
 - [x] Add Spanish version under /es (shared parts + home translated; show/company/artists in English until texts arrive)
-- [ ] Translate /es/show, /es/company and /es/artists when the user sends the Spanish texts
+- [x] Apply supplied Spanish Show, Company and Artists texts while preserving English and imagery
+- [x] Remove duration from Spanish home production copy and verify Spanish navigation, gallery and artist popups

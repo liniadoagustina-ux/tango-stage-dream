@@ -3,9 +3,13 @@ import { ShowGallery } from "@/components/ShowGallery";
 import { motion, useReducedMotion } from "framer-motion";
 import { images } from "@/data/images";
 import { characters, credits, showDetails } from "@/data/show";
+import { showCopyEs, bookingLabel, type Lang } from "@/lib/i18n";
 const showLogoAsset = images["la-muerte-del-angel-137"];
 
-export function ShowPage() {
+export function ShowPage({ lang = "en" }: { lang?: Lang }) {
+  const es = lang === "es";
+  const pageCharacters = es ? showCopyEs.characters : characters;
+  const pageCredits = es ? showCopyEs.credits : credits;
   const reducedMotion = useReducedMotion();
   return (
     <>
@@ -17,29 +21,38 @@ export function ShowPage() {
             <figcaption className="relative px-6 pt-6 pb-10 md:absolute md:inset-x-0 md:bottom-0 md:p-10">
               <span className="block h-px w-16 bg-primary mb-4" />
               <h1 className="font-serif text-foreground leading-none text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-balance drop-shadow-lg">Tango – La Muerte del Ángel</h1>
-              <p className="mt-4 font-serif text-2xl md:text-3xl text-foreground">A Charon Story</p>
-              <p className="mt-3 text-base md:text-lg text-foreground/90">In Buenos Aires, death dances to the rhythm of tango.</p>
+              {!es && <p className="mt-4 font-serif text-2xl md:text-3xl text-foreground">A Charon Story</p>}
+              <p className="mt-3 text-base md:text-lg text-foreground/90">{es ? showCopyEs.line : "In Buenos Aires, death dances to the rhythm of tango."}</p>
             </figcaption>
           </figure>
         </motion.div>
       </section>
 
+      {es && <section className="py-16 md:py-32 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-serif text-4xl md:text-5xl mb-10">{showCopyEs.workHeading}</h2>
+          <p className="text-base md:text-lg text-foreground/90 leading-relaxed">{showCopyEs.work}</p>
+        </div>
+      </section>}
+
       <section className="py-16 md:py-32 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl mb-10">The story</h2>
+          <h2 className="font-serif text-4xl md:text-5xl mb-10">{es ? showCopyEs.storyHeading : "The story"}</h2>
           <div className="space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed">
+            {es ? showCopyEs.story.map(paragraph => <p key={paragraph}>{paragraph}</p>) : <>
             <p>In a timeless barrio of Buenos Aires, Gabino and Amanda share a simple, lasting love, born in a milonga and sealed in the embrace.</p>
             <p>One stormy afternoon, in the middle of Gabino's birthday lunch, Charon, the ferryman of the dead, comes for Amanda. She doesn't resist. She dances with him.</p>
             <p>Only Nocturna, a medium who can see beyond this world, perceives his presence. Left behind, Gabino wanders through grief: the town fair, a mistaken kiss, nights with no way out. In the end he chooses to follow Amanda, and Charon guides them both across.</p>
+            </>}
           </div>
         </div>
       </section>
 
       <section className="py-16 md:py-32 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl mb-10">Characters</h2>
+          <h2 className="font-serif text-4xl md:text-5xl mb-10">{es ? showCopyEs.charactersHeading : "Characters"}</h2>
           <dl className="grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-10 gap-y-8 md:gap-y-12">
-            {characters.map(character => (
+            {pageCharacters.map(character => (
               <div key={character.name} className="border-t border-primary/40 pt-5 min-w-0">
                 <dt className="font-serif text-2xl md:text-3xl leading-tight text-foreground">{character.name}</dt>
                 <dd className="mt-3 text-sm leading-relaxed text-muted-foreground">{character.performer}</dd>
@@ -51,19 +64,19 @@ export function ShowPage() {
 
       <section className="py-12 md:py-32 px-6 bg-background">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-4xl md:text-5xl mb-12">Watch the show</h2>
-          <Trailer />
+          <h2 className="font-serif text-4xl md:text-5xl mb-12">{es ? showCopyEs.trailerHeading : "Watch the show"}</h2>
+          <Trailer lang={lang} />
         </div>
       </section>
 
       <section className="py-16 md:py-32 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl mb-10">Gallery</h2>
-          <ShowGallery />
+          <h2 className="font-serif text-4xl md:text-5xl mb-10">{es ? showCopyEs.galleryHeading : "Gallery"}</h2>
+          <ShowGallery lang={lang} />
         </div>
       </section>
 
-      <section className="py-16 md:py-32 px-6">
+      {!es && <section className="py-16 md:py-32 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-serif text-4xl md:text-5xl mb-10">Good to know</h2>
           <ul className="space-y-5 text-base md:text-lg text-foreground/90 leading-relaxed list-none">
@@ -72,17 +85,17 @@ export function ShowPage() {
             <li>Tango, folklore and aerial dance on {showDetails.aerialApparatus.slice(0, -1).join(', ')} and {showDetails.aerialApparatus.at(-1)}</li>
           </ul>
         </div>
-      </section>
+      </section>}
 
       <section className="px-6 pb-16 md:pb-32">
         <div className="max-w-4xl mx-auto border-t border-primary/40 pt-8">
-          <h2 className="font-serif text-xl mb-6">Credits</h2>
+          <h2 className="font-serif text-xl mb-6">{es ? showCopyEs.creditsHeading : "Credits"}</h2>
           <dl className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-            {credits.map(credit => (
+            {pageCredits.map(credit => (
               <div key={credit.role}><dt className="inline text-foreground">{credit.role}: </dt><dd className="inline">{credit.name}</dd></div>
             ))}
           </dl>
-          <p className="mt-12 text-sm text-muted-foreground">Booking: <a href="mailto:luizagabros@gmail.com" className="text-foreground underline underline-offset-4 hover:text-foreground/80">luizagabros@gmail.com</a></p>
+          <p className="mt-12 text-sm text-muted-foreground">{bookingLabel[lang]}: <a href="mailto:luizagabros@gmail.com" className="text-foreground underline underline-offset-4 hover:text-foreground/80">luizagabros@gmail.com</a></p>
         </div>
       </section>
     </>
