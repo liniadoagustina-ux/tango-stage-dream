@@ -7,6 +7,6 @@ test('the brothers began training at five', () => {
 test('both brothers made their international debut at 17', () => {
   expect(companyFacts.internationalDebutAge).toBe(17);
 });
-test('Tango – La Muerte del Ángel premiered in 2026', () => {
-  expect(companyFacts.showPremiereYear).toBe(2026);
+test('Tango – La Muerte del Ángel has not premiered yet', () => {
+  expect(companyFacts.hasPremiered).toBe(false);
 });

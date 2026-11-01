@@ -54,7 +54,7 @@ export function CompanyPage({ lang = "en" }: { lang?: Lang }) {
               <li>Projects in New York, London, Shanghai and Dubai for clients including Marriott International, Bulgari and The Moon Wolf Co.</li>
               <li>Founded Luizaga Brothers Production</li>
               </>}
-              <li>{copy?.premierePrefix ?? "Premiered"} <Link to={showTo} className="text-foreground underline underline-offset-4 hover:text-foreground/80">Tango – La Muerte del Ángel</Link> {copy?.premiereSuffix ?? `in ${companyFacts.showPremiereYear}`}</li>
+              <li>{copy?.premierePrefix ?? "Created"} <Link to={showTo} className="text-foreground underline underline-offset-4 hover:text-foreground/80">Tango – La Muerte del Ángel</Link>{copy?.premiereSuffix ?? ", their new production"}</li>
             </ul>
           </div>
         </div>
