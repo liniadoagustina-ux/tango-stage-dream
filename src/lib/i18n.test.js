@@ -27,9 +27,9 @@ describe("Language routing", () => {
     const head = pageSEO("/es/show", "T", "D");
     const alternates = head.links.filter((l) => l.rel === "alternate");
     expect(alternates).toEqual([
-      { rel: "alternate", hrefLang: "en", href: "https://luizagabrothers.com/show" },
-      { rel: "alternate", hrefLang: "es", href: "https://luizagabrothers.com/es/show" },
-      { rel: "alternate", hrefLang: "x-default", href: "https://luizagabrothers.com/show" },
+      { rel: "alternate", hreflang: "en", href: "https://luizagabrothers.com/show" },
+      { rel: "alternate", hreflang: "es", href: "https://luizagabrothers.com/es/show" },
+      { rel: "alternate", hreflang: "x-default", href: "https://luizagabrothers.com/show" },
     ]);
     expect(head.links[0]).toEqual({ rel: "canonical", href: "https://luizagabrothers.com/es/show" });
   });

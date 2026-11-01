@@ -35,9 +35,9 @@ export function pageSEO(path: string, title: string, description: string) {
     ],
     links: [
       { rel: "canonical", href: url },
-      { rel: "alternate", hrefLang: "en", href: new URL(en, SITE_URL).href },
-      { rel: "alternate", hrefLang: "es", href: new URL(es, SITE_URL).href },
-      { rel: "alternate", hrefLang: "x-default", href: new URL(en, SITE_URL).href },
+      { rel: "alternate", hreflang: "en", href: new URL(en, SITE_URL).href },
+      { rel: "alternate", hreflang: "es", href: new URL(es, SITE_URL).href },
+      { rel: "alternate", hreflang: "x-default", href: new URL(en, SITE_URL).href },
     ],
     scripts: [{ type: "application/ld+json", children: JSON.stringify(performingGroup) }],
   };
