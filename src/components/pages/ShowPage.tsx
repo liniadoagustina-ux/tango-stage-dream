@@ -27,14 +27,14 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
         </motion.div>
       </section>
 
-      {copy && <section className="py-16 md:py-32 px-6">
+      {copy && <section className="py-14 md:py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-serif text-4xl md:text-5xl mb-10">{copy.workHeading}</h2>
           <p className="text-base md:text-lg text-foreground/90 leading-relaxed">{copy.work}</p>
         </div>
       </section>}
 
-      <section className="py-16 md:py-32 px-6">
+      <section className="py-14 md:py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-serif text-4xl md:text-5xl mb-10">{copy?.storyHeading ?? "The story"}</h2>
           <div className="space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed">
@@ -47,7 +47,7 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
         </div>
       </section>
 
-      <section className="py-16 md:py-32 px-6">
+      <section className="py-14 md:py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-4xl md:text-5xl mb-10">{copy?.charactersHeading ?? "Characters"}</h2>
           <dl className="grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-10 gap-y-8 md:gap-y-12">
@@ -61,21 +61,21 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
         </div>
       </section>
 
-      <section className="py-12 md:py-32 px-6 bg-background">
+      <section className="py-12 md:py-24 px-6 bg-background">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-4xl md:text-5xl mb-12">{copy?.trailerHeading ?? "Watch the show"}</h2>
           <Trailer lang={lang} />
         </div>
       </section>
 
-      <section className="py-16 md:py-32 px-6">
+      <section className="py-14 md:py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-4xl md:text-5xl mb-10">{copy?.galleryHeading ?? "Gallery"}</h2>
           <ShowGallery lang={lang} />
         </div>
       </section>
 
-      <section className="px-6 pb-16 md:pb-32">
+      <section className="px-6 pb-14 md:pb-24">
         <div className="max-w-4xl mx-auto border-t border-primary/40 pt-8">
           <h2 className="font-serif text-xl mb-6">{copy?.creditsHeading ?? "Credits"}</h2>
           <dl className="space-y-3 text-sm text-muted-foreground leading-relaxed">
