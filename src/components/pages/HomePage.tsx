@@ -18,14 +18,16 @@ export function HomePage({ lang }: { lang: Lang }) {
     <>
       <Hero lang={lang} />
 
-      <section className="relative py-16 md:py-44 px-6 bg-background">
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="relative py-20 md:py-28 px-6 bg-background overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 bg-curtain opacity-40" />
+        <div className="relative max-w-4xl mx-auto text-center">
+          <span className="mx-auto mb-8 block h-px w-16 bg-primary" />
           <p className="font-serif text-3xl md:text-5xl leading-tight text-balance">{copy.manifesto}</p>
         </div>
       </section>
 
       {/* Pillars */}
-      <section className="py-12 md:py-32 px-6">
+      <section className="py-12 md:py-24 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 md:gap-4">
           {copy.pillars.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.1}>
@@ -48,7 +50,7 @@ export function HomePage({ lang }: { lang: Lang }) {
       </section>
 
       {/* Show teaser */}
-      <section className="relative py-16 md:py-44 px-6 overflow-hidden bg-background">
+      <section className="relative py-16 md:py-28 px-6 overflow-hidden bg-background">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/30" />
         <div className="relative max-w-7xl mx-auto">
           <Reveal delay={0.1}>
@@ -84,7 +86,7 @@ export function HomePage({ lang }: { lang: Lang }) {
       </section>
 
       {/* Artists strip */}
-      <section className="pt-12 pb-6 md:pt-32 md:pb-16 px-6 bg-background">
+      <section className="pt-12 pb-6 md:pt-20 md:pb-16 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
             <Reveal>
