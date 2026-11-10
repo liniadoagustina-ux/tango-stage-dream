@@ -15,7 +15,7 @@ export function CompanyPage({ lang = "en" }: { lang?: Lang }) {
       <section className="relative pt-28 pb-16 md:pt-52 md:pb-32 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
         <div className="relative max-w-5xl mx-auto">
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-balance">{copy?.title ?? "The Company"}</h1>
+          <h1 className="font-serif underline decoration-2 underline-offset-8 text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-balance">{copy?.title ?? "The Company"}</h1>
           <p className="mt-8 max-w-3xl text-lg md:text-xl leading-relaxed text-foreground/90">{copy?.intro ?? "Leonardo and Edgar Luizaga have taken Argentine tango to stages across Europe, Asia and the Americas, lifting it off the floor with circus and physical theatre."}</p>
         </div>
       </section>
