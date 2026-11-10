@@ -7,7 +7,6 @@
 @theme inline {
   --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
   --font-sans: "Jost", system-ui, sans-serif;
-  --font-title: "Bodoni Moda", "Didot", "Bodoni MT", Georgia, serif;
   --color-gold: var(--gold);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -125,10 +124,6 @@
 @layer utilities {
   .font-serif {
     font-family: var(--font-serif);
-  }
-  .font-title {
-    font-family: var(--font-title);
-    font-weight: 400;
   }
   .font-display {
     font-family: var(--font-serif);

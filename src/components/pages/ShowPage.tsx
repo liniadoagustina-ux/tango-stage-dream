@@ -21,7 +21,7 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
             <div className="pointer-events-none absolute inset-0 hidden md:block bg-gradient-to-t from-background via-background/30 to-transparent" />
             <figcaption className="relative px-6 pt-6 pb-10 md:absolute md:inset-x-0 md:bottom-0 md:p-10">
               <span className="block h-px w-16 bg-primary mb-4" />
-              <h1 className="font-title uppercase text-foreground leading-none text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-balance drop-shadow-lg">La Muerte del Ángel</h1>
+              <h1 className="font-serif uppercase text-foreground leading-none text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-balance drop-shadow-lg">La Muerte del Ángel</h1>
               <p className="mt-3 text-base md:text-lg text-foreground/90">{copy?.line ?? "In Buenos Aires, death dances to the rhythm of tango."}</p>
             </figcaption>
           </figure>
@@ -78,7 +78,7 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
 
       <section className="px-6 pt-12 pb-14 md:pt-20 md:pb-20 bg-background surface-2">
         <div className="max-w-4xl mx-auto border-t border-primary/40 pt-8">
-          <h2 className="font-title text-gold text-2xl mb-6">{copy?.creditsHeading ?? "Credits"}</h2>
+          <h2 className="font-serif text-gold text-2xl mb-6">{copy?.creditsHeading ?? "Credits"}</h2>
           <dl className="space-y-3 text-sm text-muted-foreground leading-relaxed">
             {pageCredits.map(credit => (
               <div key={credit.role}><dt className="inline text-foreground">{credit.role}{lang === "fr" ? "\u00a0: " : ": "}</dt><dd className="inline">{credit.name}</dd></div>
