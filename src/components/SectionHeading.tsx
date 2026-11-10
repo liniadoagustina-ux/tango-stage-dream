@@ -14,7 +14,7 @@ export function SectionHeading({
       <div className={`flex items-center gap-4 mb-4 ${align === "center" ? "justify-center" : ""}`}>
         <span className="h-px w-16 bg-primary" />
       </div>
-      <h2 className="font-serif underline decoration-2 underline-offset-8 text-gold text-5xl md:text-6xl text-balance leading-[1.05]">{children}</h2>
+      <h2 className="font-title text-gold text-5xl md:text-6xl text-balance leading-[1.05]">{children}</h2>
     </div>
   );
 }

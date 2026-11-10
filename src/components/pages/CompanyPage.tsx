@@ -22,21 +22,21 @@ export function CompanyPage({ lang = "en" }: { lang?: Lang }) {
 
       <section className="py-12 md:py-24 px-6 bg-background surface-1">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif underline decoration-2 underline-offset-8 text-gold text-5xl md:text-6xl mb-8">{copy?.originsHeading ?? "Where It Started"}</h2>
+          <h2 className="font-title text-gold text-5xl md:text-6xl mb-8">{copy?.originsHeading ?? "Where It Started"}</h2>
           <p className="text-base md:text-lg leading-relaxed text-foreground/90">{copy?.origins ?? <>Born in Zárate, Argentina, Leonardo and Edgar began training at the age of {companyFacts.trainingAge === 5 ? 'five' : companyFacts.trainingAge} in a family of dancers and gymnasts. They studied at the "Instituto Superior de Arte" of the "Teatro Colón" and trained in tango, ballet, flamenco, contemporary dance and circus arts. Both made their international debut at {companyFacts.internationalDebutAge}.</>}</p>
         </div>
       </section>
 
       <section className="py-12 md:py-24 px-6 bg-background surface-2">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif underline decoration-2 underline-offset-8 text-gold text-5xl md:text-6xl mb-8">{copy?.approachHeading ?? "Their Approach"}</h2>
+          <h2 className="font-title text-gold text-5xl md:text-6xl mb-8">{copy?.approachHeading ?? "Their Approach"}</h2>
           <p className="text-base md:text-lg leading-relaxed text-foreground/90">{copy?.approach ?? "Tango is their starting point, but not something to preserve under glass. They take its codes apart and rebuild them with aerial work, physical theatre and visual design, looking for the tension between control and release, the floor and the air."}</p>
         </div>
       </section>
 
       <section className="py-12 md:py-24 px-6 bg-background surface-3">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-serif underline decoration-2 underline-offset-8 text-gold text-5xl md:text-6xl mb-12">{copy?.trajectoryHeading ?? "Trajectory"}</h2>
+          <h2 className="font-title text-gold text-5xl md:text-6xl mb-12">{copy?.trajectoryHeading ?? "Trajectory"}</h2>
           <div className="grid md:grid-cols-2 gap-12 md:gap-16">
             {pageTrajectories.map(trajectory => (
               <div key={trajectory.name} className="border-t border-primary/40 pt-6 min-w-0">
@@ -62,7 +62,7 @@ export function CompanyPage({ lang = "en" }: { lang?: Lang }) {
 
       <section className="py-16 md:py-32 px-6 bg-background surface-1">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-serif underline decoration-2 underline-offset-8 text-gold text-5xl md:text-6xl mb-12">{copy?.regionsHeading ?? "Where They Have Performed"}</h2>
+          <h2 className="font-title text-gold text-5xl md:text-6xl mb-12">{copy?.regionsHeading ?? "Where They Have Performed"}</h2>
           <dl className="grid md:grid-cols-3 gap-8 md:gap-10">
             {pageRegions.map(region => (
               <div key={region.name} className="border-t border-primary/40 pt-6 min-w-0">
