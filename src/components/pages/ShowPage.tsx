@@ -1,5 +1,6 @@
 import { Trailer } from "@/components/Trailer";
 import { ShowGallery } from "@/components/ShowGallery";
+import { SectionHeading } from "@/components/SectionHeading";
 import { motion, useReducedMotion } from "framer-motion";
 import { images } from "@/data/images";
 import { characters, credits } from "@/data/show";
@@ -27,16 +28,16 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
         </motion.div>
       </section>
 
-      {copy && <section className="py-14 md:py-24 px-6">
+      {copy && <section className="py-12 md:py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl mb-10">{copy.workHeading}</h2>
+          <SectionHeading eyebrow="I">{copy.workHeading}</SectionHeading>
           <p className="text-base md:text-lg text-foreground/90 leading-relaxed">{copy.work}</p>
         </div>
       </section>}
 
-      <section className="py-14 md:py-24 px-6">
+      <section className="py-12 md:py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl mb-10">{copy?.storyHeading ?? "The story"}</h2>
+          <SectionHeading eyebrow="II">{copy?.storyHeading ?? "The story"}</SectionHeading>
           <div className="space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed">
             {copy ? copy.story.map(paragraph => <p key={paragraph}>{paragraph}</p>) : <>
             <p>In a timeless neighbourhood of Buenos Aires, Gabino and Amanda share a simple, lasting love, born in a milonga and sealed in the embrace.</p>
@@ -47,9 +48,9 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
         </div>
       </section>
 
-      <section className="py-14 md:py-24 px-6">
+      <section className="py-12 md:py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl mb-10">{copy?.charactersHeading ?? "Characters"}</h2>
+          <SectionHeading eyebrow="III">{copy?.charactersHeading ?? "Characters"}</SectionHeading>
           <dl className="grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-10 gap-y-8 md:gap-y-12">
             {pageCharacters.map(character => (
               <div key={character.name} className="border-t border-primary/40 pt-5 min-w-0">
@@ -61,21 +62,21 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
         </div>
       </section>
 
-      <section className="py-12 md:py-24 px-6 bg-background">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-4xl md:text-5xl mb-12">{copy?.trailerHeading ?? "Watch the show"}</h2>
+      <section className="py-12 md:py-20 px-6 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <SectionHeading eyebrow="IV" align="center">{copy?.trailerHeading ?? "Watch the show"}</SectionHeading>
           <Trailer lang={lang} />
         </div>
       </section>
 
-      <section className="py-14 md:py-24 px-6">
+      <section className="py-12 md:py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl mb-10">{copy?.galleryHeading ?? "Gallery"}</h2>
+          <SectionHeading eyebrow="V">{copy?.galleryHeading ?? "Gallery"}</SectionHeading>
           <ShowGallery lang={lang} />
         </div>
       </section>
 
-      <section className="px-6 pb-14 md:pb-24">
+      <section className="px-6 pb-14 md:pb-20">
         <div className="max-w-4xl mx-auto border-t border-primary/40 pt-8">
           <h2 className="font-serif text-xl mb-6">{copy?.creditsHeading ?? "Credits"}</h2>
           <dl className="space-y-3 text-sm text-muted-foreground leading-relaxed">
