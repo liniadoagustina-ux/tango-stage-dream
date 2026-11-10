@@ -55,7 +55,7 @@ export const bookingLabel: Record<Lang, string> = {
 
 export const footerCopy = {
   fr: {
-    tagline: "Tango argentin, danse aérienne et théâtre physique. De Zárate aux scènes d'Europe, d'Asie et d'Amérique.",
+    tagline: "Tango argentin, danse aérienne et théâtre physique.",
     explore: "Explorer",
     bookings: "Diffusion",
     rights: "Tous droits réservés.",
@@ -67,8 +67,7 @@ export const footerCopy = {
     rights: "All rights reserved.",
   },
   es: {
-    tagline:
-      "Tango argentino, danza aérea y teatro físico. De Zárate a los escenarios de Europa, Asia y América.",
+    tagline: "Tango argentino, danza aérea y teatro físico.",
     explore: "Explorar",
     bookings: "Contrataciones",
     rights: "Todos los derechos reservados.",

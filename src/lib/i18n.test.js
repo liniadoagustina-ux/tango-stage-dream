@@ -72,9 +72,7 @@ describe("Language routing", () => {
     expect(homeCopy.es.castLink).toBe("Conocé a los artistas");
   });
   test("Spanish footer line uses the supplied text", () => {
-    expect(footerCopy.es.tagline).toBe(
-      "Tango argentino, danza aérea y teatro físico. De Zárate a los escenarios de Europa, Asia y América.",
-    );
+    expect(footerCopy.es.tagline).toBe("Tango argentino, danza aérea y teatro físico.");
   });
   test("englishPath round-trips with pathForLang", () => {
     for (const p of ["/", "/show", "/company", "/artists"]) {
