@@ -3,9 +3,10 @@ import { Link } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { Trailer } from "@/components/Trailer";
+import { SectionHeading } from "@/components/SectionHeading";
 import { artists } from "@/data/artists";
 import { images } from "@/data/images";
-import { homeCopy, type Lang } from "@/lib/i18n";
+import { homeCopy, footerCopy, type Lang } from "@/lib/i18n";
 const stageTango = images["stage-tango"].url;
 const stageAerial = images["stage-5"].url;
 const stageTheatre = images["stage-4"].url;
@@ -18,17 +19,18 @@ export function HomePage({ lang }: { lang: Lang }) {
     <>
       <Hero lang={lang} />
 
-      <section className="relative py-20 md:py-28 px-6 bg-background overflow-hidden">
+      <section className="relative py-16 md:py-20 px-6 bg-background overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-curtain opacity-40" />
         <div className="relative max-w-4xl mx-auto text-center">
           <span className="mx-auto mb-8 block h-px w-16 bg-primary" />
           <p className="font-serif text-3xl md:text-5xl leading-tight text-balance">{copy.manifesto}</p>
+          <p className="mt-6 text-xs md:text-sm uppercase tracking-luxe text-primary/70">{footerCopy[lang].tagline}</p>
         </div>
       </section>
 
       {/* Pillars */}
-      <section className="py-12 md:py-24 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 md:gap-4">
+      <section className="py-12 md:py-20 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-3 gap-2 md:gap-4">
           {copy.pillars.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.1}>
               <div className="group relative aspect-[3/4] overflow-hidden rounded-sm border border-border/60 bg-card">
@@ -39,9 +41,9 @@ export function HomePage({ lang }: { lang: Lang }) {
                   className="absolute inset-0 h-full w-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-8">
-                  <h3 className="font-serif text-3xl mb-2">{p.title}</h3>
-                  <p className="text-sm text-muted-foreground max-w-xs">{p.text}</p>
+                <div className="absolute inset-x-0 bottom-0 p-2 md:p-8">
+                  <h3 className="font-serif text-sm md:text-3xl leading-tight mb-0 md:mb-2">{p.title}</h3>
+                  <p className="hidden md:block text-sm text-muted-foreground max-w-xs">{p.text}</p>
                 </div>
               </div>
             </Reveal>
@@ -50,7 +52,7 @@ export function HomePage({ lang }: { lang: Lang }) {
       </section>
 
       {/* Show teaser */}
-      <section className="relative py-16 md:py-28 px-6 overflow-hidden bg-background">
+      <section className="relative py-16 md:py-20 px-6 overflow-hidden bg-background">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/30" />
         <div className="relative max-w-7xl mx-auto">
           <Reveal delay={0.1}>
@@ -90,9 +92,7 @@ export function HomePage({ lang }: { lang: Lang }) {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
             <Reveal>
-              <div>
-                <h2 className="font-serif text-4xl md:text-5xl">{copy.castHeading}</h2>
-              </div>
+              <SectionHeading className="mb-0">{copy.castHeading}</SectionHeading>
             </Reveal>
             <Reveal delay={0.1}>
               <Link
