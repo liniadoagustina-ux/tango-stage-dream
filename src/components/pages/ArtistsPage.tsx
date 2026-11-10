@@ -34,9 +34,9 @@ export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
       </section>
 
       {groups.map((group, i) => (
-        <section key={group.heading} className={`px-6 pb-16 md:pb-32 bg-background ${["surface-1", "surface-2", "surface-3"][i % 3]}`}>
+        <section key={group.heading} className={`px-6 pt-12 pb-16 md:pt-20 md:pb-32 bg-background ${["surface-1", "surface-2", "surface-3"][i % 3]}`}>
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-serif font-bold text-primary text-5xl md:text-6xl mb-8 md:mb-12">{groupHeadings?.[group.heading] ?? group.heading}</h2>
+            <h2 className="font-serif font-bold italic text-primary text-glow-gold text-5xl md:text-6xl mb-8 md:mb-12">{groupHeadings?.[group.heading] ?? group.heading}</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-8 gap-y-8">
               {group.members.map(artist => <ArtistCard key={artist.slug} lang={lang} artist={artist} onOpen={() => setActive(artist)} />)}
             </div>
