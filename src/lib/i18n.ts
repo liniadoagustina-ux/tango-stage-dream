@@ -61,8 +61,7 @@ export const footerCopy = {
     rights: "Tous droits réservés.",
   },
   en: {
-    tagline:
-      "Argentine tango, aerial performance and physical theatre. From Zárate to stages in Europe, Asia and the Americas.",
+    tagline: "Argentine tango, aerial performance and physical theatre.",
     explore: "Explore",
     bookings: "Bookings",
     rights: "All rights reserved.",
