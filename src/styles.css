@@ -38,11 +38,11 @@
   --radius: 0.25rem;
 
   /* Theatrical noir palette */
-  --background: oklch(0.17 0.006 40);
+  --background: oklch(0.22 0.002 40);
   --foreground: oklch(0.92 0.03 85);
-  --card: oklch(0.21 0.01 40);
+  --card: oklch(0.26 0.003 40);
   --card-foreground: oklch(0.92 0.03 85);
-  --popover: oklch(0.21 0.01 40);
+  --popover: oklch(0.26 0.003 40);
   --popover-foreground: oklch(0.92 0.03 85);
 
   /* Brand gold — refined metallic stage gold, not bright yellow */
@@ -53,9 +53,9 @@
   /* Champagne gold from the logo, used sparingly */
   --gold: oklch(0.82 0.07 80);
 
-  --secondary: oklch(0.24 0.015 40);
+  --secondary: oklch(0.28 0.005 40);
   --secondary-foreground: oklch(0.92 0.03 85);
-  --muted: oklch(0.22 0.01 40);
+  --muted: oklch(0.26 0.003 40);
   --muted-foreground: oklch(0.68 0.025 82);
   --accent: var(--muted);
   --accent-foreground: var(--foreground);
@@ -82,7 +82,7 @@
 }
 
 .dark {
-  --background: oklch(0.17 0.006 40);
+  --background: oklch(0.22 0.002 40);
   --foreground: oklch(0.92 0.03 85);
 }
 
