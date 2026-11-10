@@ -21,7 +21,7 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
             <div className="pointer-events-none absolute inset-0 hidden md:block bg-gradient-to-t from-background via-background/30 to-transparent" />
             <figcaption className="relative px-6 pt-6 pb-10 md:absolute md:inset-x-0 md:bottom-0 md:p-10">
               <span className="block h-px w-16 bg-primary mb-4" />
-              <h1 className="font-serif text-foreground leading-none text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-balance drop-shadow-lg">La Muerte del Ángel</h1>
+              <h1 className="font-title text-foreground leading-none text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-balance drop-shadow-lg">La Muerte del Ángel</h1>
               <p className="mt-3 text-base md:text-lg text-foreground/90">{copy?.line ?? "In Buenos Aires, death dances to the rhythm of tango."}</p>
             </figcaption>
           </figure>

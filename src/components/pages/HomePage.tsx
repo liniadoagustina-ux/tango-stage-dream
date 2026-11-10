@@ -61,7 +61,7 @@ export function HomePage({ lang }: { lang: Lang }) {
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
               <figcaption className="absolute inset-x-0 bottom-0 p-5 md:p-10">
                 <span className="block h-px w-16 bg-primary mb-4" />
-                <span className="block font-serif text-foreground leading-[0.95] text-3xl sm:text-5xl md:text-6xl drop-shadow-lg">{copy.showTitle}</span>
+                <span className="block font-title text-foreground leading-[0.95] text-3xl sm:text-5xl md:text-6xl drop-shadow-lg">{copy.showTitle}</span>
               </figcaption>
             </figure>
 

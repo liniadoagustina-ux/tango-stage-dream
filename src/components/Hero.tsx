@@ -44,7 +44,7 @@ export function Hero({ lang = "en" }: { lang?: Lang }) {
             initial={reducedMotion ? false : { opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: reducedMotion ? 0 : 0.4 }}
-            className="font-serif text-5xl md:text-7xl lg:text-[8rem] leading-[0.95] text-balance text-foreground text-shadow-dramatic max-w-5xl"
+            className="font-title text-5xl md:text-7xl lg:text-[8rem] leading-[0.95] text-balance text-foreground text-shadow-dramatic max-w-5xl"
           >
             {copy.titleA}<br/>
             <span className="text-foreground">{copy.titleB}</span>
