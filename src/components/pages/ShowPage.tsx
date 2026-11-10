@@ -78,13 +78,13 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
 
       <section className="px-6 pt-12 pb-14 md:pt-20 md:pb-20 bg-background surface-2">
         <div className="max-w-4xl mx-auto border-t border-primary/40 pt-8">
-          <h2 className="font-serif text-gold text-2xl mb-6">{copy?.creditsHeading ?? "Credits"}</h2>
-          <dl className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+          <h2 className="font-serif text-gold text-3xl mb-6">{copy?.creditsHeading ?? "Credits"}</h2>
+          <dl className="space-y-3 text-base text-muted-foreground leading-relaxed">
             {pageCredits.map(credit => (
               <div key={credit.role}><dt className="inline text-foreground">{credit.role}{lang === "fr" ? "\u00a0: " : ": "}</dt><dd className="inline">{credit.name}</dd></div>
             ))}
           </dl>
-          <p className="mt-12 text-sm text-muted-foreground">{lang === "fr" ? "Diffusion :" : `${bookingLabel[lang]}:`} <a href="mailto:luizagabros@gmail.com" className="text-foreground underline underline-offset-4 hover:text-foreground/80">luizagabros@gmail.com</a></p>
+          <p className="mt-12 text-base text-muted-foreground">{lang === "fr" ? "Diffusion :" : `${bookingLabel[lang]}:`} <a href="mailto:luizagabros@gmail.com" className="text-foreground underline underline-offset-4 hover:text-foreground/80">luizagabros@gmail.com</a></p>
         </div>
       </section>
     </>
