@@ -29,6 +29,7 @@ export function ArtistCard({ artist, onOpen, lang = "en" }: { artist: PresentedA
         loading="lazy"
         className="absolute inset-0 h-full w-full object-contain"
       />
+      <div className="pointer-events-none absolute inset-0 bg-primary opacity-0 mix-blend-multiply transition-opacity duration-300 group-hover:opacity-70 group-focus-visible:opacity-70" />
       </div>
       <div className="w-full border-t border-primary/40 pt-5 pb-6">
         <h3 className="font-serif text-xl md:text-3xl text-foreground leading-tight">

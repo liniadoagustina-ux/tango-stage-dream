@@ -37,7 +37,7 @@ export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
         <section key={group.heading} className="px-6 pb-16 md:pb-32">
           <div className="max-w-7xl mx-auto">
             <h2 className="font-serif text-4xl md:text-5xl mb-8 md:mb-12">{groupHeadings?.[group.heading] ?? group.heading}</h2>
-            <div className={group.heading === 'Direction' ? 'grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10' : 'grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-8 gap-y-8'}>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-8 gap-y-8">
               {group.members.map(artist => <ArtistCard key={artist.slug} lang={lang} artist={artist} onOpen={() => setActive(artist)} />)}
             </div>
           </div>
