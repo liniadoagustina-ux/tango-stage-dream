@@ -28,14 +28,14 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
         </motion.div>
       </section>
 
-      {copy && <section className="py-12 md:py-20 px-6">
+      {copy && <section className="py-12 md:py-20 px-6 bg-background surface-2">
         <div className="max-w-4xl mx-auto">
           <SectionHeading>{copy.workHeading}</SectionHeading>
           <p className="text-base md:text-lg text-foreground/90 leading-relaxed">{copy.work}</p>
         </div>
       </section>}
 
-      <section className="py-12 md:py-20 px-6">
+      <section className="py-12 md:py-20 px-6 bg-background surface-1">
         <div className="max-w-4xl mx-auto">
           <SectionHeading>{copy?.storyHeading ?? "The Story"}</SectionHeading>
           <div className="space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed">
@@ -48,7 +48,7 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 px-6">
+      <section className="py-12 md:py-20 px-6 bg-background surface-2">
         <div className="max-w-6xl mx-auto">
           <SectionHeading>{copy?.charactersHeading ?? "Characters"}</SectionHeading>
           <dl className="grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-10 gap-y-8 md:gap-y-12">
@@ -62,23 +62,23 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 px-6 bg-background">
+      <section className="py-12 md:py-20 px-6 bg-background surface-3">
         <div className="max-w-4xl mx-auto">
           <SectionHeading align="center">{copy?.trailerHeading ?? "Watch the Show"}</SectionHeading>
           <Trailer lang={lang} />
         </div>
       </section>
 
-      <section className="py-12 md:py-20 px-6">
+      <section className="py-12 md:py-20 px-6 bg-background surface-1">
         <div className="max-w-6xl mx-auto">
           <SectionHeading>{copy?.galleryHeading ?? "Gallery"}</SectionHeading>
           <ShowGallery lang={lang} />
         </div>
       </section>
 
-      <section className="px-6 pb-14 md:pb-20">
+      <section className="px-6 pb-14 md:pb-20 bg-background surface-2">
         <div className="max-w-4xl mx-auto border-t border-primary/40 pt-8">
-          <h2 className="font-serif text-xl mb-6">{copy?.creditsHeading ?? "Credits"}</h2>
+          <h2 className="font-serif font-bold text-primary text-2xl mb-6">{copy?.creditsHeading ?? "Credits"}</h2>
           <dl className="space-y-3 text-sm text-muted-foreground leading-relaxed">
             {pageCredits.map(credit => (
               <div key={credit.role}><dt className="inline text-foreground">{credit.role}{lang === "fr" ? "\u00a0: " : ": "}</dt><dd className="inline">{credit.name}</dd></div>

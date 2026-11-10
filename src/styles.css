@@ -40,6 +40,11 @@
   /* Theatrical noir palette */
   --background: oklch(0.22 0.002 40);
   --foreground: oklch(0.92 0.03 85);
+
+  /* Section surfaces — three distinct dark-gray moments sections alternate through */
+  --surface-1: oklch(0.15 0.002 40);
+  --surface-2: oklch(0.22 0.002 40);
+  --surface-3: oklch(0.33 0.004 40);
   --card: oklch(0.26 0.003 40);
   --card-foreground: oklch(0.92 0.03 85);
   --popover: oklch(0.26 0.003 40);
@@ -156,6 +161,15 @@
   }
   .tracking-luxe {
     letter-spacing: 0.1em;
+  }
+  .surface-1 {
+    --background: var(--surface-1);
+  }
+  .surface-2 {
+    --background: var(--surface-2);
+  }
+  .surface-3 {
+    --background: var(--surface-3);
   }
 }
 
