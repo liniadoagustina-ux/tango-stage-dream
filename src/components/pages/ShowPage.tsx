@@ -30,14 +30,14 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
 
       {copy && <section className="py-12 md:py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <SectionHeading eyebrow="I">{copy.workHeading}</SectionHeading>
+          <SectionHeading>{copy.workHeading}</SectionHeading>
           <p className="text-base md:text-lg text-foreground/90 leading-relaxed">{copy.work}</p>
         </div>
       </section>}
 
       <section className="py-12 md:py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <SectionHeading eyebrow="II">{copy?.storyHeading ?? "The Story"}</SectionHeading>
+          <SectionHeading>{copy?.storyHeading ?? "The Story"}</SectionHeading>
           <div className="space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed">
             {copy ? copy.story.map(paragraph => <p key={paragraph}>{paragraph}</p>) : <>
             <p>In a timeless neighbourhood of Buenos Aires, Gabino and Amanda share a simple, lasting love, born in a milonga and sealed in the embrace.</p>
@@ -50,7 +50,7 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
 
       <section className="py-12 md:py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <SectionHeading eyebrow="III">{copy?.charactersHeading ?? "Characters"}</SectionHeading>
+          <SectionHeading>{copy?.charactersHeading ?? "Characters"}</SectionHeading>
           <dl className="grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-10 gap-y-8 md:gap-y-12">
             {pageCharacters.map(character => (
               <div key={character.name} className="border-t border-primary/40 pt-5 min-w-0">
@@ -64,14 +64,14 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
 
       <section className="py-12 md:py-20 px-6 bg-background">
         <div className="max-w-4xl mx-auto">
-          <SectionHeading eyebrow="IV" align="center">{copy?.trailerHeading ?? "Watch the Show"}</SectionHeading>
+          <SectionHeading align="center">{copy?.trailerHeading ?? "Watch the Show"}</SectionHeading>
           <Trailer lang={lang} />
         </div>
       </section>
 
       <section className="py-12 md:py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <SectionHeading eyebrow="V">{copy?.galleryHeading ?? "Gallery"}</SectionHeading>
+          <SectionHeading>{copy?.galleryHeading ?? "Gallery"}</SectionHeading>
           <ShowGallery lang={lang} />
         </div>
       </section>
