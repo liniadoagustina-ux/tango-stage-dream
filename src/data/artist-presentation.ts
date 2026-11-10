@@ -21,7 +21,7 @@ const presentation = [
     { slug: 'patricio-cotella', role: 'Double bass', credit: "Trained in the \"Orquesta Escuela de Tango\" led by Emilio Balcarce." },
     { slug: 'franco-zilocchi', role: 'Drums, music production', credit: 'Sound engineer and music producer.' },
   ] },
-  { heading: 'Creative team', members: [
+  { heading: 'Creative Team', members: [
     { slug: 'ariel-ponce', role: 'Lighting design', credit: "Nearly three decades in the theatres of \"Avenida Corrientes\", with shows such as \"Stravaganza\", Rent and Pretty Woman." },
     { slug: 'lucia-ohyama', role: 'Production', credit: 'Executive production and tour management.' },
   ] },

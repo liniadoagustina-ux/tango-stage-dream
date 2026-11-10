@@ -37,7 +37,7 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
 
       <section className="py-12 md:py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <SectionHeading eyebrow="II">{copy?.storyHeading ?? "The story"}</SectionHeading>
+          <SectionHeading eyebrow="II">{copy?.storyHeading ?? "The Story"}</SectionHeading>
           <div className="space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed">
             {copy ? copy.story.map(paragraph => <p key={paragraph}>{paragraph}</p>) : <>
             <p>In a timeless neighbourhood of Buenos Aires, Gabino and Amanda share a simple, lasting love, born in a milonga and sealed in the embrace.</p>
@@ -64,7 +64,7 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
 
       <section className="py-12 md:py-20 px-6 bg-background">
         <div className="max-w-4xl mx-auto">
-          <SectionHeading eyebrow="IV" align="center">{copy?.trailerHeading ?? "Watch the show"}</SectionHeading>
+          <SectionHeading eyebrow="IV" align="center">{copy?.trailerHeading ?? "Watch the Show"}</SectionHeading>
           <Trailer lang={lang} />
         </div>
       </section>

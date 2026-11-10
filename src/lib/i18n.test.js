@@ -41,8 +41,8 @@ describe("Language routing", () => {
     expect(head.links[0]).toEqual({ rel: "canonical", href: "https://luizagabrothers.com/es/show" });
   });
   test("Spanish nav and home copy use the supplied texts", () => {
-    expect(navItems.es.map((i) => i.label)).toEqual(["Inicio", "El show", "La compañía", "Artistas"]);
-    expect(homeCopy.es.castHeading).toBe("El elenco");
+    expect(navItems.es.map((i) => i.label)).toEqual(["Inicio", "El Show", "La Compañía", "Artistas"]);
+    expect(homeCopy.es.castHeading).toBe("El Elenco");
     expect(homeCopy.es.castRoles).toEqual(["Gabino", "Caronte", "Coreógrafos asociados", "Griseta y Osvaldo"]);
   });
   test("Spanish hero uses the supplied title, line and buttons", () => {
