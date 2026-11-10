@@ -128,13 +128,6 @@ export function ShowGallery({ lang = "en" }: { lang?: Lang }) {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
-        {gallery.map((image, index) => (
-          <Button key={image.url} variant="ghost" className="h-auto w-full rounded-none p-0 bg-background overflow-hidden" aria-label={`${copy.enlarge} ${index + 1}`} onClick={() => setSelected(index)}>
-            <img src={image.url} width={image.width} height={image.height} alt={copy.alts[index]} loading="lazy" className="block w-full h-auto" />
-          </Button>
-        ))}
-      </div>
       <Dialog open={selected !== null} onOpenChange={open => { if (!open) setSelected(null); }}>
         <DialogContent closeLabel={copy.close} aria-describedby={undefined} className="w-[calc(100%-2rem)] max-w-6xl max-h-[90dvh] gap-3 p-3 pt-12 bg-background">
           <DialogTitle className="sr-only">{copy.gallery} {selected === null ? '' : selected + 1}</DialogTitle>
