@@ -128,7 +128,7 @@
   }
   .font-title {
     font-family: var(--font-title);
-    font-weight: 400;
+    font-weight: 600;
   }
   .font-display {
     font-family: var(--font-serif);
