@@ -8,7 +8,7 @@ import { images } from '@/data/images';
 
 import { mediaCopy, type Lang } from "@/lib/i18n";
 
-const AUTOPLAY_MS = 4500;
+const AUTOPLAY_MS = 2000;
 
 const gallery = [
   { ...images['gallery-1'], alt: 'A tango couple embraces with the live band behind them' },
@@ -80,7 +80,7 @@ export function ShowGallery({ lang = "en" }: { lang?: Lang }) {
               <CarouselItem key={image.url} className="pl-0">
                 <Button
                   variant="ghost"
-                  className="relative h-auto w-full rounded-none p-0 bg-card overflow-hidden aspect-[16/10] md:aspect-[21/9]"
+                  className="relative h-auto w-full rounded-none p-0 bg-card overflow-hidden aspect-[3/2]"
                   aria-label={`${copy.enlarge} ${index + 1}`}
                   onClick={() => setSelected(index)}
                 >
