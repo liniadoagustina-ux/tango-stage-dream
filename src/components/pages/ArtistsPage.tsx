@@ -27,9 +27,10 @@ export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
     <>
       <section className="pt-28 pb-12 md:pt-52 md:pb-24 px-6">
         <div className="max-w-7xl mx-auto">
-            <h1 className="font-serif underline decoration-2 underline-offset-8 text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl">
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl">
               {lang === "fr" ? "La Distribution" : lang === "es" ? "El Elenco" : "The Cast"}
             </h1>
+            <span className="mt-6 block h-px w-full bg-gold" />
         </div>
       </section>
 
