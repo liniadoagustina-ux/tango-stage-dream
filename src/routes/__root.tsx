@@ -39,7 +39,7 @@ export const Route = createRootRoute({
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,700;1,700&family=Jost:wght@300;400;500&display=swap" },
     ],
   }),
   shellComponent: RootShell,
