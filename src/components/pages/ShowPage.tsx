@@ -78,7 +78,7 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
 
       <section className="px-6 pt-12 pb-14 md:pt-20 md:pb-20 bg-background surface-2">
         <div className="max-w-4xl mx-auto border-t border-primary/40 pt-8">
-          <h2 className="font-title font-bold underline decoration-2 underline-offset-4 text-gold text-2xl mb-6">{copy?.creditsHeading ?? "Credits"}</h2>
+          <h2 className="font-serif underline decoration-2 underline-offset-4 text-gold text-2xl mb-6">{copy?.creditsHeading ?? "Credits"}</h2>
           <dl className="space-y-3 text-sm text-muted-foreground leading-relaxed">
             {pageCredits.map(credit => (
               <div key={credit.role}><dt className="inline text-foreground">{credit.role}{lang === "fr" ? "\u00a0: " : ": "}</dt><dd className="inline">{credit.name}</dd></div>
