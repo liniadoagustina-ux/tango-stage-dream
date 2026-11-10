@@ -33,3 +33,4 @@
 - [x] Apply and verify the complete supplied French Sofía/Heber biography
 
 - [x] Apply and verify eight supplied French musician and creative-team biographies
+- [x] Show gallery: remove the photo grid under the carousel, keep the lightbox with previous/next arrows; 3:2 slides and 2-second autoplay
