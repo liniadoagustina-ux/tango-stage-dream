@@ -49,22 +49,22 @@ export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
         <DialogPortal>
           <DialogOverlay className="bg-background/85 backdrop-blur-xl" />
           <DialogPrimitive.Content
-            className="fixed left-[50%] top-[50%] z-50 block w-[95vw] max-w-5xl max-h-[90vh] translate-x-[-50%] translate-y-[-50%] overflow-y-auto md:overflow-hidden border border-border/40 bg-background/95 p-0 shadow-2xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 sm:rounded-sm"
+            className={`fixed left-[50%] top-[50%] z-50 block w-[95vw] max-w-5xl max-h-[90vh] translate-x-[-50%] translate-y-[-50%] overflow-y-auto ${(active?.portraits?.length ?? 1) > 1 ? "" : "md:overflow-hidden"} border border-border/40 bg-background/95 p-0 shadow-2xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 sm:rounded-sm`}
           >
             {active && (
               <>
                 <DialogTitle className="sr-only">{active.name}</DialogTitle>
                 <DialogDescription className="sr-only">{active.role}</DialogDescription>
 
-                <div className="flex flex-col md:flex-row md:max-h-[90vh]">
-                  <div className="relative overflow-hidden bg-background md:w-[42%] md:shrink-0 md:min-h-[60vh] md:max-h-[90vh]">
-                    <div className={`relative grid gap-1 md:absolute md:inset-0 md:content-center ${(active.portraits?.length ?? 1) > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
+                <div className={`flex flex-col ${(active.portraits?.length ?? 1) > 1 ? "" : "md:flex-row md:max-h-[90vh]"}`}>
+                  <div className={(active.portraits?.length ?? 1) > 1 ? "relative overflow-hidden bg-background" : "relative overflow-hidden bg-background md:w-[42%] md:shrink-0 md:min-h-[60vh] md:max-h-[90vh]"}>
+                    <div className={`relative grid gap-1 ${(active.portraits?.length ?? 1) > 1 ? "grid-cols-2" : "grid-cols-1 md:absolute md:inset-0 md:content-center"}`}>
                       {(active.portraits ?? [active.image]).map((src, i) => (
                         <img key={src} src={src} width={960} height={1200} alt={i === 0 ? active.name : ""} className="block w-full aspect-[4/5] object-cover object-[50%_30%]" />
                       ))}
                     </div>
                   </div>
-                  <div className="p-7 md:p-10 lg:p-12 md:flex-1 md:overflow-y-auto md:max-h-[90vh]">
+                  <div className={(active.portraits?.length ?? 1) > 1 ? "p-7 md:p-10 lg:p-12" : "p-7 md:p-10 lg:p-12 md:flex-1 md:overflow-y-auto md:max-h-[90vh]"}>
                     <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight text-foreground">
                       {active.name}
                     </h2>
