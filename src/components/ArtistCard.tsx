@@ -12,10 +12,14 @@ export function ArtistCard({ artist, onOpen, lang = "en", className }: { artist:
     >
       <div className="relative w-full overflow-hidden bg-background">
       <div className={`grid gap-1 ${(artist.portraits?.length ?? 1) > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
-        {(artist.portraits ?? [artist.image]).map((src, i) => (
-          <img key={src} src={src} width={960} height={1200} alt={i === 0 ? artist.name : ""} loading="lazy" decoding="async"
-            className="block w-full aspect-[4/5] object-cover object-[50%_30%]" />
-        ))}
+        {(artist.portraits ?? [artist.image]).map((src, i) => {
+          const portraitCount = artist.portraits?.length ?? 1;
+          const aspect = portraitCount > 1 ? "aspect-[2/5]" : artist.wide ? "aspect-[8/5]" : "aspect-[4/5]";
+          return (
+            <img key={src} src={src} width={960} height={1200} alt={i === 0 ? artist.name : ""} loading="lazy" decoding="async"
+              className={`block w-full object-cover object-[50%_30%] ${aspect}`} />
+          );
+        })}
       </div>
       <div className="pointer-events-none absolute inset-0 bg-primary opacity-0 mix-blend-multiply transition-opacity duration-300 group-hover:opacity-70 group-focus-visible:opacity-70" />
       </div>
