@@ -3,12 +3,12 @@ import type { PresentedArtist } from "@/data/artist-presentation";
 
 import { mediaCopy, type Lang } from "@/lib/i18n";
 
-export function ArtistCard({ artist, onOpen, lang = "en" }: { artist: PresentedArtist; onOpen: () => void; lang?: Lang }) {
+export function ArtistCard({ artist, onOpen, lang = "en", className }: { artist: PresentedArtist; onOpen: () => void; lang?: Lang; className?: string }) {
   return (
     <Button variant="ghost"
       onClick={onOpen}
       aria-label={`${mediaCopy[lang].biography} ${artist.name}`}
-      className="group relative flex h-full w-full flex-col items-stretch justify-start p-0 whitespace-normal text-left overflow-hidden rounded-sm bg-background hover:bg-background"
+      className={`group relative flex h-full w-full flex-col items-stretch justify-start p-0 whitespace-normal text-left overflow-hidden rounded-sm bg-background hover:bg-background ${className ?? ""}`}
     >
       <div className="relative w-full aspect-[3/4] overflow-hidden bg-background">
       <img

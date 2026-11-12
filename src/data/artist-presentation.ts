@@ -7,11 +7,11 @@ const presentation = [
   ] },
   { heading: 'Dancers', members: [
     { slug: 'maia-roldan', role: 'Amanda', responsibilities: 'Choreography', credit: "Dancer on Lali Espósito's \"Soy\" tour and in Wild Tango, London; Best Children's Choreography at the \"Premios Hugo\"." },
-    { slug: 'camila-ezequiel', role: 'Co-choreographers', credit: "World Champions of \"Tango Escenario\" and judges at the World and European Tango Championships." },
-    { slug: 'evangelina-nelson', role: 'Griseta & Osvaldo', credit: "World Vice-Champions of \"Tango Escenario\", bridging tango and folklore." },
+    { slug: 'camila-ezequiel', role: 'Co-choreographers', credit: "World Champions of \"Tango Escenario\" and judges at the World and European Tango Championships.", wide: true },
+    { slug: 'evangelina-nelson', role: 'Griseta & Osvaldo', credit: "World Vice-Champions of \"Tango Escenario\", bridging tango and folklore.", wide: true },
     { slug: 'soledad-mangia', role: 'Nocturna', credit: "Champion of the \"Festival Nacional de Cosquín\" and dance partner of Julio Bocca." },
-    { slug: 'fabrizio-federica', role: 'Ivone & El Niño Bien', credit: "A new generation of tango, featured at \"Rojo Tango\" (Faena Hotel), \"Café de los Angelitos\" and \"Señor Tango\"." },
-    { slug: 'sofia-heber', role: 'Charro & Esthercita', credit: "Leading couple of Buenos Ayres Wine in South Korea and of the European tour of Luis Pereyra's \"El Sonido de mi Tierra\"." },
+    { slug: 'fabrizio-federica', role: 'Ivone & El Niño Bien', credit: "A new generation of tango, featured at \"Rojo Tango\" (Faena Hotel), \"Café de los Angelitos\" and \"Señor Tango\".", wide: true },
+    { slug: 'sofia-heber', role: 'Charro & Esthercita', credit: "Leading couple of Buenos Ayres Wine in South Korea and of the European tour of Luis Pereyra's \"El Sonido de mi Tierra\".", wide: true },
   ] },
   { heading: 'Musicians', members: [
     { slug: 'matias-rubino', role: 'Musical direction, bandoneon', credit: "Member of Rodolfo Mederos' \"Orquesta Típica\" and of Otros Aires, Tanghetto and Narcotango." },
@@ -31,7 +31,7 @@ export const artistGroups = presentation.map(group => ({
   heading: group.heading,
   members: group.members.flatMap(member => {
     const artist = artists.find(artist => artist.slug === member.slug);
-    return artist ? [{ ...artist, role: member.role, responsibilities: 'responsibilities' in member ? member.responsibilities : undefined, credit: member.credit }] : [];
+    return artist ? [{ ...artist, role: member.role, responsibilities: 'responsibilities' in member ? member.responsibilities : undefined, credit: member.credit, wide: 'wide' in member ? member.wide : false }] : [];
   }),
 }));
 

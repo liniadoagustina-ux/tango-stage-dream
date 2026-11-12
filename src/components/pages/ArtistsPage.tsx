@@ -39,7 +39,7 @@ export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
           <div className="max-w-7xl mx-auto">
             <h2 className="font-serif text-gold text-4xl md:text-5xl mb-8 md:mb-12">{groupHeadings?.[group.heading] ?? group.heading}</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-8 gap-y-8">
-              {group.members.map(artist => <ArtistCard key={artist.slug} lang={lang} artist={artist} onOpen={() => setActive(artist)} />)}
+              {group.members.map(artist => <ArtistCard key={artist.slug} lang={lang} artist={artist} onOpen={() => setActive(artist)} className={artist.wide ? "col-span-2" : undefined} />)}
             </div>
           </div>
         </section>
