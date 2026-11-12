@@ -1,4 +1,14 @@
 import { images } from "@/data/images";
+import p_edgar_luizaga from "@/assets/webp/edgar-luizaga-portrait.webp.asset.json";
+import p_evangelina_martinez from "@/assets/webp/evangelina-martinez-portrait.webp.asset.json";
+import p_federica_tobares from "@/assets/webp/federica-tobares-portrait.webp.asset.json";
+import p_francisco_munoz from "@/assets/webp/francisco-munoz-portrait.webp.asset.json";
+import p_heber_mallorquin from "@/assets/webp/heber-mallorquin-portrait.webp.asset.json";
+import p_leonardo_luizaga from "@/assets/webp/leonardo-luizaga-portrait.webp.asset.json";
+import p_maia_roldan from "@/assets/webp/maia-roldan-portrait.webp.asset.json";
+import p_nelson_leiva from "@/assets/webp/nelson-leiva-portrait.webp.asset.json";
+import p_sofia_orlando from "@/assets/webp/sofia-orlando-portrait.webp.asset.json";
+import p_soledad_mangia from "@/assets/webp/soledad-mangia-portrait.webp.asset.json";
 import arielPonceA from "@/assets/webp/ariel-ponce.webp.asset.json";
 import edgarA from "@/assets/webp/edgar.webp.asset.json";
 const edgar = edgarA.url;
@@ -42,6 +52,7 @@ export type Artist = {
   image: string;
   imageWidth?: number;
   imageHeight?: number;
+  portraits?: string[];
   poetic: string;
   bio: string[];
 };
@@ -313,3 +324,15 @@ for (const artist of artists) {
   artist.imageWidth = image?.width;
   artist.imageHeight = image?.height;
 }
+
+// Uniform 4:5 portraits (960x1200) per person, in the order the names appear.
+const portraits: Record<string, string[]> = {
+  "leonardo-luizaga": [p_leonardo_luizaga.url],
+  "edgar-luizaga": [p_edgar_luizaga.url],
+  "maia-roldan": [p_maia_roldan.url],
+  "soledad-mangia": [p_soledad_mangia.url],
+  "evangelina-nelson": [p_evangelina_martinez.url, p_nelson_leiva.url],
+  "fabrizio-federica": [p_francisco_munoz.url, p_federica_tobares.url],
+  "sofia-heber": [p_sofia_orlando.url, p_heber_mallorquin.url],
+};
+for (const artist of artists) artist.portraits = portraits[artist.slug] ?? [artist.image];
