@@ -7,7 +7,7 @@ const presentation = [
   ] },
   { heading: 'Dancers', members: [
     { slug: 'maia-roldan', role: 'Amanda', responsibilities: 'Choreography', credit: "Dancer on Lali Espósito's \"Soy\" tour and in Wild Tango, London; Best Children's Choreography at the \"Premios Hugo\"." },
-    { slug: 'camila-ezequiel', role: 'Co-choreographers', credit: "World Champions of \"Tango Escenario\" and judges at the World and European Tango Championships.", wide: true },
+    { slug: 'camila-ezequiel', role: 'Co-choreographers', credit: "World Champions of \"Tango Escenario\" and judges at the World and European Tango Championships." },
     { slug: 'evangelina-nelson', role: 'Griseta & Osvaldo', credit: "World Vice-Champions of \"Tango Escenario\", bridging tango and folklore." },
     { slug: 'soledad-mangia', role: 'Nocturna', credit: "Champion of the \"Festival Nacional de Cosquín\" and dance partner of Julio Bocca." },
     { slug: 'fabrizio-federica', role: 'Ivone & El Niño Bien', credit: "A new generation of tango, featured at \"Rojo Tango\" (Faena Hotel), \"Café de los Angelitos\" and \"Señor Tango\"." },
