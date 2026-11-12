@@ -1,4 +1,6 @@
 import { images } from "@/data/images";
+import p_matias_rubino from "@/assets/webp/matias-rubino-portrait.webp.asset.json";
+import p_pablo_cotella from "@/assets/webp/pablo-cotella-portrait.webp.asset.json";
 import p_edgar_luizaga from "@/assets/webp/edgar-luizaga-portrait.webp.asset.json";
 import p_evangelina_martinez from "@/assets/webp/evangelina-martinez-portrait.webp.asset.json";
 import p_federica_tobares from "@/assets/webp/federica-tobares-portrait.webp.asset.json";
@@ -333,6 +335,8 @@ const portraits: Record<string, string[]> = {
   "soledad-mangia": [p_soledad_mangia.url],
   "evangelina-nelson": [p_evangelina_martinez.url, p_nelson_leiva.url],
   "fabrizio-federica": [p_francisco_munoz.url, p_federica_tobares.url],
+  "matias-rubino": [p_matias_rubino.url],
+  "patricio-cotella": [p_pablo_cotella.url],
   "sofia-heber": [p_sofia_orlando.url, p_heber_mallorquin.url],
 };
 for (const artist of artists) artist.portraits = portraits[artist.slug] ?? [artist.image];
