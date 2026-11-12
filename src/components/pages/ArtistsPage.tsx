@@ -57,10 +57,11 @@ export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
                 <DialogDescription className="sr-only">{active.role}</DialogDescription>
 
                 <div className={`flex flex-col ${(active.portraits?.length ?? 1) > 1 ? "" : "md:flex-row md:max-h-[90vh]"}`}>
-                  <div className={(active.portraits?.length ?? 1) > 1 ? "relative overflow-hidden bg-background" : "relative overflow-hidden bg-background md:w-[42%] md:shrink-0 md:min-h-[60vh] md:max-h-[90vh]"}>
-                    <div className={`relative grid gap-1 ${(active.portraits?.length ?? 1) > 1 ? "grid-cols-2" : "grid-cols-1 md:absolute md:inset-0 md:content-center"}`}>
+                  <div className={(active.portraits?.length ?? 1) > 1 ? "relative overflow-hidden bg-background shrink-0" : "relative overflow-hidden bg-background md:w-[42%] md:shrink-0 md:min-h-[60vh] md:max-h-[90vh]"}>
+                    <div className={`relative grid gap-1 ${(active.portraits?.length ?? 1) > 1 ? "grid-cols-2 h-[32vh] md:h-[34vh]" : "grid-cols-1 md:absolute md:inset-0 md:content-center"}`}>
                       {(active.portraits ?? [active.image]).map((src, i) => (
-                        <img key={src} src={src} width={960} height={1200} alt={i === 0 ? active.name : ""} className="block w-full aspect-[4/5] object-cover object-[50%_30%]" />
+                        <img key={src} src={src} width={960} height={1200} alt={i === 0 ? active.name : ""}
+                          className={(active.portraits?.length ?? 1) > 1 ? "block h-full w-full object-cover object-[50%_25%]" : "block w-full aspect-[4/5] object-cover object-[50%_30%]"} />
                       ))}
                     </div>
                   </div>
