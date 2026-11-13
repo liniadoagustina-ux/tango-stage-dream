@@ -106,6 +106,24 @@ export const artists: Artist[] = [
     ],
   },
   {
+    slug: "maia-roldan",
+    name: "Maia Roldán",
+    role: "Dancer, Choreographer",
+    discipline: "Contemporary, Musical Theatre, Tango",
+    character: "Amanda",
+    image: maia,
+    poetic:
+      "A versatile body that speaks tango, theatre and contemporary in the same breath.",
+    bio: [
+      "Argentine dancer and choreographer, widely recognised for her versatility and strong presence across musical theatre, television, and international productions. She has received numerous awards and scholarships throughout her career, including a scholarship to the Summer Dance Intensive at Point Park University (Pittsburgh, USA), awarded by Gustavo Zajac, and further training through Fundación Julio Bocca in Buenos Aires.",
+      "She also continued her studies in New York at Broadway Dance Center under the International Student Visa Program, training with renowned choreographer Ashley Dawson. In ballroom dance, she achieved First Prize at the World Promotions Sheraton competition (2011–2012) alongside Alexis Mariani. In 2018, she was awarded a Premios Hugo for Best Children's Choreography for Aladín... será genial, co-created with Rosario Asencio.",
+      "As a performer, Maia has built an extensive career across stage, television, and international tours. She has worked in major Argentine television productions such as Susana Giménez and ShowMatch – Bailando por un Sueño (2018–2019). She toured nationally and internationally with Lali Espósito in the Soy Tour (2016–2019), and performed in leading stage productions including Disney – Una Navidad Inolvidable, directed by Ariel del Mastro; Pan – The Musical (Dance Captain); and Stravaganza, directed by Flavio Mendoza.",
+      "Her contemporary dance background includes work with CEM (Contemporary Dance Company) in productions such as Pies pa' Volar, Rayuela, and Estados del Tiempo, as well as performances with Choque Urbano at Teatro Konex and on national tour (2011–2013).",
+      "Internationally, she has performed as a dancer and assistant in Wild Tango with the Germán Cornejo Company in London (2022–2023), and in Papillon, a dinner show in Dubai directed by Layla Kardan. She has also toured extensively with Freedom by Los Potros Malambo, performing across Russia, Armenia, Belarus, Kazakhstan, Kyrgyzstan, Moldova, and Italy under the direction of Isaac & Javier Gardela.",
+      "Maia has established herself as a prominent choreographer. Her work includes American Idiot – The Musical, Simona en Vivo at Luna Park Stadium, and Aladín... será genial at Teatro Gran Rex. She has also choreographed internationally with Burnet (Turkey and Egypt, 2021–2022) and contributed to Wild Tango with the Germán Cornejo Company. More recently, she has been involved in Papá por Siempre at Teatro Liceo (2026).",
+    ],
+  },
+  {
     slug: "evangelina-nelson",
     name: "Evangelina Martínez & Nelson Leiva",
     role: "Principal Dancers",
@@ -151,23 +169,6 @@ export const artists: Artist[] = [
       "In 2019, they joined the company of Marcos Ayala, performing in high-level productions and completing two consecutive seasons aboard the cruise ships Silja Symphony and Serenade. They subsequently toured internationally across the Baltic countries, Russia, and China, expanding their global reach.",
       "Throughout their career, they have performed in countries including Russia, Germany, Austria, Switzerland, Sweden, the Czech Republic, the Netherlands, Finland, and Qatar. Their performances have graced prestigious venues such as the Mariinsky Theatre in St Petersburg and the Coliseo Theatre in Buenos Aires.",
       "Since 2023, they have been part of the renowned dinner show Michelangelo Tango, continuing a career defined by elegance, passion, and an unwavering commitment to their art. Most recently, they have been invited by the Luizaga Brothers to join their new production, further affirming their standing on the international stage.",
-    ],
-  },
-  {
-    slug: "maia-roldan",
-    name: "Maia Roldán",
-    role: "Dancer, Choreographer",
-    discipline: "Contemporary, Musical Theatre, Tango",
-    image: maia,
-    poetic:
-      "A versatile body that speaks tango, theatre and contemporary in the same breath.",
-    bio: [
-      "Argentine dancer and choreographer, widely recognised for her versatility and strong presence across musical theatre, television, and international productions. She has received numerous awards and scholarships throughout her career, including a scholarship to the Summer Dance Intensive at Point Park University (Pittsburgh, USA), awarded by Gustavo Zajac, and further training through Fundación Julio Bocca in Buenos Aires.",
-      "She also continued her studies in New York at Broadway Dance Center under the International Student Visa Program, training with renowned choreographer Ashley Dawson. In ballroom dance, she achieved First Prize at the World Promotions Sheraton competition (2011–2012) alongside Alexis Mariani. In 2018, she was awarded a Premios Hugo for Best Children's Choreography for Aladín... será genial, co-created with Rosario Asencio.",
-      "As a performer, Maia has built an extensive career across stage, television, and international tours. She has worked in major Argentine television productions such as Susana Giménez and ShowMatch – Bailando por un Sueño (2018–2019). She toured nationally and internationally with Lali Espósito in the Soy Tour (2016–2019), and performed in leading stage productions including Disney – Una Navidad Inolvidable, directed by Ariel del Mastro; Pan – The Musical (Dance Captain); and Stravaganza, directed by Flavio Mendoza.",
-      "Her contemporary dance background includes work with CEM (Contemporary Dance Company) in productions such as Pies pa' Volar, Rayuela, and Estados del Tiempo, as well as performances with Choque Urbano at Teatro Konex and on national tour (2011–2013).",
-      "Internationally, she has performed as a dancer and assistant in Wild Tango with the Germán Cornejo Company in London (2022–2023), and in Papillon, a dinner show in Dubai directed by Layla Kardan. She has also toured extensively with Freedom by Los Potros Malambo, performing across Russia, Armenia, Belarus, Kazakhstan, Kyrgyzstan, Moldova, and Italy under the direction of Isaac & Javier Gardela.",
-      "Maia has established herself as a prominent choreographer. Her work includes American Idiot – The Musical, Simona en Vivo at Luna Park Stadium, and Aladín... será genial at Teatro Gran Rex. She has also choreographed internationally with Burnet (Turkey and Egypt, 2021–2022) and contributed to Wild Tango with the Germán Cornejo Company. More recently, she has been involved in Papá por Siempre at Teatro Liceo (2026).",
     ],
   },
   {

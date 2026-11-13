@@ -116,7 +116,7 @@ export const homeCopy = {
     castHeading: "La Distribution",
     castLink: "Découvrir les artistes",
     castLinkTo: "/fr/artists",
-    castRoles: ["Gabino", "Charon", "Chorégraphes associés", "Griseta et Osvaldo"],
+    castRoles: ["Gabino", "Charon", "Chorégraphes associés", "Amanda"],
   },
   en: {
     manifesto:
@@ -133,7 +133,7 @@ export const homeCopy = {
     castHeading: "The Cast",
     castLink: "See all artists",
     castLinkTo: "/artists",
-    castRoles: ["Gabino", "Charon", "Co-choreographers", "Griseta & Osvaldo"],
+    castRoles: ["Gabino", "Charon", "Co-choreographers", "Amanda"],
   },
   es: {
     manifesto:
@@ -150,7 +150,7 @@ export const homeCopy = {
     castHeading: "El Elenco",
     castLink: "Conocé a los artistas",
     castLinkTo: "/es/artists",
-    castRoles: ["Gabino", "Caronte", "Coreógrafos asociados", "Griseta y Osvaldo"],
+    castRoles: ["Gabino", "Caronte", "Coreógrafos asociados", "Amanda"],
   },
 } as const;
 

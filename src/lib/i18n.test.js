@@ -43,7 +43,7 @@ describe("Language routing", () => {
   test("Spanish nav and home copy use the supplied texts", () => {
     expect(navItems.es.map((i) => i.label)).toEqual(["Inicio", "El Show", "La Compañía", "Artistas"]);
     expect(homeCopy.es.castHeading).toBe("El Elenco");
-    expect(homeCopy.es.castRoles).toEqual(["Gabino", "Caronte", "Coreógrafos asociados", "Griseta y Osvaldo"]);
+    expect(homeCopy.es.castRoles).toEqual(["Gabino", "Caronte", "Coreógrafos asociados", "Amanda"]);
   });
   test("Spanish hero uses the supplied title, line and buttons", () => {
     expect(`${heroCopy.es.titleA} ${heroCopy.es.titleB}`).toBe("Donde el tango alza vuelo.");
