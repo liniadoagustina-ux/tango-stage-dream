@@ -108,7 +108,7 @@ export function HomePage({ lang }: { lang: Lang }) {
               <Reveal key={a.slug} delay={i * 0.08}>
                 <Link to={copy.castLinkTo} className="block group relative aspect-[4/5] overflow-hidden rounded-sm">
                   <img
-                    width={a.imageWidth} height={a.imageHeight} src={a.image}
+                    width={a.imageWidth} height={a.imageHeight} src={a.portraits?.[0] ?? a.image}
                     alt={a.name}
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover"
