@@ -304,7 +304,7 @@ export const artists: Artist[] = [
   },
   {
     slug: "ariel-ponce",
-    name: "Jorge Ariel “El Gato” Ponce",
+    name: "Jorge Ariel Ponce",
     role: "Lighting Director & Lighting Designer",
     discipline: "Lighting, Design",
     image: arielPonce,
@@ -317,7 +317,7 @@ export const artists: Artist[] = [
       "His experience also extends to major artists and live events, including Fabiana Cantilo in La Fiesta del Sol, REBORD at Movistar Arena and Lollapalooza Festival, as well as Serendipia in its theatrical and Netflix versions and La Cúpula of Flavio Mendoza on 2026.",
       "Ponce approaches lighting as an essential artistic and dramaturgical language, using light to shape space, atmosphere, rhythm and emotion while integrating seamlessly with direction, performance, music and scenography.",
       "His nearly 30-year career has earned recognition through nominations for the Estrella de Mar Awards, Carlos Awards and ACE Awards, as well as two Hugo Award .",
-      "From the theatres of Avenida Corrientes to major musicals, festivals and arena productions, Ariel “El Gato” Ponce brings to every project a distinctive combination of artistic vision, technical expertise and extensive production experience, making him a versatile creative professional for international theatre and live performance.",
+      "From the theatres of Avenida Corrientes to major musicals, festivals and arena productions, Ariel Ponce brings to every project a distinctive combination of artistic vision, technical expertise and extensive production experience, making him a versatile creative professional for international theatre and live performance.",
     ],
   },
 ];
