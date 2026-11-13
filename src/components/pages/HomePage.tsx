@@ -106,12 +106,12 @@ export function HomePage({ lang }: { lang: Lang }) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {artists.slice(0, 4).map((a, i) => (
               <Reveal key={a.slug} delay={i * 0.08}>
-                <Link to={copy.castLinkTo} className="block group relative aspect-[3/4] overflow-hidden rounded-sm">
+                <Link to={copy.castLinkTo} className="block group relative aspect-[4/5] overflow-hidden rounded-sm">
                   <img
                     width={a.imageWidth} height={a.imageHeight} src={a.image}
                     alt={a.name}
                     loading="lazy"
-                    className="absolute inset-0 h-full w-full object-contain "
+                    className="absolute inset-0 h-full w-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-4">
