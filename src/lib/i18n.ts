@@ -29,8 +29,8 @@ export function preferredLanguage(stored: string | null, browserLanguage: string
 export const navItems = {
   fr: [
     { to: "/fr", label: "Accueil" },
-    { to: "/fr/show", label: "Le spectacle" },
-    { to: "/fr/company", label: "La compagnie" },
+    { to: "/fr/show", label: "Le Spectacle" },
+    { to: "/fr/company", label: "La Compagnie" },
     { to: "/fr/artists", label: "Artistes" },
   ],
   en: [
@@ -41,8 +41,8 @@ export const navItems = {
   ],
   es: [
     { to: "/es", label: "Inicio" },
-    { to: "/es/show", label: "El show" },
-    { to: "/es/company", label: "La compañía" },
+    { to: "/es/show", label: "El Show" },
+    { to: "/es/company", label: "La Compañía" },
     { to: "/es/artists", label: "Artistas" },
   ],
 } as const;
@@ -55,21 +55,19 @@ export const bookingLabel: Record<Lang, string> = {
 
 export const footerCopy = {
   fr: {
-    tagline: "Tango argentin, danse aérienne et théâtre physique. De Zárate aux scènes d'Europe, d'Asie et d'Amérique.",
+    tagline: "Tango argentin, danse aérienne et théâtre physique.",
     explore: "Explorer",
     bookings: "Diffusion",
     rights: "Tous droits réservés.",
   },
   en: {
-    tagline:
-      "Argentine tango, aerial performance and physical theatre. From Zárate to stages in Europe, Asia and the Americas.",
+    tagline: "Argentine tango, aerial performance and physical theatre.",
     explore: "Explore",
     bookings: "Bookings",
     rights: "All rights reserved.",
   },
   es: {
-    tagline:
-      "Tango argentino, danza aérea y teatro físico. De Zárate a los escenarios de Europa, Asia y América.",
+    tagline: "Tango argentino, danza aérea y teatro físico.",
     explore: "Explorar",
     bookings: "Contrataciones",
     rights: "Todos los derechos reservados.",
@@ -111,14 +109,14 @@ export const homeCopy = {
       { title: "Aérien", text: "Sangles, cerceau et harnais : des corps suspendus au-dessus de l'orchestre." },
       { title: "Théâtre", text: "Une histoire racontée sans paroles, d'une fête de quartier jusqu'au seuil des enfers." },
     ],
-    showTitle: "Tango – La Muerte del Ángel",
+    showTitle: "La Muerte del Ángel",
     showText: "Le mythe de Charon, raconté à travers le tango, le folklore argentin et la danse aérienne, avec un orchestre sur scène.",
     showCta: "Découvrir le spectacle",
     showTo: "/fr/show",
-    castHeading: "La distribution",
+    castHeading: "La Distribution",
     castLink: "Découvrir les artistes",
     castLinkTo: "/fr/artists",
-    castRoles: ["Gabino", "Charon", "Chorégraphes associés", "Griseta et Osvaldo"],
+    castRoles: ["Gabino", "Charon", "Chorégraphes associés", "Amanda"],
   },
   en: {
     manifesto:
@@ -128,14 +126,14 @@ export const homeCopy = {
       { title: "Aerial", text: "Straps, hoop and harness: bodies suspended above the live orchestra." },
       { title: "Theatre", text: "A story told without words, from a neighbourhood celebration to the threshold of the underworld." },
     ],
-    showTitle: "Tango – La Muerte del Ángel",
+    showTitle: "La Muerte del Ángel",
     showText: "The myth of Charon, told through tango, folklore, aerial dance and a live band.",
     showCta: "Discover the show",
     showTo: "/show",
-    castHeading: "The cast",
+    castHeading: "The Cast",
     castLink: "See all artists",
     castLinkTo: "/artists",
-    castRoles: ["Gabino", "Charon", "Co-choreographers", "Griseta & Osvaldo"],
+    castRoles: ["Gabino", "Charon", "Co-choreographers", "Amanda"],
   },
   es: {
     manifesto:
@@ -145,26 +143,26 @@ export const homeCopy = {
       { title: "Aéreo", text: "Straps, aro y arnés: cuerpos suspendidos sobre la orquesta en vivo." },
       { title: "Teatro", text: "Una historia narrada sin palabras, desde una celebración de barrio hasta los umbrales del inframundo." },
     ],
-    showTitle: "Tango – La Muerte del Ángel",
+    showTitle: "La Muerte del Ángel",
     showText: "El mito de Caronte, narrado a través del tango, el folklore y la danza aérea, con orquesta en vivo.",
     showCta: "Conocé el show",
     showTo: "/es/show",
-    castHeading: "El elenco",
+    castHeading: "El Elenco",
     castLink: "Conocé a los artistas",
     castLinkTo: "/es/artists",
-    castRoles: ["Gabino", "Caronte", "Coreógrafos asociados", "Griseta y Osvaldo"],
+    castRoles: ["Gabino", "Caronte", "Coreógrafos asociados", "Amanda"],
   },
 } as const;
 
-export const showCopyEs = {"title": "Tango – La Muerte del Ángel", "line": "En Buenos Aires, la muerte baila al ritmo del tango.", "workHeading": "La obra", "work": "Narrada a través del lenguaje expresivo del tango argentino, enriquecido con elementos del folklore y de la danza aérea en straps, aro y arnés, La Muerte del Ángel reimagina el mito de Caronte, el barquero del inframundo, desde la cultura argentina. Una obra de danza teatro que une mito, movimiento y emoción, con orquesta en vivo sobre el escenario.", "storyHeading": "La historia", "story": ["En un barrio de una Buenos Aires atemporal, donde cada esquina respira tango y aire de campo, Gabino y Amanda viven un amor sencillo y duradero, nacido en una milonga y sellado en el baile.", "Una tarde, mientras los vecinos celebran el cumpleaños de Gabino, se desata una tormenta y, con ella, llega Caronte. Atraído por el alma de Amanda, emerge del inframundo para reclamarla. Ella no se resiste: con serena entrega, baila con él.", "Solo Nocturna, médium y amiga de Gabino, alcanza a percibir su presencia. Despojado de su amada, Gabino emprende su propio descenso, un recorrido por la nostalgia, la memoria y el desconsuelo del que no logra desprenderse.", "Cuando los límites entre la vida y la muerte comienzan a desdibujarse, el amor se revela más fuerte que la propia mortalidad. Gabino elige seguir a Amanda más allá de este mundo, y Caronte los guía, juntos, hacia una unión que trasciende lo humano."], "charactersHeading": "Personajes", "characters": [{"name": "Gabino", "performer": "Leonardo Luizaga"}, {"name": "Amanda", "performer": "Maia Roldán"}, {"name": "Caronte", "performer": "Edgar Luizaga"}, {"name": "Nocturna", "performer": "Soledad Mangia"}, {"name": "El Tano, el cantor", "performer": "Roberto Minondi"}, {"name": "Griseta y Osvaldo", "performer": "Evangelina Martínez y Nelson Leiva"}, {"name": "Ivone y El Niño Bien", "performer": "Federica Tobares y Fabrizio Muñoz"}, {"name": "Charro y Esthercita", "performer": "Sofía Orlando y Heber Mallorquín"}], "trailerHeading": "Mirá el show", "galleryHeading": "Galería", "creditsHeading": "Créditos", "credits": [{"role": "Idea, dirección y producción general", "name": "Leonardo Luizaga y Edgar Luizaga"}, {"role": "Coreografía", "name": "Leonardo Luizaga, Edgar Luizaga y Maia Roldán"}, {"role": "Coreógrafos asociados", "name": "Camila Alegre y Ezequiel López"}, {"role": "Coreografía aérea", "name": "Edgar Luizaga"}, {"role": "Dirección musical", "name": "Matías Rubino"}, {"role": "Producción musical", "name": "Franco Zilocchi"}, {"role": "Diseño de vestuario", "name": "Leonardo Luizaga, con la asistencia de Silvana Ursula"}, {"role": "Diseño de iluminación", "name": "Jorge Ariel \"El Gato\" Ponce"}, {"role": "Técnicos aéreos", "name": "Flavio Lilli y Darío Diaco"}, {"role": "Asistencia de producción", "name": "Lucía Ohyama"}]};
+export const showCopyEs = {"title": "La Muerte del Ángel", "line": "En Buenos Aires, la muerte baila al ritmo del tango.", "workHeading": "La Obra", "work": "Narrada a través del lenguaje expresivo del tango argentino, enriquecido con elementos del folklore y de la danza aérea en straps, aro y arnés, La Muerte del Ángel reimagina el mito de Caronte, el barquero del inframundo, desde la cultura argentina. Una obra de danza teatro que une mito, movimiento y emoción, con orquesta en vivo sobre el escenario.", "storyHeading": "La Historia", "story": ["En un barrio de una Buenos Aires atemporal, donde cada esquina respira tango y aire de campo, Gabino y Amanda viven un amor sencillo y duradero, nacido en una milonga y sellado en el baile.", "Una tarde, mientras los vecinos celebran el cumpleaños de Gabino, se desata una tormenta y, con ella, llega Caronte. Atraído por el alma de Amanda, emerge del inframundo para reclamarla. Ella no se resiste: con serena entrega, baila con él.", "Solo Nocturna, médium y amiga de Gabino, alcanza a percibir su presencia. Despojado de su amada, Gabino emprende su propio descenso, un recorrido por la nostalgia, la memoria y el desconsuelo del que no logra desprenderse.", "Cuando los límites entre la vida y la muerte comienzan a desdibujarse, el amor se revela más fuerte que la propia mortalidad. Gabino elige seguir a Amanda más allá de este mundo, y Caronte los guía, juntos, hacia una unión que trasciende lo humano."], "charactersHeading": "Personajes", "characters": [{"name": "Gabino", "performer": "Leonardo Luizaga"}, {"name": "Amanda", "performer": "Maia Roldán"}, {"name": "Caronte", "performer": "Edgar Luizaga"}, {"name": "Nocturna", "performer": "Soledad Mangia"}, {"name": "El Tano, el cantor", "performer": "Roberto Minondi"}, {"name": "Griseta y Osvaldo", "performer": "Evangelina Martínez y Nelson Leiva"}, {"name": "Ivone y El Niño Bien", "performer": "Federica Tobares y Fabrizio Muñoz"}, {"name": "Charro y Esthercita", "performer": "Sofía Orlando y Heber Mallorquín"}], "trailerHeading": "Mirá el Show", "galleryHeading": "Galería", "creditsHeading": "Créditos", "credits": [{"role": "Idea, dirección y producción general", "name": "Leonardo Luizaga y Edgar Luizaga"}, {"role": "Coreografía", "name": "Leonardo Luizaga, Edgar Luizaga y Maia Roldán"}, {"role": "Coreógrafos asociados", "name": "Camila Alegre y Ezequiel López"}, {"role": "Coreografía aérea", "name": "Edgar Luizaga"}, {"role": "Dirección musical", "name": "Matías Rubino"}, {"role": "Producción musical", "name": "Franco Zilocchi"}, {"role": "Diseño de vestuario", "name": "Leonardo Luizaga, con la asistencia de Silvana Ursula"}, {"role": "Diseño de iluminación", "name": "Jorge Ariel Ponce"}, {"role": "Técnicos aéreos", "name": "Flavio Lilli y Darío Diaco"}, {"role": "Asistencia de producción", "name": "Lucía Ohyama"}]};
 
-export const companyCopyEs = {"title": "La compañía", "intro": "Coreógrafos, directores artísticos y fundadores de Luizaga Brothers Production, Leonardo y Edgar Luizaga han llevado el tango argentino a escenarios de Europa, Asia y América, con un lenguaje que funde danza, teatro y movimiento aéreo.", "originsHeading": "Los comienzos", "origins": "Nacidos en Zárate, Argentina, Leonardo y Edgar iniciaron su formación a los cinco años, en el seno de una familia de bailarines y gimnastas. Se formaron en el Instituto Superior de Arte del Teatro Colón y cultivaron el tango, el ballet, el flamenco, la danza contemporánea y las artes circenses. Ambos comenzaron su carrera internacional a los diecisiete años.", "approachHeading": "Su mirada", "approach": "Su obra nace del tango argentino, entendido no como una tradición fija, sino como un lenguaje vivo y mutable, que deconstruyen y reconfiguran en diálogo con el circo, el teatro físico y el diseño visual. De ese cruce surge un lenguaje atravesado por la tensión: entre el control y la entrega, entre el suelo y la elevación, entre la intimidad y lo monumental.", "trajectoryHeading": "Trayectoria", "togetherHeading": "Juntos", "regionsHeading": "Sus escenarios", "showCta": "Conocé el show", "showTo": "/es/show", "trajectories": [{"name": "Leonardo Luizaga", "achievements": ["Bailarín más joven de la compañía Tango Pasión, seleccionado por Héctor Zaraspe, de la Juilliard School", "Integrante de la compañía de Juan Carlos Copes", "Primer bailarín en Malbec Tango House, Nueva York", "Premio Carlos al Mejor Bailarín (Argentina)", "Representante de la Argentina en la Expo Yeosu, Corea", "Gira por más de treinta ciudades de Japón junto a la Fundación Min-On", "Primer bailarín en Stravaganza"]}, {"name": "Edgar Luizaga", "achievements": ["Formación profesional en ballet en el Instituto Superior de Arte del Teatro Colón", "Integrante del Ballet del Mercosur y de la compañía TangoX2 en Europa", "Especialización en disciplinas aéreas en L'Académie Fratellini (París) y La Central (Barcelona)", "Giras por teatros y festivales de Europa y Asia con Wild Tango y Break the Tango", "Artista invitado en Park Chinois, Londres", "Presentaciones en America's Got Talent y Spain's Got Talent"]}], "together": ["Creación y coreografía de proyectos en Nueva York, Londres, Shanghái y Dubái para firmas como Marriott International, Bulgari y The Moon Wolf Co.", "Fundación de Luizaga Brothers Production"], "premierePrefix": "Creación de", "premiereSuffix": ", su nueva producción", "regions": [{"name": "Europa", "countries": ["Reino Unido", "España", "Francia", "Italia"]}, {"name": "Asia", "countries": ["Japón", "China", "Corea del Sur", "Emiratos Árabes Unidos"]}, {"name": "América", "countries": ["Argentina", "Estados Unidos"]}]};
+export const companyCopyEs = {"title": "La Compañía", "intro": "Coreógrafos, directores artísticos y fundadores de Luizaga Brothers Production, Leonardo y Edgar Luizaga han llevado el tango argentino a escenarios de Europa, Asia y América, con un lenguaje que funde danza, teatro y movimiento aéreo.", "originsHeading": "Los Comienzos", "origins": "Nacidos en Zárate, Argentina, Leonardo y Edgar iniciaron su formación a los cinco años, en el seno de una familia de bailarines y gimnastas. Se formaron en el Instituto Superior de Arte del Teatro Colón y cultivaron el tango, el ballet, el flamenco, la danza contemporánea y las artes circenses. Ambos comenzaron su carrera internacional a los diecisiete años.", "approachHeading": "Su Mirada", "approach": "Su obra nace del tango argentino, entendido no como una tradición fija, sino como un lenguaje vivo y mutable, que deconstruyen y reconfiguran en diálogo con el circo, el teatro físico y el diseño visual. De ese cruce surge un lenguaje atravesado por la tensión: entre el control y la entrega, entre el suelo y la elevación, entre la intimidad y lo monumental.", "trajectoryHeading": "Trayectoria", "togetherHeading": "Juntos", "regionsHeading": "Sus Escenarios", "showCta": "Conocé el show", "showTo": "/es/show", "trajectories": [{"name": "Leonardo Luizaga", "achievements": ["Bailarín más joven de la compañía Tango Pasión, seleccionado por Héctor Zaraspe, de la Juilliard School", "Integrante de la compañía de Juan Carlos Copes", "Primer bailarín en Malbec Tango House, Nueva York", "Premio Carlos al Mejor Bailarín (Argentina)", "Representante de la Argentina en la Expo Yeosu, Corea", "Gira por más de treinta ciudades de Japón junto a la Fundación Min-On", "Primer bailarín en Stravaganza"]}, {"name": "Edgar Luizaga", "achievements": ["Formación profesional en ballet en el Instituto Superior de Arte del Teatro Colón", "Integrante del Ballet del Mercosur y de la compañía TangoX2 en Europa", "Especialización en disciplinas aéreas en L'Académie Fratellini (París) y La Central (Barcelona)", "Giras por teatros y festivales de Europa y Asia con Wild Tango y Break the Tango", "Artista invitado en Park Chinois, Londres", "Presentaciones en America's Got Talent y Spain's Got Talent"]}], "together": ["Creación y coreografía de proyectos en Nueva York, Londres, Shanghái y Dubái para firmas como Marriott International, Bulgari y The Moon Wolf Co.", "Fundación de Luizaga Brothers Production"], "premierePrefix": "Creación de", "premiereSuffix": ", su nueva producción", "regions": [{"name": "Europa", "countries": ["Reino Unido", "España", "Francia", "Italia"]}, {"name": "Asia", "countries": ["Japón", "China", "Corea del Sur", "Emiratos Árabes Unidos"]}, {"name": "América", "countries": ["Argentina", "Estados Unidos"]}]};
 
-export const artistsCopyEs: Record<string, { name: string; role: string; responsibilities: string | null; credit: string }> = {"leonardo-luizaga": {"name": "Leonardo Luizaga", "role": "Gabino", "responsibilities": "Dirección general, coreografía y vestuario", "credit": "Bailarín más joven de Tango Pasión, integrante de la compañía de Juan Carlos Copes y Premio Carlos al Mejor Bailarín."}, "edgar-luizaga": {"name": "Edgar Luizaga", "role": "Caronte", "responsibilities": "Dirección general y coreografía aérea", "credit": "Formado en ballet en el Teatro Colón y en disciplinas aéreas en L'Académie Fratellini de París."}, "maia-roldan": {"name": "Maia Roldán", "role": "Amanda", "responsibilities": "Coreografía", "credit": "Bailarina de la gira Soy de Lali Espósito y de Wild Tango en Londres; Premio Hugo a la Mejor Coreografía Infantil."}, "camila-ezequiel": {"name": "Camila Alegre y Ezequiel López", "role": "Coreógrafos asociados", "responsibilities": null, "credit": "Campeones mundiales de Tango Escenario y jurados del Campeonato Mundial y del Campeonato Europeo de Tango."}, "evangelina-nelson": {"name": "Evangelina Martínez y Nelson Leiva", "role": "Griseta y Osvaldo", "responsibilities": null, "credit": "Subcampeones mundiales de Tango Escenario, con una danza que tiende puentes entre el tango y el folklore."}, "soledad-mangia": {"name": "Soledad Mangia", "role": "Nocturna", "responsibilities": null, "credit": "Campeona del Festival Nacional de Cosquín y partenaire de Julio Bocca."}, "fabrizio-federica": {"name": "Fabrizio Muñoz y Federica Tobares", "role": "Ivone y El Niño Bien", "responsibilities": null, "credit": "Una nueva generación del tango, con presentaciones en Rojo Tango (Faena Hotel), Café de los Angelitos y Señor Tango."}, "sofia-heber": {"name": "Sofía Orlando y Heber Mallorquín", "role": "Charro y Esthercita", "responsibilities": null, "credit": "Pareja protagonista de Buenos Ayres Wine en Corea del Sur y de la gira europea de El Sonido de mi Tierra, de Luis Pereyra."}, "matias-rubino": {"name": "Matías Rubino", "role": "Dirección musical y bandoneón", "responsibilities": null, "credit": "Integrante de la Orquesta Típica de Rodolfo Mederos y de Otros Aires, Tanghetto y Narcotango."}, "roberto-minondi": {"name": "Roberto Minondi", "role": "Voz y guitarra (El Tano)", "responsibilities": null, "credit": "Cinco años en Esquina Carlos Gardel; cantor de la Orquesta Típica Tanturi y de Romántica Milonguera."}, "sergio-milman": {"name": "Sergio Milman", "role": "Piano", "responsibilities": null, "credit": "Durante doce años, pianista, arreglador y director musical de la Orquesta Típica Percal."}, "luiza-anastasio": {"name": "Luiza Anastásio", "role": "Violín", "responsibilities": null, "credit": "Doctora en Música por la Universidad Federal de Minas Gerais, Brasil."}, "patricio-cotella": {"name": "Patricio Cotella", "role": "Contrabajo", "responsibilities": null, "credit": "Formado en la Orquesta Escuela de Tango dirigida por Emilio Balcarce."}, "franco-zilocchi": {"name": "Franco Zilocchi", "role": "Batería y producción musical", "responsibilities": null, "credit": "Ingeniero de sonido y productor musical."}, "ariel-ponce": {"name": "Jorge Ariel \"El Gato\" Ponce", "role": "Diseño de iluminación", "responsibilities": null, "credit": "Casi tres décadas en los teatros de la avenida Corrientes, con títulos como Stravaganza, Rent y Pretty Woman."}, "lucia-ohyama": {"name": "Lucía Ohyama", "role": "Producción", "responsibilities": null, "credit": "Producción ejecutiva y dirección de gira."}};
+export const artistsCopyEs: Record<string, { name: string; role: string; responsibilities: string | null; credit: string }> = {"leonardo-luizaga": {"name": "Leonardo Luizaga", "role": "Gabino", "responsibilities": "Dirección general, coreografía y vestuario", "credit": "Bailarín más joven de Tango Pasión, integrante de la compañía de Juan Carlos Copes y Premio Carlos al Mejor Bailarín."}, "edgar-luizaga": {"name": "Edgar Luizaga", "role": "Caronte", "responsibilities": "Dirección general y coreografía aérea", "credit": "Formado en ballet en el Teatro Colón y en disciplinas aéreas en L'Académie Fratellini de París."}, "maia-roldan": {"name": "Maia Roldán", "role": "Amanda", "responsibilities": "Coreografía", "credit": "Bailarina de la gira Soy de Lali Espósito y de Wild Tango en Londres; Premio Hugo a la Mejor Coreografía Infantil."}, "camila-ezequiel": {"name": "Camila Alegre y Ezequiel López", "role": "Coreógrafos asociados", "responsibilities": null, "credit": "Campeones mundiales de Tango Escenario y jurados del Campeonato Mundial y del Campeonato Europeo de Tango."}, "evangelina-nelson": {"name": "Evangelina Martínez y Nelson Leiva", "role": "Griseta y Osvaldo", "responsibilities": null, "credit": "Subcampeones mundiales de Tango Escenario, con una danza que tiende puentes entre el tango y el folklore."}, "soledad-mangia": {"name": "Soledad Mangia", "role": "Nocturna", "responsibilities": null, "credit": "Campeona del Festival Nacional de Cosquín y partenaire de Julio Bocca."}, "fabrizio-federica": {"name": "Fabrizio Muñoz y Federica Tobares", "role": "Ivone y El Niño Bien", "responsibilities": null, "credit": "Una nueva generación del tango, con presentaciones en Rojo Tango (Faena Hotel), Café de los Angelitos y Señor Tango."}, "sofia-heber": {"name": "Sofía Orlando y Heber Mallorquín", "role": "Charro y Esthercita", "responsibilities": null, "credit": "Pareja protagonista de Buenos Ayres Wine en Corea del Sur y de la gira europea de El Sonido de mi Tierra, de Luis Pereyra."}, "matias-rubino": {"name": "Matías Rubino", "role": "Dirección musical y bandoneón", "responsibilities": null, "credit": "Integrante de la Orquesta Típica de Rodolfo Mederos y de Otros Aires, Tanghetto y Narcotango."}, "roberto-minondi": {"name": "Roberto Minondi", "role": "Voz y guitarra (El Tano)", "responsibilities": null, "credit": "Cinco años en Esquina Carlos Gardel; cantor de la Orquesta Típica Tanturi y de Romántica Milonguera."}, "sergio-milman": {"name": "Sergio Milman", "role": "Piano", "responsibilities": null, "credit": "Durante doce años, pianista, arreglador y director musical de la Orquesta Típica Percal."}, "luiza-anastasio": {"name": "Luiza Anastásio", "role": "Violín", "responsibilities": null, "credit": "Doctora en Música por la Universidad Federal de Minas Gerais, Brasil."}, "patricio-cotella": {"name": "Patricio Cotella", "role": "Contrabajo", "responsibilities": null, "credit": "Formado en la Orquesta Escuela de Tango dirigida por Emilio Balcarce."}, "franco-zilocchi": {"name": "Franco Zilocchi", "role": "Batería y producción musical", "responsibilities": null, "credit": "Ingeniero de sonido y productor musical."}, "ariel-ponce": {"name": "Jorge Ariel Ponce", "role": "Diseño de iluminación", "responsibilities": null, "credit": "Casi tres décadas en los teatros de la avenida Corrientes, con títulos como Stravaganza, Rent y Pretty Woman."}, "lucia-ohyama": {"name": "Lucía Ohyama", "role": "Producción", "responsibilities": null, "credit": "Producción ejecutiva y dirección de gira."}};
 
-export const artistGroupHeadingsEs: Record<string, string> = {"Direction": "Dirección", "Dancers": "Bailarines", "Musicians": "Músicos", "Creative team": "Equipo creativo"};
+export const artistGroupHeadingsEs: Record<string, string> = {"Direction": "Dirección", "Dancers": "Bailarines", "Musicians": "Músicos", "Creative Team": "Equipo Creativo"};
 
-const baseMediaCopy = { en: { play: "Play the official trailer", trailer: "La Muerte del Ángel — Official Trailer", close: "Close", biography: "Read biography of", enlarge: "Enlarge gallery photo", gallery: "Tango – La Muerte del Ángel gallery, photo", previous: "Previous gallery photo", next: "Next gallery photo", alts: ["A tango couple embraces with the live band behind them", "The ensemble dances beneath pink stage lights", "Two couples perform tango on stage", "A tango couple in a sweeping embrace", "Aerial straps rise above the dancers", "A dancer lifts his partner in the spotlight", "The ensemble in a dramatic blue and pink stage scene", "Two characters wearing hats against a red theatre curtain", "An aerial performer suspended over the ensemble"] }, es: { play: "Reproducir el trailer oficial", trailer: "La Muerte del Ángel — Trailer oficial", close: "Cerrar", biography: "Leer biografía de", enlarge: "Ampliar foto de la galería", gallery: "Galería de Tango – La Muerte del Ángel, foto", previous: "Foto anterior", next: "Foto siguiente", alts: ["Una pareja de tango se abraza frente a la orquesta en vivo", "El elenco baila bajo luces rosadas", "Dos parejas bailan tango sobre el escenario", "Una pareja de tango en un abrazo extendido", "Los straps aéreos se elevan sobre los bailarines", "Un bailarín levanta a su pareja bajo el reflector", "El elenco en una escena con luces azules y rosadas", "Dos personajes con sombrero frente a un telón rojo", "Un artista aéreo suspendido sobre el elenco"] } };
+const baseMediaCopy = { en: { play: "Play the official trailer", trailer: "La Muerte del Ángel — Official Trailer", close: "Close", biography: "Read biography of", enlarge: "Enlarge gallery photo", gallery: "La Muerte del Ángel gallery, photo", previous: "Previous gallery photo", next: "Next gallery photo", alts: ["A tango couple embraces with the live band behind them", "The ensemble dances beneath pink stage lights", "Two couples perform tango on stage", "A tango couple in a sweeping embrace", "Aerial straps rise above the dancers", "A dancer lifts his partner in the spotlight", "The ensemble in a dramatic blue and pink stage scene", "Two characters wearing hats against a red theatre curtain", "An aerial performer suspended over the ensemble"] }, es: { play: "Reproducir el trailer oficial", trailer: "La Muerte del Ángel — Trailer Oficial", close: "Cerrar", biography: "Leer biografía de", enlarge: "Ampliar foto de la galería", gallery: "Galería de La Muerte del Ángel, foto", previous: "Foto anterior", next: "Foto siguiente", alts: ["Una pareja de tango se abraza frente a la orquesta en vivo", "El elenco baila bajo luces rosadas", "Dos parejas bailan tango sobre el escenario", "Una pareja de tango en un abrazo extendido", "Los straps aéreos se elevan sobre los bailarines", "Un bailarín levanta a su pareja bajo el reflector", "El elenco en una escena con luces azules y rosadas", "Dos personajes con sombrero frente a un telón rojo", "Un artista aéreo suspendido sobre el elenco"] } };
 
 
 export const mediaCopy = {
@@ -172,21 +170,21 @@ export const mediaCopy = {
   fr: {
     ...baseMediaCopy.en,
     play: "Lire la bande-annonce officielle",
-    trailer: "La Muerte del Ángel — Bande-annonce officielle",
+    trailer: "La Muerte del Ángel — Bande-Annonce Officielle",
     close: "Fermer",
     biography: "Lire la biographie de",
     enlarge: "Agrandir la photo de la galerie",
-    gallery: "Galerie de Tango – La Muerte del Ángel, photo",
+    gallery: "Galerie de La Muerte del Ángel, photo",
     previous: "Photo précédente",
     next: "Photo suivante",
   },
 };
 
 export const artistGroupHeadingsFr: Record<string, string> = {
-  Direction: "Direction artistique",
+  Direction: "Direction Artistique",
   Dancers: "Danseurs",
   Musicians: "Musiciens",
-  "Creative team": "Équipe de création",
+  "Creative Team": "Équipe de Création",
 };
 
 export const artistsCopyFr: typeof artistsCopyEs = {
@@ -204,20 +202,20 @@ export const artistsCopyFr: typeof artistsCopyEs = {
   "luiza-anastasio": { name: "Luiza Anastásio", role: "Violon", responsibilities: null, credit: "Docteure en musique de l'Université fédérale du Minas Gerais, au Brésil." },
   "patricio-cotella": { name: "Patricio Cotella", role: "Contrebasse", responsibilities: null, credit: "Formé au sein de l'« Orquesta Escuela de Tango » dirigée par Emilio Balcarce." },
   "franco-zilocchi": { name: "Franco Zilocchi", role: "Batterie et production musicale", responsibilities: null, credit: "Ingénieur du son et producteur." },
-  "ariel-ponce": { name: "Jorge Ariel « El Gato » Ponce", role: "Création lumière", responsibilities: null, credit: "Près de trente ans dans les théâtres de l'« Avenida Corrientes », avec des spectacles tels que « Stravaganza », Rent et Pretty Woman." },
+  "ariel-ponce": { name: "Jorge Ariel Ponce", role: "Création lumière", responsibilities: null, credit: "Près de trente ans dans les théâtres de l'« Avenida Corrientes », avec des spectacles tels que « Stravaganza », Rent et Pretty Woman." },
   "lucia-ohyama": { name: "Lucía Ohyama", role: "Production", responsibilities: null, credit: "Production exécutive et direction de tournée." },
 };
 
 export const companyCopyFr = {
-  title: "La compagnie",
+  title: "La Compagnie",
   intro: "Chorégraphes, directeurs artistiques et fondateurs de Luizaga Brothers Production, Leonardo et Edgar Luizaga ont porté le tango argentin sur les scènes d'Europe, d'Asie et d'Amérique, à travers un langage qui mêle danse, théâtre et mouvement aérien.",
-  originsHeading: "Les débuts",
+  originsHeading: "Les Débuts",
   origins: "Nés à Zárate, en Argentine, Leonardo et Edgar commencent leur formation dès l'âge de cinq ans, au sein d'une famille de danseurs et de gymnastes. Formés à l'« Instituto Superior de Arte » du « Teatro Colón », ils pratiquent le tango, le ballet, le flamenco, la danse contemporaine et les arts du cirque. Tous deux entament leur carrière internationale à dix-sept ans.",
-  approachHeading: "Leur regard",
+  approachHeading: "Leur Regard",
   approach: "Leur travail prend racine dans le tango argentin, envisagé non comme une tradition figée mais comme un langage vivant et mouvant, qu'ils déconstruisent et recomposent en dialogue avec le cirque, le théâtre physique et la création visuelle. De cette rencontre naît un langage traversé de tensions : entre maîtrise et lâcher-prise, entre ancrage et élévation, entre intimité et monumentalité.",
   trajectoryHeading: "Parcours",
   togetherHeading: "Ensemble",
-  regionsHeading: "Leurs scènes",
+  regionsHeading: "Leurs Scènes",
   showCta: "Découvrir le spectacle",
   showTo: "/fr/show",
   trajectories: [
@@ -253,11 +251,11 @@ export const companyCopyFr = {
 };
 
 export const showCopyFr = {
-  title: "Tango – La Muerte del Ángel",
+  title: "La Muerte del Ángel",
   line: "À Buenos Aires, la mort danse au rythme du tango.",
-  workHeading: "L'œuvre",
+  workHeading: "L'Œuvre",
   work: "Portée par le langage expressif du tango argentin, enrichie d'éléments du folklore et de danse aérienne sur sangles, cerceau et harnais, La Muerte del Ángel réinvente le mythe de Charon, le passeur des enfers, à travers la culture argentine. Une œuvre de danse-théâtre qui unit mythe, mouvement et émotion, avec un orchestre sur scène.",
-  storyHeading: "L'histoire",
+  storyHeading: "L'Histoire",
   story: [
     "Dans un quartier d'un Buenos Aires hors du temps, où chaque coin de rue respire le tango et l'air de la campagne, Gabino et Amanda vivent un amour simple et durable, né dans une milonga et scellé par la danse.",
     "Un après-midi, tandis que les voisins célèbrent l'anniversaire de Gabino, un orage éclate et, avec lui, surgit Charon. Attiré par l'âme d'Amanda, il remonte des enfers pour la réclamer. Elle ne résiste pas : dans un abandon serein, elle danse avec lui.",
@@ -275,7 +273,7 @@ export const showCopyFr = {
     { name: "Ivone et El Niño Bien", performer: "Federica Tobares et Fabrizio Muñoz" },
     { name: "Charro et Esthercita", performer: "Sofía Orlando et Heber Mallorquín" },
   ],
-  trailerHeading: "Voir le spectacle",
+  trailerHeading: "Voir le Spectacle",
   galleryHeading: "Galerie",
   creditsHeading: "Générique",
   credits: [
@@ -286,7 +284,7 @@ export const showCopyFr = {
     { role: "Direction musicale", name: "Matías Rubino" },
     { role: "Production musicale", name: "Franco Zilocchi" },
     { role: "Costumes", name: "Leonardo Luizaga, assisté de Silvana Ursula" },
-    { role: "Création lumière", name: "Jorge Ariel « El Gato » Ponce" },
+    { role: "Création lumière", name: "Jorge Ariel Ponce" },
     { role: "Techniciens aériens", name: "Flavio Lilli et Darío Diaco" },
     { role: "Assistante de production", name: "Lucía Ohyama" },
   ],

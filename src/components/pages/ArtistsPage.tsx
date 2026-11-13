@@ -28,17 +28,18 @@ export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
       <section className="pt-28 pb-12 md:pt-52 md:pb-24 px-6">
         <div className="max-w-7xl mx-auto">
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl">
-              {lang === "fr" ? "La distribution" : lang === "es" ? "El elenco" : "The cast"}
+              {lang === "fr" ? "La Distribution" : lang === "es" ? "El Elenco" : "The Cast"}
             </h1>
+            <span className="mt-6 block h-px w-full bg-gold" />
         </div>
       </section>
 
-      {groups.map(group => (
-        <section key={group.heading} className="px-6 pb-16 md:pb-32">
+      {groups.map((group, i) => (
+        <section key={group.heading} className={`px-6 pt-12 pb-16 md:pt-20 md:pb-32 bg-background ${["surface-1", "surface-2", "surface-3"][i % 3]}`}>
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl mb-8 md:mb-12">{groupHeadings?.[group.heading] ?? group.heading}</h2>
-            <div className={group.heading === 'Direction' ? 'grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10' : 'grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-8 gap-y-8'}>
-              {group.members.map(artist => <ArtistCard key={artist.slug} lang={lang} artist={artist} onOpen={() => setActive(artist)} />)}
+            <h2 className="font-serif text-gold text-4xl md:text-5xl mb-8 md:mb-12">{groupHeadings?.[group.heading] ?? group.heading}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 md:gap-x-8 gap-y-8">
+              {group.members.map(artist => <ArtistCard key={artist.slug} lang={lang} artist={artist} onOpen={() => setActive(artist)} className={artist.wide ? "sm:col-span-2" : undefined} />)}
             </div>
           </div>
         </section>
@@ -57,18 +58,12 @@ export function ArtistsPage({ lang = "en" }: { lang?: Lang }) {
 
                 <div className="flex flex-col md:flex-row md:max-h-[90vh]">
                   <div className="relative overflow-hidden bg-background md:w-[42%] md:shrink-0 md:min-h-[60vh] md:max-h-[90vh]">
-                    <img
-                      src={active.image} width={active.imageWidth} height={active.imageHeight}
-                      alt=""
-                      aria-hidden="true"
-                      className="absolute inset-0 h-full w-full object-cover scale-110 blur-2xl opacity-40"
-                    />
-                    <div className="absolute inset-0 bg-background/50" />
-                    <img
-                      src={active.image} width={active.imageWidth} height={active.imageHeight}
-                      alt={active.name}
-                      className="relative block w-full h-auto md:absolute md:inset-0 md:h-full md:object-contain"
-                    />
+                    <div className={`relative grid gap-1 md:absolute md:inset-0 md:content-center ${(active.portraits?.length ?? 1) > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
+                      {(active.portraits ?? [active.image]).map((src, i) => (
+                        <img key={src} src={src} width={960} height={1200} alt={i === 0 ? active.name : ""}
+                          className={`block w-full object-cover object-[50%_30%] ${(active.portraits?.length ?? 1) > 1 ? "aspect-[2/5]" : "aspect-[4/5]"}`} />
+                      ))}
+                    </div>
                   </div>
                   <div className="p-7 md:p-10 lg:p-12 md:flex-1 md:overflow-y-auto md:max-h-[90vh]">
                     <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight text-foreground">

@@ -22,7 +22,7 @@ export const credits = [
   { role: 'Musical direction', name: 'Matías Rubino' },
   { role: 'Music production', name: 'Franco Zilocchi' },
   { role: 'Costumes', name: 'Leonardo Luizaga, assisted by Silvana Ursula' },
-  { role: 'Lighting', name: 'Jorge Ariel "El Gato" Ponce' },
+  { role: 'Lighting', name: 'Jorge Ariel Ponce' },
   { role: 'Aerial technicians', name: 'Flavio Lilli, Darío Diaco' },
   { role: 'Production', name: 'Lucía Ohyama' },
 ];

@@ -38,12 +38,17 @@
   --radius: 0.25rem;
 
   /* Theatrical noir palette */
-  --background: oklch(0.11 0.008 20);
-  --foreground: oklch(0.95 0.012 75);
-  --card: oklch(0.15 0.015 18);
-  --card-foreground: oklch(0.95 0.012 75);
-  --popover: oklch(0.15 0.015 18);
-  --popover-foreground: oklch(0.95 0.012 75);
+  --background: oklch(0.22 0.002 40);
+  --foreground: oklch(0.92 0.03 85);
+
+  /* Section surfaces — three dark-gray moments sections alternate through, close enough that the shift reads as a gentle shade change rather than a hard cut */
+  --surface-1: oklch(0.18 0.002 40);
+  --surface-2: oklch(0.22 0.002 40);
+  --surface-3: oklch(0.28 0.003 40);
+  --card: oklch(0.26 0.003 40);
+  --card-foreground: oklch(0.92 0.03 85);
+  --popover: oklch(0.26 0.003 40);
+  --popover-foreground: oklch(0.92 0.03 85);
 
   /* Brand gold — refined metallic stage gold, not bright yellow */
   --primary: oklch(0.78 0.115 85);
@@ -53,10 +58,10 @@
   /* Champagne gold from the logo, used sparingly */
   --gold: oklch(0.82 0.07 80);
 
-  --secondary: oklch(0.2 0.03 18);
-  --secondary-foreground: oklch(0.95 0.012 75);
-  --muted: oklch(0.18 0.015 18);
-  --muted-foreground: oklch(0.7 0.02 60);
+  --secondary: oklch(0.28 0.005 40);
+  --secondary-foreground: oklch(0.92 0.03 85);
+  --muted: oklch(0.26 0.003 40);
+  --muted-foreground: oklch(0.68 0.025 82);
   --accent: var(--muted);
   --accent-foreground: var(--foreground);
   --destructive: oklch(0.55 0.22 27);
@@ -82,8 +87,8 @@
 }
 
 .dark {
-  --background: oklch(0.13 0.01 20);
-  --foreground: oklch(0.96 0.005 60);
+  --background: oklch(0.22 0.002 40);
+  --foreground: oklch(0.92 0.03 85);
 }
 
 @layer base {
@@ -156,6 +161,15 @@
   }
   .tracking-luxe {
     letter-spacing: 0.1em;
+  }
+  .surface-1 {
+    --background: var(--surface-1);
+  }
+  .surface-2 {
+    --background: var(--surface-2);
+  }
+  .surface-3 {
+    --background: var(--surface-3);
   }
 }
 

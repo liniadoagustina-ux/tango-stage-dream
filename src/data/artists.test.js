@@ -9,7 +9,7 @@ describe("Home cast strip labels", () => {
       ["Leonardo Luizaga", "Gabino"],
       ["Edgar Luizaga", "Charon"],
       ["Camila Alegre & Ezequiel López", "Co-choreographers"],
-      ["Evangelina Martínez & Nelson Leiva", "Griseta & Osvaldo"],
+      ["Maia Roldán", "Amanda"],
     ]);
   });
 
