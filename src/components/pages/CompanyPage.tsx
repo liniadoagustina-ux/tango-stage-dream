@@ -12,10 +12,23 @@ export function CompanyPage({ lang = "en" }: { lang?: Lang }) {
   const showTo = lang === "fr" ? "/fr/show" : es ? "/es/show" : "/show";
   return (
     <>
-      <section className="relative pt-28 pb-16 md:pt-52 md:pb-32 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
-        <div className="relative max-w-5xl mx-auto">
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-balance">{copy?.title ?? "The Company"}</h1>
+      <section className="relative w-full aspect-[16/9] md:aspect-[2/1] overflow-hidden bg-background">
+        <img
+          src="/images/company-luizaga-brothers.webp" width={1532} height={782}
+          alt="Leonardo y Edgar Luizaga"
+          fetchPriority="high"
+          className="absolute inset-0 h-full w-full object-cover object-right-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
+        <div className="relative z-10 flex h-full flex-col justify-end pb-8 pl-6 pr-6 md:pb-16 md:pl-16">
+          <p className="font-serif text-xl md:text-3xl tracking-wide text-foreground/90">Luizaga Brothers</p>
+          <h1 className="mt-2 font-serif text-4xl sm:text-5xl md:text-7xl leading-[0.95] text-balance text-gold">{copy?.enterCta ?? "Enter the Company"}</h1>
+        </div>
+      </section>
+
+      <section className="px-6 pt-10 md:pt-16">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-serif text-3xl md:text-4xl leading-tight text-balance">{copy?.title ?? "The Company"}</h2>
           <span className="mt-6 block h-px w-full bg-gold" />
           <p className="mt-8 max-w-3xl text-lg md:text-xl leading-relaxed text-foreground/90">{copy?.intro ?? "Leonardo and Edgar Luizaga have taken Argentine tango to stages across Europe, Asia and the Americas, lifting it off the floor with circus and physical theatre."}</p>
         </div>
