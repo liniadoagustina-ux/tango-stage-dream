@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { images } from "@/data/images";
@@ -19,22 +19,20 @@ export function Hero({ lang = "en" }: { lang?: Lang }) {
 
   return (
     <section className="relative h-screen min-h-[640px] w-full overflow-hidden vignette bg-background">
-      {/* Stage photography backdrop */}
-      <AnimatePresence mode="sync">
-        <motion.img
-          key={index}
-          src={slides[index]?.url}
+      {/* Stage photography backdrop — all slides stay mounted and pre-decoded,
+          crossfading by opacity so one dissolves into the next with no gap. */}
+      {slides.map((slide, i) => (
+        <img
+          key={slide.url}
+          src={slide.url}
           width={1920}
           height={1280}
           alt="Luizaga Brothers on stage"
-          fetchPriority="high"
-          initial={reducedMotion ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: reducedMotion ? 0 : 0.4 }}
-          className="absolute inset-0 h-full w-full object-cover object-top"
+          fetchPriority={i === 0 ? "high" : undefined}
+          className="absolute inset-0 h-full w-full object-cover object-top transition-opacity ease-in-out"
+          style={{ opacity: i === index ? 1 : 0, transitionDuration: reducedMotion ? "0ms" : "900ms" }}
         />
-      </AnimatePresence>
+      ))}
       <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-background/15 to-background" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.13_0.01_20/0.6)_90%)]" />
 
