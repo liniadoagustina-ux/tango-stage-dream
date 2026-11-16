@@ -19,14 +19,16 @@ export function CompanyPage({ lang = "en" }: { lang?: Lang }) {
           fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover object-right-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
+        <div className="relative z-10 flex h-full flex-col justify-end pb-8 pl-6 pr-6 md:pb-16 md:pl-16">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-[0.95] text-balance">{copy?.title ?? "The Company"}</h1>
+          <span className="mt-6 block h-px w-24 bg-gold" />
+        </div>
       </section>
 
       <section className="px-6 pt-10 md:pt-16">
         <div className="max-w-5xl mx-auto">
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-[0.95] text-balance">{copy?.title ?? "The Company"}</h1>
-          <span className="mt-6 block h-px w-full bg-gold" />
-          <p className="mt-8 max-w-3xl text-lg md:text-xl leading-relaxed text-foreground/90">{copy?.intro ?? "Leonardo and Edgar Luizaga have taken Argentine tango to stages across Europe, Asia and the Americas, lifting it off the floor with circus and physical theatre."}</p>
+          <p className="max-w-3xl text-lg md:text-xl leading-relaxed text-foreground/90">{copy?.intro ?? "Leonardo and Edgar Luizaga have taken Argentine tango to stages across Europe, Asia and the Americas, lifting it off the floor with circus and physical theatre."}</p>
         </div>
       </section>
 
