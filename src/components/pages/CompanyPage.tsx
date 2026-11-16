@@ -1,10 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { companyFacts, trajectories, performanceRegions } from "@/data/company";
-import { images } from "@/data/images";
 
 import { companyCopyEs, companyCopyFr, bookingLabel, type Lang } from "@/lib/i18n";
-const logo = images.logo;
 
 export function CompanyPage({ lang = "en" }: { lang?: Lang }) {
   const es = lang === "es";
@@ -21,16 +19,14 @@ export function CompanyPage({ lang = "en" }: { lang?: Lang }) {
           fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover object-right-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
-        <div className="relative z-10 flex h-full flex-col justify-end pb-8 pl-6 pr-6 md:pb-16 md:pl-16">
-          <img src={logo.url} width={logo.width} height={logo.height} alt="Luizaga Brothers" className="h-9 sm:h-16 md:h-24 w-auto" />
-          <h1 className="mt-2 md:mt-3 font-serif text-3xl sm:text-5xl md:text-7xl leading-[0.95] text-balance text-gold">{copy?.title ?? "The Company"}</h1>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </section>
 
       <section className="px-6 pt-10 md:pt-16">
         <div className="max-w-5xl mx-auto">
-          <p className="max-w-3xl text-lg md:text-xl leading-relaxed text-foreground/90">{copy?.intro ?? "Leonardo and Edgar Luizaga have taken Argentine tango to stages across Europe, Asia and the Americas, lifting it off the floor with circus and physical theatre."}</p>
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-[0.95] text-balance">{copy?.title ?? "The Company"}</h1>
+          <span className="mt-6 block h-px w-full bg-gold" />
+          <p className="mt-8 max-w-3xl text-lg md:text-xl leading-relaxed text-foreground/90">{copy?.intro ?? "Leonardo and Edgar Luizaga have taken Argentine tango to stages across Europe, Asia and the Americas, lifting it off the floor with circus and physical theatre."}</p>
         </div>
       </section>
 
