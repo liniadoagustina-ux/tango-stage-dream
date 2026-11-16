@@ -40,9 +40,9 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
           <SectionHeading>{copy?.storyHeading ?? "The Story"}</SectionHeading>
           <div className="space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed">
             {copy ? copy.story.map(paragraph => <p key={paragraph}>{paragraph}</p>) : <>
-            <p>In a timeless neighbourhood of Buenos Aires, Gabino and Amanda share a simple, lasting love, born in a milonga and sealed in the embrace.</p>
-            <p>One stormy afternoon, in the middle of Gabino's birthday lunch, Charon, the ferryman of the dead, comes for Amanda. She doesn't resist. She dances with him.</p>
-            <p>Only Nocturna, a medium who can see beyond this world, perceives his presence. Left behind, Gabino wanders through grief: the town fair, a mistaken kiss, nights with no way out. In the end he chooses to follow Amanda, and Charon guides them both across.</p>
+            <p>Buenos Aires, the 1980s. Amanda and Gabino have a passionate love until Charon, the mythical ferryman of the dead, enters the world of the living to claim Amanda's soul.</p>
+            <p>As Gabino struggles with her absence, the community gathers around him. Music gives voice to his sorrow, while Nocturna, a spiritual medium, helps him reach Amanda's spirit.</p>
+            <p>Through memory, desire and the embrace of tango, their story explores the fragile boundary between love, loss and the afterlife.</p>
             </>}
           </div>
         </div>
