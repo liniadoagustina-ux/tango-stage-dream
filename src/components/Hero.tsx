@@ -13,7 +13,7 @@ export function Hero({ lang = "en" }: { lang?: Lang }) {
 
   useEffect(() => {
     if (reducedMotion) return;
-    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 6000);
+    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 3000);
     return () => clearInterval(id);
   }, [reducedMotion]);
 

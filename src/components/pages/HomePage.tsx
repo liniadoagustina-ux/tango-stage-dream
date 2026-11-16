@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
+import { useReducedMotion } from "framer-motion";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { Trailer } from "@/components/Trailer";
@@ -15,6 +16,7 @@ const pillarImages = [stageTango, stageAerial, stageTheatre];
 
 export function HomePage({ lang }: { lang: Lang }) {
   const copy = homeCopy[lang];
+  const reducedMotion = useReducedMotion();
   return (
     <>
       <Hero lang={lang} />
@@ -56,8 +58,14 @@ export function HomePage({ lang }: { lang: Lang }) {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/30" />
         <div className="relative max-w-7xl mx-auto">
           <Reveal delay={0.1}>
-            <figure className="relative block w-full max-w-4xl overflow-hidden shadow-deep ring-1 ring-primary/40">
-              <img width={showLogoAsset.width} height={showLogoAsset.height} loading="lazy" src={showLogoAsset.url} alt="La Muerte del Ángel — Luizaga Brothers" className="block w-full h-auto" />
+            <figure className="relative block w-full max-w-4xl aspect-[16/9] overflow-hidden shadow-deep ring-1 ring-primary/40">
+              {reducedMotion ? (
+                <img width={showLogoAsset.width} height={showLogoAsset.height} loading="lazy" src={showLogoAsset.url} alt="La Muerte del Ángel — Luizaga Brothers" className="absolute inset-0 h-full w-full object-cover" />
+              ) : (
+                <video autoPlay loop muted playsInline poster={showLogoAsset.url} aria-label="La Muerte del Ángel — Luizaga Brothers" className="absolute inset-0 h-full w-full object-cover">
+                  <source src="/video/la-muerte-del-angel-loop.mp4" type="video/mp4" />
+                </video>
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
               <figcaption className="absolute inset-x-0 bottom-0 p-5 md:p-10">
                 <span className="block h-px w-16 bg-primary mb-4" />
