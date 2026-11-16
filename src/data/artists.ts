@@ -18,7 +18,7 @@ import leonardoA from "@/assets/webp/leonardo-new.webp.asset.json";
 import maiaA from "@/assets/webp/maia-roldan-new.webp.asset.json";
 import luizaA from "@/assets/webp/luiza-anastasio-new.webp.asset.json";
 const luiza = luizaA.url;
-const camilaEzequielA = { url: "/images/camila-ezequiel-portrait.webp" };
+import camilaEzequielA from "@/assets/webp/camila-ezequiel-new.webp.asset.json";
 import patricioA from "@/assets/webp/patricio-cotella-new.webp.asset.json";
 const patricio = patricioA.url;
 import evangelinaNelsonA from "@/assets/webp/evangelina-nelson-new.webp.asset.json";
