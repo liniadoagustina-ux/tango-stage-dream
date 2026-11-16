@@ -21,7 +21,7 @@ const presentation = [
     { slug: 'patricio-cotella', role: 'Double bass', credit: "Trained in the \"Orquesta Escuela de Tango\" led by Emilio Balcarce." },
     { slug: 'franco-zilocchi', role: 'Drums, music production', credit: 'Sound engineer and music producer.' },
   ] },
-  { heading: 'Creative team', members: [
+  { heading: 'Creative Team', members: [
     { slug: 'ariel-ponce', role: 'Lighting design', credit: "Nearly three decades in the theatres of \"Avenida Corrientes\", with shows such as \"Stravaganza\", Rent and Pretty Woman." },
     { slug: 'lucia-ohyama', role: 'Production', credit: 'Executive production and tour management.' },
   ] },
@@ -31,7 +31,7 @@ export const artistGroups = presentation.map(group => ({
   heading: group.heading,
   members: group.members.flatMap(member => {
     const artist = artists.find(artist => artist.slug === member.slug);
-    return artist ? [{ ...artist, role: member.role, responsibilities: 'responsibilities' in member ? member.responsibilities : undefined, credit: member.credit }] : [];
+    return artist ? [{ ...artist, role: member.role, responsibilities: 'responsibilities' in member ? member.responsibilities : undefined, credit: member.credit, wide: 'wide' in member ? member.wide : false }] : [];
   }),
 }));
 

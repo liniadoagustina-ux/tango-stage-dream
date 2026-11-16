@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
+import { useReducedMotion } from "framer-motion";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { Trailer } from "@/components/Trailer";
@@ -15,11 +16,12 @@ const pillarImages = [stageTango, stageAerial, stageTheatre];
 
 export function HomePage({ lang }: { lang: Lang }) {
   const copy = homeCopy[lang];
+  const reducedMotion = useReducedMotion();
   return (
     <>
       <Hero lang={lang} />
 
-      <section className="relative py-16 md:py-20 px-6 bg-background overflow-hidden">
+      <section className="relative py-16 md:py-20 px-6 bg-background surface-2 overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-curtain opacity-40" />
         <div className="relative max-w-4xl mx-auto text-center">
           <span className="mx-auto mb-8 block h-px w-16 bg-primary" />
@@ -29,7 +31,7 @@ export function HomePage({ lang }: { lang: Lang }) {
       </section>
 
       {/* Pillars */}
-      <section className="py-12 md:py-20 px-6">
+      <section className="py-12 md:py-20 px-6 bg-background surface-1">
         <div className="max-w-7xl mx-auto grid grid-cols-3 gap-2 md:gap-4">
           {copy.pillars.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.1}>
@@ -52,12 +54,18 @@ export function HomePage({ lang }: { lang: Lang }) {
       </section>
 
       {/* Show teaser */}
-      <section className="relative py-16 md:py-20 px-6 overflow-hidden bg-background">
+      <section className="relative py-16 md:py-20 px-6 overflow-hidden bg-background surface-3">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/30" />
         <div className="relative max-w-7xl mx-auto">
           <Reveal delay={0.1}>
-            <figure className="relative block w-full max-w-4xl overflow-hidden shadow-deep ring-1 ring-primary/40">
-              <img width={showLogoAsset.width} height={showLogoAsset.height} loading="lazy" src={showLogoAsset.url} alt="La Muerte del Ángel — Luizaga Brothers" className="block w-full h-auto" />
+            <figure className="relative block w-full max-w-4xl aspect-[16/9] overflow-hidden shadow-deep ring-1 ring-primary/40">
+              {reducedMotion ? (
+                <img width={showLogoAsset.width} height={showLogoAsset.height} loading="lazy" src={showLogoAsset.url} alt="La Muerte del Ángel — Luizaga Brothers" className="absolute inset-0 h-full w-full object-cover" />
+              ) : (
+                <video autoPlay loop muted playsInline poster={showLogoAsset.url} aria-label="La Muerte del Ángel — Luizaga Brothers" className="absolute inset-0 h-full w-full object-cover">
+                  <source src="/video/la-muerte-del-angel-loop.mp4" type="video/mp4" />
+                </video>
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
               <figcaption className="absolute inset-x-0 bottom-0 p-5 md:p-10">
                 <span className="block h-px w-16 bg-primary mb-4" />
@@ -88,7 +96,7 @@ export function HomePage({ lang }: { lang: Lang }) {
       </section>
 
       {/* Artists strip */}
-      <section className="pt-12 pb-6 md:pt-20 md:pb-16 px-6 bg-background">
+      <section className="pt-12 pb-6 md:pt-20 md:pb-16 px-6 bg-background surface-1">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
             <Reveal>
@@ -106,12 +114,12 @@ export function HomePage({ lang }: { lang: Lang }) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {artists.slice(0, 4).map((a, i) => (
               <Reveal key={a.slug} delay={i * 0.08}>
-                <Link to={copy.castLinkTo} className="block group relative aspect-[3/4] overflow-hidden rounded-sm">
+                <Link to={copy.castLinkTo} className="block group relative aspect-[4/5] overflow-hidden rounded-sm">
                   <img
-                    width={a.imageWidth} height={a.imageHeight} src={a.image}
+                    width={a.imageWidth} height={a.imageHeight} src={a.portraits?.[0] ?? a.image}
                     alt={a.name}
                     loading="lazy"
-                    className="absolute inset-0 h-full w-full object-contain "
+                    className="absolute inset-0 h-full w-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-4">

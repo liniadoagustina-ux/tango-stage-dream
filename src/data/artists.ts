@@ -1,4 +1,16 @@
 import { images } from "@/data/images";
+import p_matias_rubino from "@/assets/webp/matias-rubino-portrait.webp.asset.json";
+import p_pablo_cotella from "@/assets/webp/pablo-cotella-portrait.webp.asset.json";
+import p_edgar_luizaga from "@/assets/webp/edgar-luizaga-portrait.webp.asset.json";
+import p_evangelina_martinez from "@/assets/webp/evangelina-martinez-portrait.webp.asset.json";
+import p_federica_tobares from "@/assets/webp/federica-tobares-portrait.webp.asset.json";
+import p_francisco_munoz from "@/assets/webp/francisco-munoz-portrait.webp.asset.json";
+import p_heber_mallorquin from "@/assets/webp/heber-mallorquin-portrait.webp.asset.json";
+import p_leonardo_luizaga from "@/assets/webp/leonardo-luizaga-portrait.webp.asset.json";
+import p_maia_roldan from "@/assets/webp/maia-roldan-portrait.webp.asset.json";
+import p_nelson_leiva from "@/assets/webp/nelson-leiva-portrait.webp.asset.json";
+import p_sofia_orlando from "@/assets/webp/sofia-orlando-portrait.webp.asset.json";
+import p_soledad_mangia from "@/assets/webp/soledad-mangia-portrait.webp.asset.json";
 import arielPonceA from "@/assets/webp/ariel-ponce.webp.asset.json";
 import edgarA from "@/assets/webp/edgar.webp.asset.json";
 const edgar = edgarA.url;
@@ -42,6 +54,7 @@ export type Artist = {
   image: string;
   imageWidth?: number;
   imageHeight?: number;
+  portraits?: string[];
   poetic: string;
   bio: string[];
 };
@@ -93,6 +106,24 @@ export const artists: Artist[] = [
     ],
   },
   {
+    slug: "maia-roldan",
+    name: "Maia Roldán",
+    role: "Dancer, Choreographer",
+    discipline: "Contemporary, Musical Theatre, Tango",
+    character: "Amanda",
+    image: maia,
+    poetic:
+      "A versatile body that speaks tango, theatre and contemporary in the same breath.",
+    bio: [
+      "Argentine dancer and choreographer, widely recognised for her versatility and strong presence across musical theatre, television, and international productions. She has received numerous awards and scholarships throughout her career, including a scholarship to the Summer Dance Intensive at Point Park University (Pittsburgh, USA), awarded by Gustavo Zajac, and further training through Fundación Julio Bocca in Buenos Aires.",
+      "She also continued her studies in New York at Broadway Dance Center under the International Student Visa Program, training with renowned choreographer Ashley Dawson. In ballroom dance, she achieved First Prize at the World Promotions Sheraton competition (2011–2012) alongside Alexis Mariani. In 2018, she was awarded a Premios Hugo for Best Children's Choreography for Aladín... será genial, co-created with Rosario Asencio.",
+      "As a performer, Maia has built an extensive career across stage, television, and international tours. She has worked in major Argentine television productions such as Susana Giménez and ShowMatch – Bailando por un Sueño (2018–2019). She toured nationally and internationally with Lali Espósito in the Soy Tour (2016–2019), and performed in leading stage productions including Disney – Una Navidad Inolvidable, directed by Ariel del Mastro; Pan – The Musical (Dance Captain); and Stravaganza, directed by Flavio Mendoza.",
+      "Her contemporary dance background includes work with CEM (Contemporary Dance Company) in productions such as Pies pa' Volar, Rayuela, and Estados del Tiempo, as well as performances with Choque Urbano at Teatro Konex and on national tour (2011–2013).",
+      "Internationally, she has performed as a dancer and assistant in Wild Tango with the Germán Cornejo Company in London (2022–2023), and in Papillon, a dinner show in Dubai directed by Layla Kardan. She has also toured extensively with Freedom by Los Potros Malambo, performing across Russia, Armenia, Belarus, Kazakhstan, Kyrgyzstan, Moldova, and Italy under the direction of Isaac & Javier Gardela.",
+      "Maia has established herself as a prominent choreographer. Her work includes American Idiot – The Musical, Simona en Vivo at Luna Park Stadium, and Aladín... será genial at Teatro Gran Rex. She has also choreographed internationally with Burnet (Turkey and Egypt, 2021–2022) and contributed to Wild Tango with the Germán Cornejo Company. More recently, she has been involved in Papá por Siempre at Teatro Liceo (2026).",
+    ],
+  },
+  {
     slug: "evangelina-nelson",
     name: "Evangelina Martínez & Nelson Leiva",
     role: "Principal Dancers",
@@ -138,23 +169,6 @@ export const artists: Artist[] = [
       "In 2019, they joined the company of Marcos Ayala, performing in high-level productions and completing two consecutive seasons aboard the cruise ships Silja Symphony and Serenade. They subsequently toured internationally across the Baltic countries, Russia, and China, expanding their global reach.",
       "Throughout their career, they have performed in countries including Russia, Germany, Austria, Switzerland, Sweden, the Czech Republic, the Netherlands, Finland, and Qatar. Their performances have graced prestigious venues such as the Mariinsky Theatre in St Petersburg and the Coliseo Theatre in Buenos Aires.",
       "Since 2023, they have been part of the renowned dinner show Michelangelo Tango, continuing a career defined by elegance, passion, and an unwavering commitment to their art. Most recently, they have been invited by the Luizaga Brothers to join their new production, further affirming their standing on the international stage.",
-    ],
-  },
-  {
-    slug: "maia-roldan",
-    name: "Maia Roldán",
-    role: "Dancer, Choreographer",
-    discipline: "Contemporary, Musical Theatre, Tango",
-    image: maia,
-    poetic:
-      "A versatile body that speaks tango, theatre and contemporary in the same breath.",
-    bio: [
-      "Argentine dancer and choreographer, widely recognised for her versatility and strong presence across musical theatre, television, and international productions. She has received numerous awards and scholarships throughout her career, including a scholarship to the Summer Dance Intensive at Point Park University (Pittsburgh, USA), awarded by Gustavo Zajac, and further training through Fundación Julio Bocca in Buenos Aires.",
-      "She also continued her studies in New York at Broadway Dance Center under the International Student Visa Program, training with renowned choreographer Ashley Dawson. In ballroom dance, she achieved First Prize at the World Promotions Sheraton competition (2011–2012) alongside Alexis Mariani. In 2018, she was awarded a Premios Hugo for Best Children's Choreography for Aladín... será genial, co-created with Rosario Asencio.",
-      "As a performer, Maia has built an extensive career across stage, television, and international tours. She has worked in major Argentine television productions such as Susana Giménez and ShowMatch – Bailando por un Sueño (2018–2019). She toured nationally and internationally with Lali Espósito in the Soy Tour (2016–2019), and performed in leading stage productions including Disney – Una Navidad Inolvidable, directed by Ariel del Mastro; Pan – The Musical (Dance Captain); and Stravaganza, directed by Flavio Mendoza.",
-      "Her contemporary dance background includes work with CEM (Contemporary Dance Company) in productions such as Pies pa' Volar, Rayuela, and Estados del Tiempo, as well as performances with Choque Urbano at Teatro Konex and on national tour (2011–2013).",
-      "Internationally, she has performed as a dancer and assistant in Wild Tango with the Germán Cornejo Company in London (2022–2023), and in Papillon, a dinner show in Dubai directed by Layla Kardan. She has also toured extensively with Freedom by Los Potros Malambo, performing across Russia, Armenia, Belarus, Kazakhstan, Kyrgyzstan, Moldova, and Italy under the direction of Isaac & Javier Gardela.",
-      "Maia has established herself as a prominent choreographer. Her work includes American Idiot – The Musical, Simona en Vivo at Luna Park Stadium, and Aladín... será genial at Teatro Gran Rex. She has also choreographed internationally with Burnet (Turkey and Egypt, 2021–2022) and contributed to Wild Tango with the Germán Cornejo Company. More recently, she has been involved in Papá por Siempre at Teatro Liceo (2026).",
     ],
   },
   {
@@ -290,7 +304,7 @@ export const artists: Artist[] = [
   },
   {
     slug: "ariel-ponce",
-    name: "Jorge Ariel “El Gato” Ponce",
+    name: "Jorge Ariel Ponce",
     role: "Lighting Director & Lighting Designer",
     discipline: "Lighting, Design",
     image: arielPonce,
@@ -303,7 +317,7 @@ export const artists: Artist[] = [
       "His experience also extends to major artists and live events, including Fabiana Cantilo in La Fiesta del Sol, REBORD at Movistar Arena and Lollapalooza Festival, as well as Serendipia in its theatrical and Netflix versions and La Cúpula of Flavio Mendoza on 2026.",
       "Ponce approaches lighting as an essential artistic and dramaturgical language, using light to shape space, atmosphere, rhythm and emotion while integrating seamlessly with direction, performance, music and scenography.",
       "His nearly 30-year career has earned recognition through nominations for the Estrella de Mar Awards, Carlos Awards and ACE Awards, as well as two Hugo Award .",
-      "From the theatres of Avenida Corrientes to major musicals, festivals and arena productions, Ariel “El Gato” Ponce brings to every project a distinctive combination of artistic vision, technical expertise and extensive production experience, making him a versatile creative professional for international theatre and live performance.",
+      "From the theatres of Avenida Corrientes to major musicals, festivals and arena productions, Ariel Ponce brings to every project a distinctive combination of artistic vision, technical expertise and extensive production experience, making him a versatile creative professional for international theatre and live performance.",
     ],
   },
 ];
@@ -313,3 +327,17 @@ for (const artist of artists) {
   artist.imageWidth = image?.width;
   artist.imageHeight = image?.height;
 }
+
+// Uniform 4:5 portraits (960x1200) per person, in the order the names appear.
+const portraits: Record<string, string[]> = {
+  "leonardo-luizaga": [p_leonardo_luizaga.url],
+  "edgar-luizaga": [p_edgar_luizaga.url],
+  "maia-roldan": [p_maia_roldan.url],
+  "soledad-mangia": [p_soledad_mangia.url],
+  "evangelina-nelson": [p_evangelina_martinez.url, p_nelson_leiva.url],
+  "fabrizio-federica": [p_francisco_munoz.url, p_federica_tobares.url],
+  "matias-rubino": [p_matias_rubino.url],
+  "patricio-cotella": [p_pablo_cotella.url],
+  "sofia-heber": [p_sofia_orlando.url, p_heber_mallorquin.url],
+};
+for (const artist of artists) artist.portraits = portraits[artist.slug] ?? [artist.image];

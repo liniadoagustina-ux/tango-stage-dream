@@ -41,9 +41,9 @@ describe("Language routing", () => {
     expect(head.links[0]).toEqual({ rel: "canonical", href: "https://luizagabrothers.com/es/show" });
   });
   test("Spanish nav and home copy use the supplied texts", () => {
-    expect(navItems.es.map((i) => i.label)).toEqual(["Inicio", "El show", "La compañía", "Artistas"]);
-    expect(homeCopy.es.castHeading).toBe("El elenco");
-    expect(homeCopy.es.castRoles).toEqual(["Gabino", "Caronte", "Coreógrafos asociados", "Griseta y Osvaldo"]);
+    expect(navItems.es.map((i) => i.label)).toEqual(["Inicio", "El Show", "La Compañía", "Artistas"]);
+    expect(homeCopy.es.castHeading).toBe("El Elenco");
+    expect(homeCopy.es.castRoles).toEqual(["Gabino", "Caronte", "Coreógrafos asociados", "Amanda"]);
   });
   test("Spanish hero uses the supplied title, line and buttons", () => {
     expect(`${heroCopy.es.titleA} ${heroCopy.es.titleB}`).toBe("Donde el tango alza vuelo.");
@@ -72,9 +72,7 @@ describe("Language routing", () => {
     expect(homeCopy.es.castLink).toBe("Conocé a los artistas");
   });
   test("Spanish footer line uses the supplied text", () => {
-    expect(footerCopy.es.tagline).toBe(
-      "Tango argentino, danza aérea y teatro físico. De Zárate a los escenarios de Europa, Asia y América.",
-    );
+    expect(footerCopy.es.tagline).toBe("Tango argentino, danza aérea y teatro físico.");
   });
   test("englishPath round-trips with pathForLang", () => {
     for (const p of ["/", "/show", "/company", "/artists"]) {
