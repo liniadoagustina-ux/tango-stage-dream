@@ -16,8 +16,14 @@ export function ShowPage({ lang = "en" }: { lang?: Lang }) {
     <>
       <section className="relative w-full overflow-hidden vignette bg-background">
         <motion.div initial={reducedMotion ? false : { opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: reducedMotion ? 0 : 0.4 }} className="relative z-10">
-          <figure className="relative block w-full overflow-hidden shadow-deep ring-1 ring-primary/40">
-            <img src={showLogoAsset.url} width={showLogoAsset.width} height={showLogoAsset.height} alt="La Muerte del Ángel — Luizaga Brothers" fetchPriority="high" className="block w-full h-auto" />
+          <figure className="relative block w-full aspect-[16/9] overflow-hidden shadow-deep ring-1 ring-primary/40">
+            {reducedMotion ? (
+              <img src={showLogoAsset.url} width={showLogoAsset.width} height={showLogoAsset.height} alt="La Muerte del Ángel — Luizaga Brothers" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />
+            ) : (
+              <video autoPlay loop muted playsInline poster={showLogoAsset.url} aria-label="La Muerte del Ángel — Luizaga Brothers" className="absolute inset-0 h-full w-full object-cover">
+                <source src="/video/la-muerte-del-angel-loop.mp4" type="video/mp4" />
+              </video>
+            )}
             <div className="pointer-events-none absolute inset-0 hidden md:block bg-gradient-to-t from-background via-background/30 to-transparent" />
             <figcaption className="relative px-6 pt-6 pb-10 md:absolute md:inset-x-0 md:bottom-0 md:p-10">
               <span className="block h-px w-16 bg-primary mb-4" />
